@@ -8,7 +8,7 @@ use Kreait\Firebase\Factory;
 use Kreait\Firebase\ServiceAccount;
 
 
-class TestController extends Controller
+class FirebaseController extends Controller
 {
     //
     public function index()

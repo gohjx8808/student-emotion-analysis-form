@@ -15,4 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('firebase','TestController@index');
+Route::get('/personaldetail', function () {
+    return view('personalDetail');
+});
