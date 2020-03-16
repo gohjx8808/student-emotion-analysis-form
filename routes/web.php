@@ -18,3 +18,5 @@ Route::get('/', function () {
 Route::get('/personaldetail', function () {
     return view('personalDetail');
 });
+
+Route::post('/personaldetail/post','PersonalDetailController@update');
