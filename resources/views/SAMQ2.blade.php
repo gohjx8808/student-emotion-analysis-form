@@ -101,12 +101,22 @@
                     <input type="radio" name="SAM3" class="radio-center" value="D9" />
                 </div>
             </div>
+            <input type="hidden" value="0" id="mouseClicked" name="mouseClicked"/>
             <button type="submit" class="btn btn-primary" style="width:15%" id="submit">
                 Next
             </button>
         </div>
     </form>
-    <script></script>
+    <script>
+        $(document).ready(function() {
+                window.addEventListener('mousedown',function(){
+                    let mouseClickedInt=$("#mouseClicked").val();
+                    mouseClickedInt++;
+
+                    $('#mouseClicked').val(mouseClickedInt);
+                })
+            })
+    </script>
 </body>
 
 </html>

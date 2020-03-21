@@ -33,6 +33,21 @@ class SAMController extends Controller
     public function saveSAMQ4(Request $request)
     {
         $request->session()->put('SAMQ4', $request->except('_token'));
+        // dd(session()->all());
+        $serviceAccount = ServiceAccount::fromJsonFile(__DIR__ . '/student-emotion-analysis-d61dc-3e42dda5c936.json');
+        $firebase = (new Factory)
+            ->withServiceAccount($serviceAccount)
+            ->withDatabaseUri('https://student-emotion-analysis-d61dc.firebaseio.com/')
+            ->create();
+
+        $database = $firebase->getDatabase();
+
+        $request->session()->forget(['_token','_previous']);
+
+        $database
+            ->getReference('QuestionSurvey')
+            ->push($request->session()->all());
+
         return redirect('/thankyou');
     }
 }

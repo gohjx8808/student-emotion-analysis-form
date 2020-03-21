@@ -56,13 +56,23 @@
         <p class="white-label">
             3. A subclass can call a constructor method defined by its super class by use of the <input type="text" name="Fill3" /> keyword.
         </p>
+        <input type="hidden" value="0" id="mouseClicked" name="mouseClicked"/>
         <div style="text-align: center;">
             <button type="submit" class="btn btn-primary" style="width:15%" id='submit'>
                 Next
             </button>
         </div>
     </form>
-    <script></script>
+    <script>
+        $(document).ready(function() {
+                window.addEventListener('mousedown',function(){
+                    let mouseClickedInt=$("#mouseClicked").val();
+                    mouseClickedInt++;
+
+                    $('#mouseClicked').val(mouseClickedInt);
+                })
+            })
+    </script>
 </body>
 
 </html>

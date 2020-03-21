@@ -13,6 +13,7 @@ class PersonalDetailController extends Controller
 {
     public function update(Request $request)
     {
+        $request->session()->flush();
         $serviceAccount = ServiceAccount::fromJsonFile(__DIR__ . '/student-emotion-analysis-d61dc-3e42dda5c936.json');
         $firebase = (new Factory)
             ->withServiceAccount($serviceAccount)
