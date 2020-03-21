@@ -68,6 +68,7 @@
             </p>
             <br />
             <h4 class="white-label">Part 1: Personal Detail</h4>
+            <hr style="background-color: white"/>
             <div class="form-group">
                 <label for="gender" class="white-label">Gender</label>
                 <div
@@ -112,6 +113,49 @@
                     placeholder="Please enter your age"
                     required
                 />
+            </div>
+            <div class="form-group">
+                <label for="nationality" class="white-label">Nationality</label>
+                <div
+                    class="form-control"
+                    style="border-bottom-width: 0;border-radius: 10px 10px 0px 0px;"
+                >
+                    <label class="form-check-label" for="malaysian">
+                        <input
+                            class="form-control-input"
+                            type="radio"
+                            id="malaysian"
+                            name="nationality"
+                            value="malaysian"
+                            required
+                        />
+                        Malaysian
+                    </label>
+                </div>
+                <div class="input-group radio-center radio-center">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <label class="form-check-label" for="international">
+                                <input
+                                    class="form-control-input"
+                                    type="radio"
+                                    id="international"
+                                    name="nationality"
+                                    value="international"
+                                />
+                                International:
+                            </label>
+                        </div>
+                    </div>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="international"
+                        name="international"
+                        disabled
+                        placeholder="Please enter your nationality"
+                    />
+                </div>
             </div>
             <div class="form-group">
                 <label for="race" class="white-label">Race</label>
@@ -530,7 +574,7 @@
                 </div>
             </div>
             <div style="text-align: center;">
-                <button type="submit" class="btn btn-primary" style="width:15%">
+                <button type="submit" class="btn btn-primary" style="width:15%" id='submit'>
                     Next
                 </button>
             </div>
@@ -560,6 +604,16 @@
             ];
 
             $(document).ready(function() {
+
+                $("input[name=nationality]").on("change", function() {
+                    var race = $(this).val();
+                    if (race == "international") {
+                        $("input[name=international]").removeAttr("disabled");
+                    } else {
+                        $("input[name=international]").attr("disabled", true);
+                    }
+                });
+
                 $("input[name=race]").on("change", function() {
                     var race = $(this).val();
                     if (race == "others-race") {
