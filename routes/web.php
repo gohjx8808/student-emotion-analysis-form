@@ -45,3 +45,9 @@ Route::get('/SAMQ2',function(){
 
 Route::post('/SAMQ2/save','SAMController@saveSAMQ2');
 
+Route::get('/Q3',function(){
+    return view('questions3');
+});
+
+Route::post('/Q3/save','QuestionsController@saveQ3');
+

@@ -61,7 +61,7 @@
                 Please answer the questions as best as you can. Good luck!
             </p>
             <hr style="background-color:white" />
-            <p class="white-label"><u>Question 2: Short Answer</u></p>
+            <p class="white-label"><u>Question 2: Short Coding Problem</u></p>
             <p class="white-label">
                 Please write you answer below
             </p>
