@@ -35,7 +35,7 @@
 </head>
 
 <body class="background">
-    <form class="form-background" action="SAMQ2/save" method="POST">
+    <form class="form-background" action="SAMQ4/save" method="POST">
         {{ csrf_field() }}
         <h1 class="white-label">Student Emotion Analysis</h1>
         <br />
@@ -44,13 +44,13 @@
             Please answer the questions as best as you can. Good luck!
         </p>
         <hr style="background-color:white" />
-        <p class="white-label"><u>Question 2: Short Coding Problem</u></p>
+        <p class="white-label"><u>Question 4: True/False</u></p>
         <p class="white-label">
             Please choose the options that best matches your emotion after
-            trying the question before.
+            trying the questions before.
         </p>
         <div style="text-align: center">
-            <label for="SAM2" class="white-label">How do you feel?</label>
+            <label for="SAM4" class="white-label">How do you feel?</label>
             <br />
             <img src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/SAM1.png?alt=media&token=414e2593-346a-49b7-b3c0-8045ba9dcce7" class="img-fluid" alt="SAM1" />
             <br />
@@ -67,7 +67,7 @@
                     <input type="radio" name="SAM1" class="radio-center" value="V9" />
                 </div>
             </div>
-            <label for="SAM2" class="white-label">How strong do you feel?</label>
+            <label for="SAM3" class="white-label">How strong do you feel?</label>
             <br />
             <img src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/SAM2.png?alt=media&token=9a832e2a-f8d0-43a1-875a-b4e1dd6fba14" class="img-fluid" alt="SAM2" />
             <br />
@@ -84,7 +84,7 @@
                     <input type="radio" name="SAM2" class="radio-center" value="A9" />
                 </div>
             </div>
-            <label for="SAM2" class="white-label">How strong does the emotion controls you?</label>
+            <label for="SAM3" class="white-label">How strong does the emotion controls you?</label>
             <br />
             <img src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/SAM3.png?alt=media&token=d43d4bdf-cebe-4f74-a448-4280bf0c3b81" class="img-fluid" alt="SAM3" />
             <br />

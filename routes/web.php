@@ -51,3 +51,25 @@ Route::get('/Q3',function(){
 
 Route::post('/Q3/save','QuestionsController@saveQ3');
 
+Route::get('/SAMQ3',function(){
+    return view('SAMQ3');
+});
+
+Route::post('/SAMQ3/save','SAMController@saveSAMQ3');
+
+Route::get('/Q4',function(){
+    return view('questions4');
+});
+
+Route::post('/Q4/save','QuestionsController@saveQ4');
+
+Route::get('/SAMQ4',function(){
+    return view('SAMQ4');
+});
+
+Route::post('/SAMQ4/save','SAMController@saveSAMQ4');
+
+Route::get('/thankyou',function(){
+    return view('thankyou');
+});
+

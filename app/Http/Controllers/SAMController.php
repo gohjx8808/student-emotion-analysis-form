@@ -23,4 +23,16 @@ class SAMController extends Controller
         $request->session()->put('SAMQ2', $request->except('_token'));
         return redirect('/Q3');
     }
+
+    public function saveSAMQ3(Request $request)
+    {
+        $request->session()->put('SAMQ3', $request->except('_token'));
+        return redirect('/Q4');
+    }
+
+    public function saveSAMQ4(Request $request)
+    {
+        $request->session()->put('SAMQ4', $request->except('_token'));
+        return redirect('/thankyou');
+    }
 }

@@ -30,21 +30,14 @@ class QuestionsController extends Controller
     public function saveQ3(Request $request)
     {
         $request->session()->put('Q3', $request->except('_token'));
-        $request->session()->forget('_previous');
-        $serviceAccount = ServiceAccount::fromJsonFile(__DIR__ . '/student-emotion-analysis-d61dc-3e42dda5c936.json');
-        $firebase = (new Factory)
-            ->withServiceAccount($serviceAccount)
-            ->withDatabaseUri('https://student-emotion-analysis-d61dc.firebaseio.com/')
-            ->create();
-
-        $database = $firebase->getDatabase();
-
-        $database
-            ->getReference('QuestionSurvey')
-            ->push(session()->all());
-
-        dd('success');
 
         return redirect('/SAMQ3');
+    }
+
+    public function saveQ4(Request $request)
+    {
+        $request->session()->put('Q4', $request->except('_token'));
+
+        return redirect('/SAMQ4');
     }
 }
