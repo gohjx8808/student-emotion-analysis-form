@@ -37,7 +37,7 @@ class QuestionsController extends Controller
 
         // dd($displayedResult);
 
-        return redirect()->back()->withInput()->with(['endResult'=>$displayedResult]);
+        return redirect()->back()->withInput()->with(['endResult' => $displayedResult]);
     }
 
     public function saveQ2(Request $request)
@@ -51,20 +51,34 @@ class QuestionsController extends Controller
     public function saveQ3(Request $request)
     {
         $request->session()->put('Q3', $request->except('_token'));
+        $displayedResult = array();
+        array_push($displayedResult, $this->checkResult($request->input('Q3_1'), 'encapsulation', ''));
+        array_push($displayedResult, $this->checkResult($request->input('Q3_2'), 'string', ''));
+        array_push($displayedResult, $this->checkResult($request->input('Q3_3'), 'super', ''));
         // dd(session()->all());
-        return redirect('/SAMQ3');
+        return redirect()->back()->withInput()->with(['endResult' => $displayedResult]);
     }
 
     public function saveQ4(Request $request)
     {
         $request->session()->put('Q4', $request->except('_token'));
-        // dd(session()->all());
-        return redirect('/SAMQ4');
+        // dd($request->input());
+        $displayedResult = array();
+        array_push($displayedResult, $this->checkResult($request->input('Q4_1'), 'true', ''));
+        array_push($displayedResult, $this->checkResult($request->input('Q4_2'), 'false', 'Explanation: The
+        default case in a switch structure is optional and only used when none of the other cases match.'));
+        array_push($displayedResult, $this->checkResult($request->input('Q4_3'), 'true', ''));
+        // dd($displayedResult);
+        return redirect()->back()->withInput()->with(['endResult' => $displayedResult]);
     }
 
     public function checkResult($input, $correctAns, $explanations)
     {
         $result = 'The correct answer is ' . strtoupper($correctAns) . '.';
+        if (is_bool($input) == false) {
+            $input = strtolower($input);
+        }
+        // dd($input);
         if ($input == $correctAns) {
             $result .= ' Your answer is correct';
             $explanation = '';

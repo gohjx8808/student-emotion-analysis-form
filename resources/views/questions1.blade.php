@@ -207,13 +207,14 @@
                     Check
                 </button>
             </div>
+            <input type="hidden" value="0" id="mouseClicked" name="mouseClicked" />
         </form>
         <div style=" text-align: center;">
-            <button type="submit" class="btn btn-primary" style="width:15%" id='submit' {{old("flag")?'':'disabled'}}>
+            <button type="button" class="btn btn-primary" style="width:15%" id='submit' {{old("flag")?'':'disabled'}}
+                onclick="window.location='{{ url("SAMQ1") }}'">
                 Next
             </button>
         </div>
-        <input type="hidden" value="0" id="mouseClicked" name="mouseClicked" />
     </div>
     <script>
         $(document).ready(function() {
