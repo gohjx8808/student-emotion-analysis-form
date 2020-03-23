@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Kreait\Firebase;
+use Carbon\Carbon;
 use Kreait\Firebase\Factory;
 use Kreait\Firebase\ServiceAccount;
 
@@ -42,10 +42,10 @@ class SAMController extends Controller
 
         $database = $firebase->getDatabase();
 
-        $request->session()->forget(['_token','_previous']);
+        $request->session()->forget(['_token', '_previous']);
 
         $database
-            ->getReference('QuestionSurvey')
+            ->getReference(Carbon::now())
             ->push($request->session()->all());
 
         return redirect('/thankyou');

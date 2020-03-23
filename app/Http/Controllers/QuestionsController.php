@@ -9,7 +9,6 @@ class QuestionsController extends Controller
 {
     public function saveQ1(Request $request)
     {
-        session()->flush();
         $request->session()->put('Q1', $request->input());
         // dd(session()->all());
         $displayedResult = array();
