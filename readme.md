@@ -1,4 +1,4 @@
-This is a custom made survey form developed to collect data for future use in my Final Year Project (FYP). The taregt audience of this survey website is the students in the Faculty of Computer Science and Information Technology in the University of Malaya, ranged from variety of majors. 
+This is a custom made survey form developed to collect data for future use in my Final Year Project (FYP). The target audience of this survey website is the students in the Faculty of Computer Science and Information Technology in the University of Malaya, ranged from variety of majors and year of study. 
 <H3>Objective</H3>
 The objective of this survey form is to collect emotions of students after completing some questions regarding the basic programming of Java language of different format.
 <H3>Framework</H3>
