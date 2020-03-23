@@ -208,6 +208,7 @@
                 </button>
             </div>
             <input type="hidden" value="0" id="mouseClicked" name="mouseClicked" />
+            <input type="hidden" value="0" id="timeTaken" name="timeTaken"/>
         </form>
         <div style=" text-align: center;">
             <button type="button" class="btn btn-primary" style="width:15%" id='submit' {{old("flag")?'':'disabled'}}
@@ -224,6 +225,14 @@
 
                 $('#mouseClicked').val(mouseClickedInt);
             })
+
+            setInterval(function(){
+                let counter=$('#timeTaken').val();
+                counter++;
+
+                $('#timeTaken').val(counter);
+            },1000)
+
         })
     </script>
 </body>

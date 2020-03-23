@@ -108,14 +108,6 @@
         </div>
     </form>
     <script>
-        $(document).ready(function() {
-                window.addEventListener('mousedown',function(){
-                    let mouseClickedInt=$("#mouseClicked").val();
-                    mouseClickedInt++;
-
-                    $('#mouseClicked').val(mouseClickedInt);
-                })
-            })
     </script>
 </body>
 
