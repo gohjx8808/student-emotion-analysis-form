@@ -10,6 +10,7 @@ class QuestionsController extends Controller
     public function saveQ1(Request $request)
     {
         $request->session()->put('Q1', $request->input());
+
         // dd(session()->all());
         $displayedResult = array();
 
@@ -34,6 +35,13 @@ class QuestionsController extends Controller
         As there is only one variable(type) in the object whose value is a. So it will be changed to b and printed
         two times. The super keyword here is of no use.'));
 
+        $correct = $this->checkCorrectness($displayedResult);
+        $added = $request->session()->get('Q1');
+        $added['correct'] = strval($correct) . '/3';
+        $request->session()->put('Q1', $added);
+
+        // dd(session()->all());
+
         // dd($displayedResult);
 
         return redirect()->back()->withInput()->with(['endResult' => $displayedResult]);
@@ -55,6 +63,12 @@ class QuestionsController extends Controller
         array_push($displayedResult, $this->checkResult($request->input('Q3_2'), 'string', ''));
         array_push($displayedResult, $this->checkResult($request->input('Q3_3'), 'super', ''));
         // dd(session()->all());
+
+        $correct = $this->checkCorrectness($displayedResult);
+        $added = $request->session()->get('Q3');
+        $added['correct'] = strval($correct) . '/3';
+        $request->session()->put('Q3', $added);
+
         return redirect()->back()->withInput()->with(['endResult' => $displayedResult]);
     }
 
@@ -68,6 +82,12 @@ class QuestionsController extends Controller
         default case in a switch structure is optional and only used when none of the other cases match.'));
         array_push($displayedResult, $this->checkResult($request->input('Q4_3'), 'true', ''));
         // dd($displayedResult);
+
+        $correct = $this->checkCorrectness($displayedResult);
+        $added = $request->session()->get('Q4');
+        $added['correct'] = strval($correct) . '/3';
+        $request->session()->put('Q4', $added);
+
         return redirect()->back()->withInput()->with(['endResult' => $displayedResult]);
     }
 
@@ -89,5 +109,18 @@ class QuestionsController extends Controller
         }
 
         return array($result, $explanation, $flag);
+    }
+
+    public function checkCorrectness($array)
+    {
+        $correct = 0;
+
+        for ($x = 0; $x < count($array); $x++) {
+            if ($array[$x][2]) {
+                $correct++;
+            }
+        }
+
+        return $correct;
     }
 }
