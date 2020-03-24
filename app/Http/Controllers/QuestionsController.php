@@ -11,7 +11,7 @@ class QuestionsController extends Controller
     {
         $request->session()->put('Q1', $request->input());
 
-        dd(session()->all());
+        // dd(session()->all());
         $displayedResult = array();
 
         array_push($displayedResult, $this->checkResult($request->input('Q1_1'), 'a', 'Explanation : static
