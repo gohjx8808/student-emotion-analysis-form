@@ -70,23 +70,6 @@
             </button>
         </div>
     </form>
-    <script>
-        $(document).ready(function() {
-                window.addEventListener('mousedown',function(){
-                    let mouseClickedInt=$("#mouseClicked").val();
-                    mouseClickedInt++;
-
-                    $('#mouseClicked').val(mouseClickedInt);
-                })
-
-                setInterval(function(){
-                    let counter=$('#timeTaken').val();
-                    counter++;
-
-                    $('#timeTaken').val(counter);
-                },1000)
-            })
-    </script>
+    <script src="{{asset('js/custom.js')}}" type="text/javascript"></script>
 </body>
-
 </html>
