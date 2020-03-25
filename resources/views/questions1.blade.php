@@ -210,6 +210,7 @@
             <input type="hidden" value="0" id="mouseClicked" name="mouseClicked" />
             <input type="hidden" value="0" id="timeTaken" name="timeTaken"/>
             <input type="hidden" value="0" id="mouseWheelCounter" name="mouseWheelCounter"/>
+            <input type="hidden" value="[0,0,0,0]" id="quadrantsCounter" name="quadrantsCounter"/>
         </form>
         <div style=" text-align: center;">
             <button type="button" class="btn btn-primary" style="width:15%" id='submit' {{old("flag")?'':'disabled'}}
