@@ -66,6 +66,7 @@
         <input type="hidden" value="0" id="timeTaken" name="timeTaken"/>
         <input type="hidden" value="0" id="mouseWheelCounter" name="mouseWheelCounter"/>
         <input type="hidden" value="[0,0,0,0]" id="quadrantsCounter" name="quadrantsCounter"/>
+        <input type="hidden" value="[0,0,0,0]" id="quadrantsTimer" name="quadrantsTimer"/>
         <div style="text-align: center;">
             <button type="submit" class="btn btn-primary" style="width:15%" id='submit'>
                 Next
