@@ -334,80 +334,80 @@
                         <td>It is too difficult to remember the syntax</td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="P1-difficultSyntax"
-                                value="stronglyDisagree" required />
+                                value="1" required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P1-difficultSyntax" value="disagree" />
+                            <input class="form-control-input" type="radio" name="P1-difficultSyntax" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P1-difficultSyntax" value="neutral" />
+                            <input class="form-control-input" type="radio" name="P1-difficultSyntax" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P1-difficultSyntax" value="agree" />
+                            <input class="form-control-input" type="radio" name="P1-difficultSyntax" value="4" />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="P1-difficultSyntax"
-                                value="stronglyAgree" />
+                                value="5" />
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
                         <td>I do not understand the logic of the programming.</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P2-noLogic" value="stronglyDisagree"
+                            <input class="form-control-input" type="radio" name="P2-noLogic" value="1"
                                 required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P2-noLogic" value="disagree" />
+                            <input class="form-control-input" type="radio" name="P2-noLogic" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P2-noLogic" value="neutral" />
+                            <input class="form-control-input" type="radio" name="P2-noLogic" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P2-noLogic" value="agree" />
+                            <input class="form-control-input" type="radio" name="P2-noLogic" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P2-noLogic" value="stronglyAgree" />
+                            <input class="form-control-input" type="radio" name="P2-noLogic" value="5" />
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">3</th>
                         <td>The materials for learning do not provide suitable examples.</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P3-noExample" value="stronglyDisagree"
+                            <input class="form-control-input" type="radio" name="P3-noExample" value="1"
                                 required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P3-noExample" value="disagree" />
+                            <input class="form-control-input" type="radio" name="P3-noExample" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P3-noExample" value="neutral" />
+                            <input class="form-control-input" type="radio" name="P3-noExample" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P3-noExample" value="agree" />
+                            <input class="form-control-input" type="radio" name="P3-noExample" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P3-noExample" value="stronglyAgree" />
+                            <input class="form-control-input" type="radio" name="P3-noExample" value="5" />
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">4</th>
                         <td>It requires certain skills that I do not have.</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P4-noSkill" value="stronglyDisagree"
+                            <input class="form-control-input" type="radio" name="P4-noSkill" value="1"
                                 required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P4-noSkill" value="disagree" />
+                            <input class="form-control-input" type="radio" name="P4-noSkill" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P4-noSkill" value="neutral" />
+                            <input class="form-control-input" type="radio" name="P4-noSkill" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P4-noSkill" value="agree" />
+                            <input class="form-control-input" type="radio" name="P4-noSkill" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P4-noSkill" value="stronglyAgree" />
+                            <input class="form-control-input" type="radio" name="P4-noSkill" value="5" />
                         </td>
                     </tr>
                     <tr>
@@ -415,20 +415,20 @@
                         <td>It is not enough interesting, exciting, or provoking for me.</td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="P5-notInteresting"
-                                value="stronglyDisagree" required />
+                                value="1" required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P5-notInteresting" value="disagree" />
+                            <input class="form-control-input" type="radio" name="P5-notInteresting" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P5-notInteresting" value="neutral" />
+                            <input class="form-control-input" type="radio" name="P5-notInteresting" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P5-notInteresting" value="agree" />
+                            <input class="form-control-input" type="radio" name="P5-notInteresting" value="4" />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="P5-notInteresting"
-                                value="stronglyAgree" />
+                                value="5" />
                         </td>
                     </tr>
                 </tbody>
@@ -453,220 +453,220 @@
                         <th scope="row">1</th>
                         <td>Bored</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F1-bored" value="stronglyDisagree"
+                            <input class="form-control-input" type="radio" name="F1-bored" value="1"
                                 required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F1-bored" value="disagree" />
+                            <input class="form-control-input" type="radio" name="F1-bored" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F1-bored" value="neutral" />
+                            <input class="form-control-input" type="radio" name="F1-bored" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F1-bored" value="agree" />
+                            <input class="form-control-input" type="radio" name="F1-bored" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F1-bored" value="stronglyAgree" />
+                            <input class="form-control-input" type="radio" name="F1-bored" value="5" />
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
                         <td>Happy</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F2-happy" value="stronglyDisagree"
+                            <input class="form-control-input" type="radio" name="F2-happy" value="1"
                                 required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F2-happy" value="disagree" />
+                            <input class="form-control-input" type="radio" name="F2-happy" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F2-happy" value="neutral" />
+                            <input class="form-control-input" type="radio" name="F2-happy" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F2-happy" value="agree" />
+                            <input class="form-control-input" type="radio" name="F2-happy" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F2-happy" value="stronglyAgree" />
+                            <input class="form-control-input" type="radio" name="F2-happy" value="5" />
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">3</th>
                         <td>Frustrated</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F3-frustrated" value="stronglyDisagree"
+                            <input class="form-control-input" type="radio" name="F3-frustrated" value="1"
                                 required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F3-frustrated" value="disagree" />
+                            <input class="form-control-input" type="radio" name="F3-frustrated" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F3-frustrated" value="neutral" />
+                            <input class="form-control-input" type="radio" name="F3-frustrated" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F3-frustrated" value="agree" />
+                            <input class="form-control-input" type="radio" name="F3-frustrated" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F3-frustrated" value="stronglyAgree" />
+                            <input class="form-control-input" type="radio" name="F3-frustrated" value="5" />
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">4</th>
                         <td>Relaxed</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F4-relaxed" value="stronglyDisagree"
+                            <input class="form-control-input" type="radio" name="F4-relaxed" value="1"
                                 required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F4-relaxed" value="disagree" />
+                            <input class="form-control-input" type="radio" name="F4-relaxed" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F4-relaxed" value="neutral" />
+                            <input class="form-control-input" type="radio" name="F4-relaxed" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F4-relaxed" value="agree" />
+                            <input class="form-control-input" type="radio" name="F4-relaxed" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F4-relaxed" value="stronglyAgree" />
+                            <input class="form-control-input" type="radio" name="F4-relaxed" value="5" />
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">5</th>
                         <td>Enthusiastic</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F5-enthusiastic" value="stronglyDisagree"
+                            <input class="form-control-input" type="radio" name="F5-enthusiastic" value="1"
                                 required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F5-enthusiastic" value="disagree" />
+                            <input class="form-control-input" type="radio" name="F5-enthusiastic" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F5-enthusiastic" value="neutral" />
+                            <input class="form-control-input" type="radio" name="F5-enthusiastic" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F5-enthusiastic" value="agree" />
+                            <input class="form-control-input" type="radio" name="F5-enthusiastic" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F5-enthusiastic" value="stronglyAgree" />
+                            <input class="form-control-input" type="radio" name="F5-enthusiastic" value="5" />
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">6</th>
                         <td>Idle</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F6-idle" value="stronglyDisagree"
+                            <input class="form-control-input" type="radio" name="F6-idle" value="1"
                                 required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F6-idle" value="disagree" />
+                            <input class="form-control-input" type="radio" name="F6-idle" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F6-idle" value="neutral" />
+                            <input class="form-control-input" type="radio" name="F6-idle" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F6-idle" value="agree" />
+                            <input class="form-control-input" type="radio" name="F6-idle" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F6-idle" value="stronglyAgree" />
+                            <input class="form-control-input" type="radio" name="F6-idle" value="5" />
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">7</th>
                         <td>Excited</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F7-excited" value="stronglyDisagree"
+                            <input class="form-control-input" type="radio" name="F7-excited" value="1"
                                 required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F7-excited" value="disagree" />
+                            <input class="form-control-input" type="radio" name="F7-excited" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F7-excited" value="neutral" />
+                            <input class="form-control-input" type="radio" name="F7-excited" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F7-excited" value="agree" />
+                            <input class="form-control-input" type="radio" name="F7-excited" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F7-excited" value="stronglyAgree" />
+                            <input class="form-control-input" type="radio" name="F7-excited" value="5" />
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">8</th>
                         <td>Dissatisfied</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F8-dissatisfied" value="stronglyDisagree"
+                            <input class="form-control-input" type="radio" name="F8-dissatisfied" value="1"
                                 required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F8-dissatisfied" value="disagree" />
+                            <input class="form-control-input" type="radio" name="F8-dissatisfied" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F8-dissatisfied" value="neutral" />
+                            <input class="form-control-input" type="radio" name="F8-dissatisfied" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F8-dissatisfied" value="agree" />
+                            <input class="form-control-input" type="radio" name="F8-dissatisfied" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F8-dissatisfied" value="stronglyAgree" />
+                            <input class="form-control-input" type="radio" name="F8-dissatisfied" value="5" />
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">9</th>
                         <td>Motivated</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F9-motivated" value="stronglyDisagree"
+                            <input class="form-control-input" type="radio" name="F9-motivated" value="1"
                                 required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F9-motivated" value="disagree" />
+                            <input class="form-control-input" type="radio" name="F9-motivated" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F9-motivated" value="neutral" />
+                            <input class="form-control-input" type="radio" name="F9-motivated" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F9-motivated" value="agree" />
+                            <input class="form-control-input" type="radio" name="F9-motivated" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F9-motivated" value="stronglyAgree" />
+                            <input class="form-control-input" type="radio" name="F9-motivated" value="5" />
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">10</th>
                         <td>Focused</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F10-focused" value="stronglyDisagree"
+                            <input class="form-control-input" type="radio" name="F10-focused" value="1"
                                 required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F10-focused" value="disagree" />
+                            <input class="form-control-input" type="radio" name="F10-focused" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F10-focused" value="neutral" />
+                            <input class="form-control-input" type="radio" name="F10-focused" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F10-focused" value="agree" />
+                            <input class="form-control-input" type="radio" name="F10-focused" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F10-focused" value="stronglyAgree" />
+                            <input class="form-control-input" type="radio" name="F10-focused" value="5" />
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">11</th>
                         <td>Stressful</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F11-stressful" value="stronglyDisagree"
+                            <input class="form-control-input" type="radio" name="F11-stressful" value="1"
                                 required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F11-stressful" value="disagree" />
+                            <input class="form-control-input" type="radio" name="F11-stressful" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F11-stressful" value="neutral" />
+                            <input class="form-control-input" type="radio" name="F11-stressful" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F11-stressful" value="agree" />
+                            <input class="form-control-input" type="radio" name="F11-stressful" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F11-stressful" value="stronglyAgree" />
+                            <input class="form-control-input" type="radio" name="F11-stressful" value="5" />
                         </td>
                     </tr>
                 </tbody>
@@ -692,200 +692,200 @@
                         <th scope="row">1</th>
                         <td>I usually use tutorials and examples.</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A1-tutorial" value="stronglyDisagree"
+                            <input class="form-control-input" type="radio" name="A1-tutorial" value="1"
                                 required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A1-tutorial" value="disagree" />
+                            <input class="form-control-input" type="radio" name="A1-tutorial" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A1-tutorial" value="neutral" />
+                            <input class="form-control-input" type="radio" name="A1-tutorial" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A1-tutorial" value="agree" />
+                            <input class="form-control-input" type="radio" name="A1-tutorial" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A1-tutorial" value="stronglyAgree" />
+                            <input class="form-control-input" type="radio" name="A1-tutorial" value="5" />
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
                         <td>I focus on the coding with all my attention.</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A2-fullAttention" value="stronglyDisagree"
+                            <input class="form-control-input" type="radio" name="A2-fullAttention" value="1"
                                 required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A2-fullAttention" value="disagree" />
+                            <input class="form-control-input" type="radio" name="A2-fullAttention" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A2-fullAttention" value="neutral" />
+                            <input class="form-control-input" type="radio" name="A2-fullAttention" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A2-fullAttention" value="agree" />
+                            <input class="form-control-input" type="radio" name="A2-fullAttention" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A2-fullAttention" value="stronglyAgree" />
+                            <input class="form-control-input" type="radio" name="A2-fullAttention" value="5" />
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">3</th>
                         <td>I like to finish my coding task as soon as possible.</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A3-ASAP" value="stronglyDisagree"
+                            <input class="form-control-input" type="radio" name="A3-ASAP" value="1"
                                 required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A3-ASAP" value="disagree" />
+                            <input class="form-control-input" type="radio" name="A3-ASAP" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A3-ASAP" value="neutral" />
+                            <input class="form-control-input" type="radio" name="A3-ASAP" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A3-ASAP" value="agree" />
+                            <input class="form-control-input" type="radio" name="A3-ASAP" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A3-ASAP" value="stronglyAgree" />
+                            <input class="form-control-input" type="radio" name="A3-ASAP" value="5" />
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">4</th>
                         <td>I get distracted easily by other stimuli.</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A4-distractedEasily" value="stronglyDisagree"
+                            <input class="form-control-input" type="radio" name="A4-distractedEasily" value="1"
                                 required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A4-distractedEasily" value="disagree" />
+                            <input class="form-control-input" type="radio" name="A4-distractedEasily" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A4-distractedEasily" value="neutral" />
+                            <input class="form-control-input" type="radio" name="A4-distractedEasily" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A4-distractedEasily" value="agree" />
+                            <input class="form-control-input" type="radio" name="A4-distractedEasily" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A4-distractedEasily" value="stronglyAgree" />
+                            <input class="form-control-input" type="radio" name="A4-distractedEasily" value="5" />
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">5</th>
                         <td>I am usually interested and curious about the coding I am writing.</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A5-curious" value="stronglyDisagree"
+                            <input class="form-control-input" type="radio" name="A5-curious" value="1"
                                 required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A5-curious" value="disagree" />
+                            <input class="form-control-input" type="radio" name="A5-curious" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="curious" value="neutral" />
+                            <input class="form-control-input" type="radio" name="curious" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A5-curious" value="agree" />
+                            <input class="form-control-input" type="radio" name="A5-curious" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A5-curious" value="stronglyAgree" />
+                            <input class="form-control-input" type="radio" name="A5-curious" value="5" />
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">6</th>
                         <td>I usually lose the notion of time when coding.</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A6-veryFocus" value="stronglyDisagree"
+                            <input class="form-control-input" type="radio" name="A6-veryFocus" value="1"
                                 required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A6-veryFocus" value="disagree" />
+                            <input class="form-control-input" type="radio" name="A6-veryFocus" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A6-veryFocus" value="neutral" />
+                            <input class="form-control-input" type="radio" name="A6-veryFocus" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A6-veryFocus" value="agree" />
+                            <input class="form-control-input" type="radio" name="A6-veryFocus" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A6-veryFocus" value="stronglyAgree" />
+                            <input class="form-control-input" type="radio" name="A6-veryFocus" value="5" />
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">7</th>
                         <td>I like to code challenging problems.</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A7-likeChallenging" value="stronglyDisagree"
+                            <input class="form-control-input" type="radio" name="A7-likeChallenging" value="1"
                                 required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A7-likeChallenging" value="disagree" />
+                            <input class="form-control-input" type="radio" name="A7-likeChallenging" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A7-likeChallenging" value="neutral" />
+                            <input class="form-control-input" type="radio" name="A7-likeChallenging" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A7-likeChallenging" value="agree" />
+                            <input class="form-control-input" type="radio" name="A7-likeChallenging" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A7-likeChallenging" value="stronglyAgree" />
+                            <input class="form-control-input" type="radio" name="A7-likeChallenging" value="5" />
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">8</th>
                         <td>I am not sure whether my code is producing the right result.</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A8-doubt" value="stronglyDisagree"
+                            <input class="form-control-input" type="radio" name="A8-doubt" value="1"
                                 required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A8-doubt" value="disagree" />
+                            <input class="form-control-input" type="radio" name="A8-doubt" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A8-doubt" value="neutral" />
+                            <input class="form-control-input" type="radio" name="A8-doubt" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A8-doubt" value="agree" />
+                            <input class="form-control-input" type="radio" name="A8-doubt" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A8-doubt" value="stronglyAgree" />
+                            <input class="form-control-input" type="radio" name="A8-doubt" value="5" />
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">9</th>
                         <td>I like to learn and try new things when coding.</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A9-learnNewThings" value="stronglyDisagree"
+                            <input class="form-control-input" type="radio" name="A9-learnNewThings" value="1"
                                 required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A9-learnNewThings" value="disagree" />
+                            <input class="form-control-input" type="radio" name="A9-learnNewThings" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A9-learnNewThings" value="neutral" />
+                            <input class="form-control-input" type="radio" name="A9-learnNewThings" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A9-learnNewThings" value="agree" />
+                            <input class="form-control-input" type="radio" name="A9-learnNewThings" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A9-learnNewThings" value="stronglyAgree" />
+                            <input class="form-control-input" type="radio" name="A9-learnNewThings" value="5" />
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">10</th>
                         <td>I finish the coding when I have given all my best.</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A10-giveTheBest" value="stronglyDisagree"
+                            <input class="form-control-input" type="radio" name="A10-giveTheBest" value="1"
                                 required />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A10-giveTheBest" value="disagree" />
+                            <input class="form-control-input" type="radio" name="A10-giveTheBest" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A10-giveTheBest" value="neutral" />
+                            <input class="form-control-input" type="radio" name="A10-giveTheBest" value="3" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A10-giveTheBest" value="agree" />
+                            <input class="form-control-input" type="radio" name="A10-giveTheBest" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A10-giveTheBest" value="stronglyAgree" />
+                            <input class="form-control-input" type="radio" name="A10-giveTheBest" value="5" />
                         </td>
                     </tr>
                 </tbody>
