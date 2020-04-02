@@ -14,31 +14,24 @@ class QuestionsController extends Controller
         // dd(session()->all());
         $displayedResult = array();
 
-        array_push($displayedResult, $this->checkResult($request->input('Q1_1'), 'a', 'Explanation : static
-        variable is class level variable. If we create multiple objects of class and all objects can point same
-        reference of static variable means If you can change the value of static variable in any object, then
-        compiler automatically updates the value of all object static variables.'));
-
-        array_push($displayedResult, $this->checkResult($request->input('Q1_2'), 'a', 'Explanation: When a
-        constructor is marked as private, the only way to create a new object of that class from some external
-        class is using a method that creates a new object, as defined above in the program. The method create()
-        is responsible for creation of Temp object from some other external class. Once the object is created, its
-        method can be invoked from the class in which the object is created.'));
-
-        array_push($displayedResult, $this->checkResult($request->input('Q1_3'), 'a', 'Explanation : The statement
-        new Beta().go() executes in two phases. In first phase Beta class constructor is called. There is no
-        instance member present in Beta class. So now Beta class constructor is executed. As Beta class extends
-        Alpha class, so call goes to Alpha class constructor as first statement by default(Put by the compiler)
-        is super() in the Beta class constructor. Now as one instance variable(type) is present in Alpha class,
-        so it will get memory and now Alpha class constructor is executed, then call return to Beta class
-        constructor next statement. So alpha beta is printed. In second phase go() method is called on this object.
-        As there is only one variable(type) in the object whose value is a. So it will be changed to b and printed
-        two times. The super keyword here is of no use.'));
-
-        $correct = $this->checkCorrectness($displayedResult);
-        $added = $request->session()->get('Q1');
-        $added['correct'] = strval($correct) . '/3';
-        $request->session()->put('Q1', $added);
+        $random = 2;
+        if ($random == 1) {
+            array_push($displayedResult, $this->checkMCQ($request->input('Q1_1'), 'd', 'Explanation : Inside main, 2 integer variables a, b are declared.
+            By following operator precedence,
+            a = 12 + 21 * 3 - 9 / 2 = 12 + 63 - 9 / 2 = 12 + 63 - 4 = 75 - 4 = 71,
+            b = 14 - 32 * 4 + 175 / 8 - 3 = 14 - 128 + 175 / 8 - 3 = 14 - 128 + 21 - 3 = -114 + 21 - 3 = -93 - 3 = -96
+            Then first if condition is checked, ++a > 71 && --b < 20 is 72 > 71 && -97 < 20 = true && true = true
+            So, if is executed and value of a which is 72 and b which is -97 are printed.
+            Then next if condition is checked, b-- == -97 || a-- < 100 is -97 == -97 || a-- < 100 is
+            (true || anything(either true or false)) = true
+            (by short circuiting, as only first part(b-- == -97) of the or (||) condition suffices to evaluate the result, so the second part (a-- < 100) is not executed and hence a is not decremented)
+            So only b decrements and display statement is executed and prints value of a and b as 72 and -98 respectively.'));
+        } else if ($random == 2) {
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q1_1A'), '>'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q1_1B'), '<'));
+            array_push($displayedResult, $this->checkMultipleSelect($request->input('Q1_1C'), '='));
+            array_push($displayedResult, $this->checkMultipleSelect($request->input('Q1_1D'), '<'));
+        }
 
         // dd(session()->all());
 
@@ -91,7 +84,7 @@ class QuestionsController extends Controller
         return redirect()->back()->withInput()->with(['endResult' => $displayedResult]);
     }
 
-    public function checkResult($input, $correctAns, $explanations)
+    public function checkMCQ($input, $correctAns, $explanations)
     {
         $result = 'The correct answer is ' . strtoupper($correctAns) . '.';
         if (is_bool($input) == false) {
@@ -111,16 +104,33 @@ class QuestionsController extends Controller
         return array($result, $explanation, $flag);
     }
 
-    public function checkCorrectness($array)
+    public function checkOnlyOneSelect($input, $correctAns)
     {
-        $correct = 0;
-
-        for ($x = 0; $x < count($array); $x++) {
-            if ($array[$x][2]) {
-                $correct++;
-            }
+        if (is_bool($input) == false) {
+            $input = strtolower($input);
+        }
+        // dd($input);
+        if ($input == $correctAns) {
+            $flag = true;
+        } else {
+            $flag = false;
         }
 
-        return $correct;
+        return $flag;
+    }
+
+    public function checkMultipleSelect($input, $correctAns)
+    {
+        if (is_bool($input) == false) {
+            $input = strtolower($input);
+        }
+        // dd($input);
+        if ($input != $correctAns) {
+            $flag = true;
+        } else {
+            $flag = false;
+        }
+
+        return $flag;
     }
 }

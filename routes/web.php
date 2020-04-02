@@ -22,7 +22,7 @@ Route::get('/', function () {
 Route::post('/personaldetail/post', 'PersonalDetailController@update');
 
 Route::get('/Q1', function () {
-    return view('questions1');
+    return view('Q1');
 });
 
 Route::post('/Q1/save','QuestionsController@saveQ1');
@@ -34,7 +34,7 @@ Route::get('/SAMQ1',function(){
 Route::post('/SAMQ1/save','SAMController@saveSAMQ1');
 
 Route::get('/Q2',function(){
-    return view('questions2');
+    return view('Q2');
 });
 
 Route::post('/Q2/save','QuestionsController@saveQ2');
@@ -46,7 +46,7 @@ Route::get('/SAMQ2',function(){
 Route::post('/SAMQ2/save','SAMController@saveSAMQ2');
 
 Route::get('/Q3',function(){
-    return view('questions3');
+    return view('Q3');
 });
 
 Route::post('/Q3/save','QuestionsController@saveQ3');
@@ -58,7 +58,7 @@ Route::get('/SAMQ3',function(){
 Route::post('/SAMQ3/save','SAMController@saveSAMQ3');
 
 Route::get('/Q4',function(){
-    return view('questions4');
+    return view('Q4');
 });
 
 Route::post('/Q4/save','QuestionsController@saveQ4');
