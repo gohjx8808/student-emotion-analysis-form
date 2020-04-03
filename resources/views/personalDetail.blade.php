@@ -779,7 +779,7 @@
                             <input class="form-control-input" type="radio" name="A5-curious" value="2" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="curious" value="3" />
+                            <input class="form-control-input" type="radio" name="A5-curious" value="3" />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="A5-curious" value="4" />

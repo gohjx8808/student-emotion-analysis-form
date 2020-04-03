@@ -21,9 +21,7 @@ Route::get('/', function () {
 
 Route::post('/personaldetail/post', 'PersonalDetailController@update');
 
-Route::get('/Q1', function () {
-    return view('Q1');
-});
+Route::get('/Q1', 'QuestionsController@displayQ1');
 
 Route::post('/Q1/save','QuestionsController@saveQ1');
 

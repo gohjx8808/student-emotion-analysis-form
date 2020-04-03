@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class QuestionsController extends Controller
 {
+
+    public function displayQ1(Request $request)
+    {
+        $Qformat = rand(1, 4);
+        return view('Q1')->with('Qformat', $Qformat);
+    }
+
     public function saveQ1(Request $request)
     {
         $request->session()->put('Q1', $request->input());
@@ -14,23 +21,17 @@ class QuestionsController extends Controller
         // dd(session()->all());
         $displayedResult = array();
 
-        $random = 2;
+        $random = $request->input('Qformat');
         if ($random == 1) {
-            array_push($displayedResult, $this->checkMCQ($request->input('Q1_1'), 'd', 'Explanation : Inside main, 2 integer variables a, b are declared.
-            By following operator precedence,
-            a = 12 + 21 * 3 - 9 / 2 = 12 + 63 - 9 / 2 = 12 + 63 - 4 = 75 - 4 = 71,
-            b = 14 - 32 * 4 + 175 / 8 - 3 = 14 - 128 + 175 / 8 - 3 = 14 - 128 + 21 - 3 = -114 + 21 - 3 = -93 - 3 = -96
-            Then first if condition is checked, ++a > 71 && --b < 20 is 72 > 71 && -97 < 20 = true && true = true
-            So, if is executed and value of a which is 72 and b which is -97 are printed.
-            Then next if condition is checked, b-- == -97 || a-- < 100 is -97 == -97 || a-- < 100 is
-            (true || anything(either true or false)) = true
-            (by short circuiting, as only first part(b-- == -97) of the or (||) condition suffices to evaluate the result, so the second part (a-- < 100) is not executed and hence a is not decremented)
-            So only b decrements and display statement is executed and prints value of a and b as 72 and -98 respectively.'));
-        } else if ($random == 2) {
-            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q1_1A'), '>'));
-            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q1_1B'), '<'));
-            array_push($displayedResult, $this->checkMultipleSelect($request->input('Q1_1C'), '='));
-            array_push($displayedResult, $this->checkMultipleSelect($request->input('Q1_1D'), '<'));
+            array_push($displayedResult, $this->checkMCQ($request->input('Q1_1'), 'c', ''));
+        } else if ($random == 2 || $random == 3) {
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q1_1A'), 'x'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q1_1B'), 'y'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q1_1C'), 'z'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q1_1D'), 'x'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q1_1E'), 'y'));
+        } else if ($random == 4) {
+            array_push($displayedResult, 'Thank you for the answer. We will look through it.');
         }
 
         // dd(session()->all());
@@ -92,7 +93,7 @@ class QuestionsController extends Controller
         }
         // dd($input);
         if ($input == $correctAns) {
-            $result .= ' Your answer is correct';
+            $result .= ' Your answer is correct.';
             $explanation = '';
             $flag = true;
         } else {

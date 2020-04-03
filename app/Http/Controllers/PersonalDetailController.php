@@ -12,6 +12,7 @@ class PersonalDetailController extends Controller
     {
         session()->flush();
         $request->session()->put('PersonalDetails', $request->input());
+
         // dd(session()->all());
         return redirect('/Q1');
     }
