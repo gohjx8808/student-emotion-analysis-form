@@ -50,12 +50,12 @@
             trying the questions before.
         </p>
         <div style="text-align: center">
-            <label for="SAM3" class="white-label">How do you feel?</label>
+            <label for="SAM1" class="white-label">How do you feel?</label>
             <br />
             <img src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/SAM1.png?alt=media&token=414e2593-346a-49b7-b3c0-8045ba9dcce7" class="img-fluid" alt="SAM1" />
             <br />
             <div class="form-group">
-                <div class="form-control" style="width: 40.5%; margin:auto">
+                <div class="form-control" style="width: 620px; margin:auto">
                     <input type="radio" name="SAM1" style="margin-left: 4.3%" value="V1" required />
                     <input type="radio" name="SAM1" class="radio-center" value="V2" />
                     <input type="radio" name="SAM1" class="radio-center" value="V3" />
@@ -67,12 +67,12 @@
                     <input type="radio" name="SAM1" class="radio-center" value="V9" />
                 </div>
             </div>
-            <label for="SAM3" class="white-label">How strong do you feel?</label>
+            <label for="SAM2" class="white-label">How strong do you feel?</label>
             <br />
             <img src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/SAM2.png?alt=media&token=9a832e2a-f8d0-43a1-875a-b4e1dd6fba14" class="img-fluid" alt="SAM2" />
             <br />
             <div class="form-group">
-                <div class="form-control" style="width: 40.5%;margin:auto">
+                <div class="form-control" style="width: 620px;margin:auto">
                     <input type="radio" name="SAM2" style="margin-left: 4.3%" value="A1" required />
                     <input type="radio" name="SAM2" class="radio-center" value="A2" />
                     <input type="radio" name="SAM2" class="radio-center" value="A3" />
@@ -89,7 +89,7 @@
             <img src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/SAM3.png?alt=media&token=d43d4bdf-cebe-4f74-a448-4280bf0c3b81" class="img-fluid" alt="SAM3" />
             <br />
             <div class="form-group">
-                <div class="form-control" style="width: 40.5%;margin:auto">
+                <div class="form-control" style="width: 620px;margin:auto">
                     <input type="radio" name="SAM3" style="margin-left: 4.3%;" value="D1" required />
                     <input type="radio" name="SAM3" class="radio-center" value="D2" />
                     <input type="radio" name="SAM3" class="radio-center" value="D3" />
