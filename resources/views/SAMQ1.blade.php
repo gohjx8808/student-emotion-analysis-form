@@ -44,7 +44,7 @@
             Please answer the questions as best as you can. Good luck!
         </p>
         <hr style="background-color:white" />
-        <p class="white-label"><u>Question 1: MCQ</u></p>
+        <p class="white-label"><u>Question 1</u></p>
         <p class="white-label">
             Please choose the options that best matches your emotion after
             trying the question before.
@@ -101,7 +101,6 @@
                     <input type="radio" name="SAM3" class="radio-center" value="D9" />
                 </div>
             </div>
-            <input type="hidden" value="0" id="mouseClicked" name="mouseClicked"/>
             <button type="submit" class="btn btn-primary" style="width:15%" id="submit">
                 Next
             </button>

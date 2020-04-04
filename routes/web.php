@@ -31,9 +31,7 @@ Route::get('/SAMQ1',function(){
 
 Route::post('/SAMQ1/save','SAMController@saveSAMQ1');
 
-Route::get('/Q2',function(){
-    return view('Q2');
-});
+Route::get('/Q2','QuestionsController@displayQ2');
 
 Route::post('/Q2/save','QuestionsController@saveQ2');
 
@@ -43,9 +41,7 @@ Route::get('/SAMQ2',function(){
 
 Route::post('/SAMQ2/save','SAMController@saveSAMQ2');
 
-Route::get('/Q3',function(){
-    return view('Q3');
-});
+Route::get('/Q3','QuestionsController@displayQ3');
 
 Route::post('/Q3/save','QuestionsController@saveQ3');
 

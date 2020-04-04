@@ -101,7 +101,6 @@
                     <input type="radio" name="SAM3" class="radio-center" value="D9" />
                 </div>
             </div>
-            <input type="hidden" value="0" id="mouseClicked" name="mouseClicked"/>
             <button type="submit" class="btn btn-primary" style="width:15%" id="submit">
                 Next
             </button>

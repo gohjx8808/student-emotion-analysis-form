@@ -84,7 +84,7 @@
             <div class="form-group">
                 @if($Qformat!=null)
                 {{-- mcq --}}
-                @if($Qformat==1){
+                @if($Qformat==1)
                 <div>
                     <label for=" Q1" class="white-label" style="margin-top: 15px">
                         What will be the output of the following program?</label>
@@ -156,10 +156,9 @@
                     </p>
                     @endif
                 </div>
-                }
-                @elseif($Qformat==2){
+                @elseif($Qformat==2)
                 {{-- matching --}}
-                <div style="display: {{$Qformat==2?'block':'none'}}">
+                <div>
                     <label for=" Q1" class="white-label" style="margin-top: 15px">
                         Please select the appropriate input to produce the following output.</label>
                     <p class="programming-bg" style="font-weight:bold">Input: x = 900.23 y = 23.45 z =
@@ -269,10 +268,9 @@
                                 </p>
                     </div>
                 </div>
-                }
-                @elseif($Qformat==3){
+                @elseif($Qformat==3)
                 {{-- fill-in-blank --}}
-                <div style="display: {{$Qformat==3?'block':'none'}}">
+                <div>
                     <label for=" Q1" class="white-label" style="margin-top: 15px">
                         Please fill in the approriate variables to produce the following output.</label>
                     <p class="programming-bg" style="font-weight:bold">Input: x = 1.2234 y = 7.823 z = 1080.32
@@ -362,10 +360,9 @@
                                 </p>
                     </div>
                 </div>
-                }
-                @elseif($Qformat==4){
+                @elseif($Qformat==4)
                 {{-- code --}}
-                <div style="display: {{$Qformat==4?'block':'none'}}">
+                <div>
                     <label for=" Q1" class="white-label" style="margin-top: 15px">
                         Please write a program that accepts three numbers from the user and prints "increasing" if the
                         numbers are in increasing order, "decreasing" if the numbers are in decreasing order, and
@@ -380,7 +377,6 @@
                     </div>
                     @endif
                 </div>
-                }
                 @endif
                 @endif
                 <input type="hidden" value=true name="flag" />
