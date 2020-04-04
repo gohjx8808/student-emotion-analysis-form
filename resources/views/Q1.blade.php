@@ -228,7 +228,8 @@
                                 &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
                                     class="programming-green">"Increasing order"</span>);<br />
                                 &emsp;&emsp;}<br />
-                                &emsp;&emsp;<span class="programming-blue">else if</span> (<select class="form-control"
+                                &emsp;&emsp;<span class="programming-blue">else if</span> (
+                                    <select class="form-control"
                                     name="Q1_1D" required style="display: inline; width:70px;height:33px"
                                     {{old("flag")?'disabled':''}}>
                                     <option value="" disabled selected />

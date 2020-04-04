@@ -4,13 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class QuestionsController extends Controller
 {
 
     public function displayQ1(Request $request)
     {
-        $Qformat = rand(1, 4);
+        if ($request->session()->has('Q1')) {
+            $Qformat=$request->session()->get('Q1')['Qformat'];
+        }
+        else{
+            $Qformat = rand(1, 4);
+        }
         return view('Q1')->with('Qformat', $Qformat);
     }
 
