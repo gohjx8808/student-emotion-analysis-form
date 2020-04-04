@@ -44,7 +44,7 @@
             Please answer the questions as best as you can. Good luck!
         </p>
         <hr style="background-color:white" />
-        <p class="white-label"><u>Question 4: True/False</u></p>
+        <p class="white-label"><u>Question 4</u></p>
         <p class="white-label">
             Please choose the options that best matches your emotion after
             trying the questions before.

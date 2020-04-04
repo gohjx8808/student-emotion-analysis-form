@@ -142,21 +142,49 @@ class QuestionsController extends Controller
         return redirect()->back()->withInput()->with(['endResult' => $displayedResult]);
     }
 
+    public function displayQ4(Request $request)
+    {
+        // dd($request->session()->all());
+        if ($request->session()->has('Q4')) {
+            $Qformat = $request->session()->get('Q4')['Qformat'];
+        } else {
+            $Qformat = rand(1, 4);
+        }
+        return view('Q4')->with('Qformat', $Qformat);
+    }
+
     public function saveQ4(Request $request)
     {
         $request->session()->put('Q4', $request->except('_token'));
         // dd($request->input());
         $displayedResult = array();
-        array_push($displayedResult, $this->checkResult($request->input('Q4_1'), 'true', ''));
-        array_push($displayedResult, $this->checkResult($request->input('Q4_2'), 'false', 'Explanation: The
-        default case in a switch structure is optional and only used when none of the other cases match.'));
-        array_push($displayedResult, $this->checkResult($request->input('Q4_3'), 'true', ''));
-        // dd($displayedResult);
-
-        $correct = $this->checkCorrectness($displayedResult);
-        $added = $request->session()->get('Q4');
-        $added['correct'] = strval($correct) . '/3';
-        $request->session()->put('Q4', $added);
+        $random = $request->input('Qformat');
+        // dd($random);
+        if ($random == 1) {
+            array_push($displayedResult, $this->checkMCQ($request->input('Q4_1'), 'c', ''));
+            $added = $request->session()->get('Q4');
+            $added['correct'] = strval($displayedResult[0][2] ? 1 : 0) . '/1';
+            $request->session()->put('Q4', $added);
+        } else if ($random == 2) {
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q4_1A'), '1'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q4_1B'), 'a'));
+            $correct = $this->checkCorrectness($displayedResult);
+            $added = $request->session()->get('Q4');
+            $added['correct'] = strval($correct) . '/2';
+            $request->session()->put('Q4', $added);
+            // dd($displayedResult);
+        } else if ($random == 3) {
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q4_1A'), '1'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q4_1B'), 'n*factorial(n-1)'));
+            $correct = $this->checkCorrectness($displayedResult);
+            $added = $request->session()->get('Q4');
+            $added['correct'] = strval($correct) . '/2';
+            $request->session()->put('Q4', $added);
+            array_push($displayedResult, 'The appropriate answer is 1 and n*factorial(n-1). Your answer is correct as long as it fits the logic.');
+            // dd($displayedResult);
+        } else if ($random == 4) {
+            array_push($displayedResult, 'Thank you for the answer. We will look through it.');
+        }
 
         return redirect()->back()->withInput()->with(['endResult' => $displayedResult]);
     }
@@ -198,12 +226,17 @@ class QuestionsController extends Controller
 
     public function checkMultipleSelect($input, $correctAns)
     {
+        $options = ['x', 'y', 'z'];
         if (is_bool($input) == false) {
             $input = strtolower($input);
         }
         // dd($input);
-        if ($input != $correctAns) {
-            $flag = true;
+        if (in_array($input, $options)) {
+            if ($input != $correctAns) {
+                $flag = true;
+            } else {
+                $flag = false;
+            }
         } else {
             $flag = false;
         }

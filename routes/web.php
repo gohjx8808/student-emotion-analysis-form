@@ -51,9 +51,7 @@ Route::get('/SAMQ3',function(){
 
 Route::post('/SAMQ3/save','SAMController@saveSAMQ3');
 
-Route::get('/Q4',function(){
-    return view('Q4');
-});
+Route::get('/Q4','QuestionsController@displayQ4');
 
 Route::post('/Q4/save','QuestionsController@saveQ4');
 

@@ -346,7 +346,7 @@
         </form>
         <div style=" text-align: center;">
             <button type="button" class="btn btn-primary" style="width:15%" id='submit' {{old("flag")?'':'disabled'}}
-                onclick="window.location='{{ url("SAMQ2") }}'">
+                onclick="window.location='{{ url("SAMQ3") }}'">
                 Next
             </button>
         </div>

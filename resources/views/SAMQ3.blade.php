@@ -44,7 +44,7 @@
             Please answer the questions as best as you can. Good luck!
         </p>
         <hr style="background-color:white" />
-        <p class="white-label"><u>Question 3: Fill in the blank</u></p>
+        <p class="white-label"><u>Question 3</u></p>
         <p class="white-label">
             Please choose the options that best matches your emotion after
             trying the questions before.
