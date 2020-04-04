@@ -61,6 +61,66 @@ Route::get('/SAMQ4',function(){
 
 Route::post('/SAMQ4/save','SAMController@saveSAMQ4');
 
+Route::get('/Q5','QuestionsController@displayQ5');
+
+Route::post('/Q5/save','QuestionsController@saveQ5');
+
+Route::get('/SAMQ5',function(){
+    return view('SAMQ5');
+});
+
+Route::post('/SAMQ5/save','SAMController@saveSAMQ5');
+
+Route::get('/Q6','QuestionsController@displayQ6');
+
+Route::post('/Q6/save','QuestionsController@saveQ6');
+
+Route::get('/SAMQ6',function(){
+    return view('SAMQ6');
+});
+
+Route::post('/SAMQ6/save','SAMController@saveSAMQ6');
+
+Route::get('/Q7','QuestionsController@displayQ7');
+
+Route::post('/Q7/save','QuestionsController@saveQ7');
+
+Route::get('/SAMQ7',function(){
+    return view('SAMQ7');
+});
+
+Route::post('/SAMQ7/save','SAMController@saveSAMQ7');
+
+Route::get('/Q8','QuestionsController@displayQ8');
+
+Route::post('/Q8/save','QuestionsController@saveQ8');
+
+Route::get('/SAMQ8',function(){
+    return view('SAMQ8');
+});
+
+Route::post('/SAMQ8/save','SAMController@saveSAMQ8');
+
+Route::get('/Q9','QuestionsController@displayQ9');
+
+Route::post('/Q9/save','QuestionsController@saveQ9');
+
+Route::get('/SAMQ9',function(){
+    return view('SAMQ9');
+});
+
+Route::post('/SAMQ9/save','SAMController@saveSAMQ9');
+
+Route::get('/Q10','QuestionsController@displayQ10');
+
+Route::post('/Q10/save','QuestionsController@saveQ10');
+
+Route::get('/SAMQ10',function(){
+    return view('SAMQ10');
+});
+
+Route::post('/SAMQ10/save','SAMController@saveSAMQ10');
+
 Route::get('/thankyou',function(){
     return view('thankyou');
 });

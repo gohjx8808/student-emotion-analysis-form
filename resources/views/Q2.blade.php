@@ -93,7 +93,7 @@
                     <div class="programming-bg">
                         <p>
                             <span class="programming-blue">import</span> java.util.Scanner;<br />
-                            <span class="programming-blue">public class AverageEvenOdd</span><br />
+                            <span class="programming-blue">public class Q2</span><br />
                             {<br />
                             &emsp;<span class="programming-blue">public static void</span>
                             <span class="programming-green">main</span> (String[] args)<br />
@@ -187,7 +187,7 @@
                         Total of Even Number = 112<br />
                         <div class="programming-bg">
                             <span class="programming-blue">import</span> java.util.Scanner;<br />
-                            <span class="programming-blue">public class SortOrder</span><br />
+                            <span class="programming-blue">public class Q2</span><br />
                             {<br />
                             &emsp;<span class="programming-blue">public static void</span>
                             <span class="programming-green">main</span> (String[] args)<br />
@@ -248,7 +248,7 @@
                         Total of Even Number = 112<br />
                         <div class="programming-bg">
                             <span class="programming-blue">import</span> java.util.Scanner;<br />
-                            <span class="programming-blue">public class SortOrder</span><br />
+                            <span class="programming-blue">public class Q2</span><br />
                             {<br />
                             &emsp;<span class="programming-blue">public static void</span>
                             <span class="programming-green">main</span> (String[] args)<br />

@@ -89,7 +89,7 @@
                     <label for=" Q4" class="white-label" style="margin-top: 15px">
                         What is the output of the following program?</label>
                     <div class="programming-bg">
-                        <span class="programming-blue">public class Factorial</span><br />
+                        <span class="programming-blue">public class Q4</span><br />
                         {<br />
                         &emsp;<span class="programming-blue">static int </span>factorial(<span
                             class="programming-blue">int</span> n)<br />
@@ -152,7 +152,7 @@
                         Please select the appropriate algorithm to produce the following output.</label>
                     <p class="programming-bg" style="font-weight:bold">Output: 362880
                         <div class="programming-bg">
-                            <span class="programming-blue">public class Factorial</span><br />
+                            <span class="programming-blue">public class Q4</span><br />
                             {<br />
                             &emsp;<span class="programming-blue">static int </span>factorial(<span
                                 class="programming-blue">int</span> n)<br />
@@ -207,7 +207,7 @@
                         Please enter the appropriate algorithm to produce the following output.</label>
                     <p class="programming-bg" style="font-weight:bold">Output: 120
                         <div class="programming-bg">
-                            <span class="programming-blue">public class Factorial</span><br />
+                            <span class="programming-blue">public class Q4</span><br />
                             {<br />
                             &emsp;<span class="programming-blue">static int </span>factorial(<span
                                 class="programming-blue">int</span> n)<br />

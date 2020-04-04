@@ -197,21 +197,21 @@ class QuestionsController extends Controller
         } else {
             $Qformat = rand(1, 4);
         }
-        return view('Q5')->with('Qformat', $Qformat);
+        return view('Q5')->with('Qformat', 2);
     }
 
     public function saveQ5(Request $request)
     {
-        $request->session()->put('Q4', $request->except('_token'));
+        $request->session()->put('Q5', $request->except('_token'));
         // dd($request->input());
         $displayedResult = array();
         $random = $request->input('Qformat');
         // dd($random);
         if ($random == 1) {
-            array_push($displayedResult, $this->checkMCQ($request->input('Q4_1'), 'c', ''));
-            $added = $request->session()->get('Q4');
+            array_push($displayedResult, $this->checkMCQ($request->input('Q5_1'), 'c', "This is a Floyd's triangle algorithm."));
+            $added = $request->session()->get('Q5');
             $added['correct'] = strval($displayedResult[0][2] ? 1 : 0) . '/1';
-            $request->session()->put('Q4', $added);
+            $request->session()->put('Q5', $added);
         } else if ($random == 2) {
             array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q4_1A'), '1'));
             array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q4_1B'), 'a'));

@@ -17,6 +17,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <style>
         .form-background {
             padding: 50px;
@@ -48,6 +49,23 @@
             font-weight: bold;
             padding: 10px;
         }
+
+        .programming-blue {
+            font-weight: bold;
+            color: blue;
+        }
+
+        .programming-green {
+            font-weight: bold;
+            color: green;
+        }
+
+        .programming-bg {
+            background-color: white;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+            border-radius: 10px;
+        }
     </style>
 </head>
 
@@ -60,166 +78,254 @@
             Please answer the questions as best as you can. Good luck!
         </p>
         <hr style="background-color:white" />
-        <p class="white-label"><u>Question 1: MCQ</u></p>
-        <p class="white-label">
-            Please choose the best match answer according to the information
-            below.
-        </p>
-        <form action="Q1/save" method="POST">
+        <p class="white-label"><u>Question 5</u></p>
+        <form action="Q5/save" method="POST">
             {{ csrf_field() }}
             <div class="form-group">
-                <p class="white-label">1.</p>
-                <div class="text-center">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/Q1.1.PNG?alt=media&token=a7e66fd0-9c83-4c3c-8c54-d0c00b55e05d"
-                        class="img-fluid rounded" alt="Q1_1" />
+                @if($Qformat!=null)
+                {{-- mcq --}}
+                @if($Qformat==1)
+                <div>
+                    <label for=" Q5" class="white-label" style="margin-top: 15px">
+                        What is the output of the following program?</label>
+                    <p class="programming-bg" style="font-weight:bold">Input: 3</p>
+                    <div class="programming-bg">
+                        <span class="programming-blue">public class Q5</span><br />
+                        {<br />
+                        &emsp;<span class="programming-blue">public static void</span>
+                        <span class="programming-green">main</span> (String[] args)<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
+                        &emsp;&emsp;<span class="programming-blue">int </span>n, num = 1, c, d;<br />
+                        &emsp;&emsp;n = in.<span class="programming-green">nextInt</span>(); <br />
+                        &emsp;&emsp;<span class="programming-blue">for</span> (c = 1; c
+                        <= n; c++)<br />
+                        &emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;<span class="programming-blue">for</span> (d = 1; d
+                        <= c; d++)<br />
+                        &emsp;&emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">print</span>(num + <span
+                            class="programming-green">" "</span>);<br />
+                        &emsp;&emsp;&emsp;num++;<br />
+                        &emsp;&emsp;&emsp;} <br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>();<br />
+                        &emsp;&emsp;} <br />
+                        &emsp;}<br />
+                        }
+                    </div>
+                    <br />
+                    <div class="form-control"
+                        style="border-bottom-width: 0;border-radius: 10px 10px 0px 0px;height:60px">
+                        <input class="form-control-input" type="radio" id="Q5_1a" name="Q5_1" value="a" required"
+                            {{old("Q5_1")=='a'?'checked':''}} {{old("flag")?'disabled':''}} />
+                        <label class="form-check-label" for="Q5_1a" style="padding-left: 15px;">
+                            1<br />2 3
+                        </label>
+                    </div>
+                    <div class="form-control radio-center">
+                        <input class="form-control-input" type="radio" id="Q5_1b" name="Q5_1" value="b"
+                            {{old("Q5_1")=='b'?'checked':''}} {{old("flag")?'disabled':''}} />
+                        <label class="form-check-label" for="Q5_1b" style="padding-left: 15px">
+                            1 2 3
+                        </label>
+                    </div>
+                    <div class="form-control radio-center" style="height: 85px">
+                        <input class="form-control-input" type="radio" id="Q5_1c" name="Q5_1" value="c"
+                            {{old("Q5_1")=='c'?'checked':''}} {{old("flag")?'disabled':''}} />
+                        <label class="form-check-label" for="Q5_1c" style="padding-left: 15px">
+                            1<br />2 3<br />4 5 6
+                        </label>
+                    </div>
+                    <div class="form-control" style="border-radius: 0px 0px 10px 10px;">
+                        <input class="form-control-input" type="radio" id="Q5_1d" name="Q5_1" value="d"
+                            {{old("Q5_1")=='d'?'checked':''}} {{old("flag")?'disabled':''}} />
+                        <label class="form-check-label" for="Q5_1d" style="padding-left: 15px">
+                            1 2 3 4 5 6
+                        </label>
+                    </div>
+                    @if(Session::has('endResult'))
+                    <p class="rounded resultMsg" type='text'
+                        style="display: {{old('flag')?'block': 'none' }};color: {{Session::get('endResult')[0][2]?'green':'red'}}" />
+                    {{Session::get('endResult')[0][0]}} {{Session::get('endResult')[0][1]}}
+                    </p>
+                    @endif
                 </div>
-                <label for="Q1" class="white-label" style="margin-top: 15px">What is the output for the question
-                    above?</label>
-                <div class="form-control" style="border-bottom-width: 0;border-radius: 10px 10px 0px 0px;height:60px;">
-                    <input class="form-control-input" type="radio" id="Q1_1a" name="Q1_1" value="a" required"
-                        {{old("Q1_1")=='a'?'checked':''}} {{old("flag")?'disabled':''}} />
-                    <label class="form-check-label" for="Q1_1a" style="padding-left: 15px;">
-                        t1.a=100, t1.b=200<br />
-                        t2.a=10, t2.b=200
-                    </label>
+                @elseif($Qformat==2)
+                {{-- matching --}}
+                <div>
+                    <label for="Q5" class="white-label" style="margin-top: 15px">
+                        Please select the appropriate algorithm to produce the following output.</label>
+                    <p class="programming-bg" style="font-weight:bold">Input: 4<br />Output:<br /> 1<br />2 3<br />4 5
+                        6<br />7 8 9 10
+                        <div class="programming-bg">
+                            <span class="programming-blue">public class Q5</span><br />
+                            {<br />
+                            &emsp;<span class="programming-blue">public static void</span>
+                            <span class="programming-green">main</span> (String[] args)<br />
+                            &emsp;{<br />
+                            &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
+                            &emsp;&emsp;<span class="programming-blue">int </span>n, num = 1, c, d;<br />
+                            &emsp;&emsp;n = in.<span class="programming-green">nextInt</span>(); <br />
+                            &emsp;&emsp;<span class="programming-blue">for</span> (c = 1;
+                            <select class="form-control" name="Q5_1A" required style="display: inline; width:60px;"
+                                {{old("flag")?'disabled':''}}>
+                                <option value="" disabled selected />
+                                <option value='n' {{old("Q5_1A")=='n'?'selected':''}}>n</option>
+                                <option value='c' {{old("Q5_1A")=='c'?'selected':''}}>c</option>
+                                <option value='d' {{old("Q5_1A")=='d'?'selected':''}}>d</option>
+                            </select>@if(Session::has('endResult'))
+                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                                <ion-icon name="{{Session::get('endResult')[0]?'checkmark-circle':'close-circle'}}"
+                                    style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
+                            </div>
+                            @endif
+                            <= <select class="form-control" name="Q5_1A" required style="display: inline; width:60px;"
+                                {{old("flag")?'disabled':''}}>
+                                <option value="" disabled selected />
+                                <option value='n' {{old("Q5_1A")=='n'?'selected':''}}>n</option>
+                                <option value='c' {{old("Q5_1A")=='c'?'selected':''}}>c</option>
+                                <option value='d' {{old("Q5_1A")=='d'?'selected':''}}>d</option>
+                                </select>
+                                @if(Session::has('endResult'))
+                                <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                                    <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
+                                        style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
+                                </div>
+                                @endif ; c++)<br />
+                                &emsp;&emsp;{<br />
+                                &emsp;&emsp;&emsp;<span class="programming-blue">for</span> (d = 1;
+                                <select class="form-control" name="Q5_1A" required style="display: inline; width:60px;"
+                                    {{old("flag")?'disabled':''}}>
+                                    <option value="" disabled selected />
+                                    <option value='n' {{old("Q5_1C")=='n'?'selected':''}}>n</option>
+                                    <option value='c' {{old("Q5_1C")=='c'?'selected':''}}>c</option>
+                                    <option value='d' {{old("Q5_1C")=='d'?'selected':''}}>d</option>
+                                </select>@if(Session::has('endResult'))
+                                <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                                    <ion-icon name="{{Session::get('endResult')[2]?'checkmark-circle':'close-circle'}}"
+                                        style="color: {{Session::get('endResult')[2]?'green':'red'}};"></ion-icon>
+                                </div>
+                                @endif
+                                <= <select class="form-control" name="Q5_1A" required
+                                    style="display: inline; width:60px;" {{old("flag")?'disabled':''}}>
+                                    <option value="" disabled selected />
+                                    <option value='n' {{old("Q5_1D")=='n'?'selected':''}}>n</option>
+                                    <option value='c' {{old("Q5_1D")=='c'?'selected':''}}>c</option>
+                                    <option value='d' {{old("Q5_1D")=='d'?'selected':''}}>d</option>
+                                    </select>
+                                    @if(Session::has('endResult'))
+                                    <div class="rounded" type='text'
+                                        style="display: {{old('flag')?'inline': 'none' }};">
+                                        <ion-icon
+                                            name="{{Session::get('endResult')[3]?'checkmark-circle':'close-circle'}}"
+                                            style="color: {{Session::get('endResult')[3]?'green':'red'}};"></ion-icon>
+                                    </div>
+                                    @endif ; d++)<br />
+                                    &emsp;&emsp;&emsp;{<br />
+                                    &emsp;&emsp;&emsp;&emsp;System.out.<span class="programming-green">print</span>(num
+                                    + <span class="programming-green">" "</span>);<br />
+                                    &emsp;&emsp;&emsp;&emsp;num++;<br />
+                                    &emsp;&emsp;&emsp;}<br />
+                                    &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>();<br />
+                                    &emsp;&emsp;}<br />
+                                    &emsp;}<br />
+                                    }
+                        </div>
+                    </p>
                 </div>
-                <div class="form-control radio-center" style="height:60px;">
-                    <input class="form-control-input" type="radio" id="Q1_1b" name="Q1_1" value="b"
-                        {{old("Q1_1")=='b'?'checked':''}} {{old("flag")?'disabled':''}} />
-                    <label class="form-check-label" for="Q1_1b" style="padding-left: 15px">
-                        t1.a=10, t1.b=200<br />
-                        t2.a=10, t2.b=200
-                    </label>
+                @elseif($Qformat==3)
+                {{-- fill-in-blank --}}
+                <div>
+                    <label for="Q5" class="white-label" style="margin-top: 15px">
+                        Please enter the appropriate algorithm to produce the following output.</label>
+                    <p class="programming-bg" style="font-weight:bold">Output: 120
+                        <div class="programming-bg">
+                            <span class="programming-blue">public class Factorial</span><br />
+                            {<br />
+                            &emsp;<span class="programming-blue">static int </span>factorial(<span
+                                class="programming-blue">int</span> n)<br />
+                            &emsp;{<br />
+                            &emsp;&emsp;<span class="programming-blue">if </span>(n == 0)<br />
+                            &emsp;&emsp;&emsp;<span class="programming-blue">return </span><input class="form-control"
+                                name="Q5_1A" required style="display: inline; width:220px;"
+                                {{old("flag")?'disabled':''}} value="{{old('Q5_1A')}}" />
+                            @if(Session::has('endResult'))
+                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                                <ion-icon name="{{Session::get('endResult')[0]?'checkmark-circle':'close-circle'}}"
+                                    style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
+                            </div>
+                            @endif;<br />
+                            &emsp;&emsp;<span class="programming-blue">return </span>
+                            <input class="form-control" name="Q5_1B" required style="display: inline; width:220px;"
+                                {{old("flag")?'disabled':''}} value="{{old('Q5_1B')}}" />
+                            @if(Session::has('endResult'))
+                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                                <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
+                                    style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
+                            </div>
+                            @endif;<br />
+                            &emsp;}<br /><br />
+                            &emsp;<span class="programming-blue">public static void</span>
+                            <span class="programming-green">main</span> (String[] args)<br />
+                            &emsp;{<br />
+                            &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
+                            &emsp;&emsp;<span class="programming-blue">int</span> num = 5;<br />
+                            &emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
+                                class="programming-green">"Factorial of "</span> + num + <span
+                                class="programming-green">"
+                                is "</span> + factorial(num))<br />
+                            &emsp;}<br />
+                            }
+                        </div>
+                    </p>
+                    @if(Session::has('endResult'))
+                    @if(Session::get('endResult')[0]==false || Session::get('endResult')[1]==false)
+                    <p class="rounded resultMsg" style="color: red;" />
+                    {{Session::get('endResult')[2]}}
+                    </p>
+                    @endif
+                    @endif
                 </div>
-                <div class="form-control radio-center" style="height:60px;">
-                    <input class="form-control-input" type="radio" id="Q1_1c" name="Q1_1" value="c"
-                        {{old("Q1_1")=='c'?'checked':''}} {{old("flag")?'disabled':''}} />
-                    <label class="form-check-label" for="Q1_1c" style="padding-left: 15px">
-                        t1.a=100, t1.b=200<br />
-                        t2.a=10, t2.b=20
-                    </label>
+                @elseif($Qformat==4)
+                {{-- code --}}
+                <div style="display: {{$Qformat==4?'block':'none'}}">
+                    <label for=" Q5" class="white-label" style="margin-top: 15px">
+                        Please write a program to find the factorial value of any number entered through the
+                        keyboard</label>
+                    <textarea class="form-control" rows="30" required name='Q5' {{old("flag")?'disabled':''}}>{{old('Q5')}}
+                    </textarea>
+                    @if(Session::has('endResult'))
+                    <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                        <p class="rounded resultMsg" type='text'
+                            style="display: {{old('flag')?'block': 'none' }};color:green;">
+                            {{Session::get('endResult')[0]}}</p>
+                    </div>
+                    @endif
                 </div>
-                <div class="form-control" style="border-radius: 0px 0px 10px 10px;height:60px;">
-                    <input class="form-control-input" type="radio" id="Q1_1d" name="Q1_1" value="d"
-                        {{old("Q1_1")=='d'?'checked':''}} {{old("flag")?'disabled':''}} />
-                    <label class="form-check-label" for="Q1_1d" style="padding-left: 15px">
-                        t1.a=100, t1.b=200<br />
-                        t2.a=100, t2.b=200
-                    </label>
-                </div>
-                @if(Session::has('endResult'))
-                <p class="rounded resultMsg" type='text'
-                    style="display: {{old('flag')?'block': 'none' }};color: {{Session::get('endResult')[0][2]?'green':'red'}}" />
-                {{Session::get('endResult')[0][0]}}<br />{{Session::get('endResult')[0][1]}}
-                </p>
                 @endif
-            </div>
-            <div class="form-group" style="padding-top: 25px">
-                <p class="white-label">2.</p>
-                <div class="text-center">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/Q1.2.PNG?alt=media&token=353bcf2b-dadf-4487-9d97-64bd50d45f86"
-                        class="img-fluid rounded" alt="Q1_2" />
-                </div>
-                <label for="Q1" class="white-label" style="margin-top: 15px">What is the output for the question
-                    above?</label>
-                <div class="form-control" style="border-bottom-width: 0;border-radius: 10px 10px 0px 0px;">
-                    <input class="form-control-input" type="radio" id="Q1_2a" name="Q1_2" value="a" required"
-                        {{old("Q1_2")=='a'?'checked':''}} {{old("flag")?'disabled':''}} />
-                    <label class="form-check-label" for="Q1_2a" style="padding-left: 15px;">
-                        Constructor called Method called
-                    </label>
-                </div>
-                <div class="form-control radio-center">
-                    <input class="form-control-input" type="radio" id="Q1_2b" name="Q1_2" value="b"
-                        {{old("Q1_2")=='b'?'checked':''}} {{old("flag")?'disabled':''}} />
-                    <label class="form-check-label" for="Q1_2b" style="padding-left: 15px">
-                        Compilation error
-                    </label>
-                </div>
-                <div class="form-control radio-center">
-                    <input class="form-control-input" type="radio" id="Q1_2c" name="Q1_2" value="c"
-                        {{old("Q1_2")=='c'?'checked':''}} {{old("flag")?'disabled':''}} />
-                    <label class="form-check-label" for="Q1_2c" style="padding-left: 15px">
-                        Runtime error
-                    </label>
-                </div>
-                <div class="form-control" style="border-radius: 0px 0px 10px 10px;">
-                    <input class="form-control-input" type="radio" id="Q1_2d" name="Q1_2" value="d"
-                        {{old("Q1_2")=='d'?'checked':''}} {{old("flag")?'disabled':''}} />
-                    <label class="form-check-label" for="Q1_2d" style="padding-left: 15px">
-                        None of the above
-                    </label>
-                </div>
-                @if(Session::has('endResult'))
-                <p class="rounded resultMsg" type='text'
-                    style="display: {{old('flag')?'block': 'none' }};color: {{Session::get('endResult')[1][2]?'green':'red'}}" />
-                {{Session::get('endResult')[1][0]}}<br />{{Session::get('endResult')[1][1]}}
-                </p>
                 @endif
-            </div>
-            <div class="form-group" style="padding-top: 25px">
-                <p class="white-label">3.</p>
-                <div class="text-center">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/Q1.3.PNG?alt=media&token=50957e0f-e0c0-47e6-95e0-c9928181fb5a"
-                        class="img-fluid rounded" alt="Q1_3" />
+                <input type="hidden" value=true name="flag" />
+                <div style="text-align:end;margin-top:15px">
+                    <button type="submit" class="btn btn-success" style="width:10%;margin-bottom:15px" id='submit'
+                        {{old("flag")?'disabled':''}}>
+                        Check
+                    </button>
                 </div>
-                <label for="Q1" class="white-label" style="margin-top: 15px">What is the output for the question
-                    above?</label>
-                <div class="form-control" style="border-bottom-width: 0;border-radius: 10px 10px 0px 0px;">
-                    <input class="form-control-input" type="radio" id="Q1_3a" name="Q1_3" value="a" required"
-                        {{old("Q1_3")=='a'?'checked':''}} {{old("flag")?'disabled':''}} />
-                    <label class="form-check-label" for="Q1_3a" style="padding-left: 15px;">
-                        alpha beta b b
-                    </label>
-                </div>
-                <div class="form-control radio-center">
-                    <input class="form-control-input" type="radio" id="Q1_3b" name="Q1_3" value="b"
-                        {{old("Q1_3")=='b'?'checked':''}} {{old("flag")?'disabled':''}} />
-                    <label class="form-check-label" for="Q1_3b" style="padding-left: 15px">
-                        alpha beta a b
-                    </label>
-                </div>
-                <div class="form-control radio-center">
-                    <input class="form-control-input" type="radio" id="Q1_3c" name="Q1_3" value="c"
-                        {{old("Q1_3")=='c'?'checked':''}} {{old("flag")?'disabled':''}} />
-                    <label class="form-check-label" for="Q1_3c" style="padding-left: 15px">
-                        beta alpha b b
-                    </label>
-                </div>
-                <div class="form-control" style="border-radius: 0px 0px 10px 10px;">
-                    <input class="form-control-input" type="radio" id="Q1_3d" name="Q1_3" value="d"
-                        {{old("Q1_3")=='d'?'checked':''}} {{old("flag")?'disabled':''}} />
-                    <label class="form-check-label" for="Q1_3d" style="padding-left: 15px">
-                        beta alpha a b
-                    </label>
-                </div>
-                @if(Session::has('endResult'))
-                <p class="rounded resultMsg" type='text'
-                    style="display: {{old('flag')?'block': 'none' }};color: {{Session::get('endResult')[2][2]?'green':'red'}}" />
-                {{Session::get('endResult')[2][0]}}<br />{{Session::get('endResult')[2][1]}}
-                </p>
-                @endif
-            </div>
-            <input type="hidden" value=true name="flag" />
-            <div style="text-align:end;margin-top:15px">
-                <button type="submit" class="btn btn-success" style="width:10%;margin-bottom:15px" id='submit'
-                    {{old("flag")?'disabled':''}}>
-                    Check
-                </button>
-            </div>
-            <input type="hidden" value="0" id="mouseClicked" name="mouseClicked" />
-            <input type="hidden" value="0" id="timeTaken" name="timeTaken"/>
-            <input type="hidden" value="0" id="mouseWheelCounter" name="mouseWheelCounter"/>
-            <input type="hidden" value="[0,0,0,0]" id="quadrantsCounter" name="quadrantsCounter"/>
-            <input type="hidden" value="[0,0,0,0]" id="quadrantsTimer" name="quadrantsTimer"/>
+                <input type="hidden" value="0" id="mouseClicked" name="mouseClicked" />
+                <input type="hidden" value="0" id="timeTaken" name="timeTaken" />
+                <input type="hidden" value="0" id="mouseWheelCounter" name="mouseWheelCounter" />
+                <input type="hidden" value="[0,0,0,0]" id="quadrantsCounter" name="quadrantsCounter" />
+                <input type="hidden" value="[0,0,0,0]" id="quadrantsTimer" name="quadrantsTimer" />
+                <input type="hidden" value={{$Qformat}} name="Qformat" />
         </form>
         <div style=" text-align: center;">
             <button type="button" class="btn btn-primary" style="width:15%" id='submit' {{old("flag")?'':'disabled'}}
-                onclick="window.location='{{ url("SAMQ1") }}'">
+                onclick="window.location='{{ url("SAMQ5") }}'">
                 Next
             </button>
         </div>
     </div>
     <script src="{{asset('js/custom.js')}}" type="text/javascript"></script>
 </body>
+
 </html>

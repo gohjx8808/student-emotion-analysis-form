@@ -93,7 +93,7 @@
                     <div class="programming-bg">
                         <p>
                             <span class="programming-blue">import</span> java.util.Scanner;<br />
-                            <span class="programming-blue">public class LeapYear</span><br />
+                            <span class="programming-blue">public class Q3</span><br />
                             {<br />
                             &emsp;<span class="programming-blue">public static void</span>
                             <span class="programming-green">main</span> (String[] args)<br />
@@ -177,7 +177,7 @@
                         not a leap year
                         <div class="programming-bg">
                             <span class="programming-blue">import</span> java.util.Scanner;<br />
-                            <span class="programming-blue">public class LeapYear</span><br />
+                            <span class="programming-blue">public class Q3</span><br />
                             {<br />
                             &emsp;<span class="programming-blue">public static void</span>
                             <span class="programming-green">main</span> (String[] args)<br />
@@ -257,7 +257,7 @@
                         not a leap year
                         <div class="programming-bg">
                             <span class="programming-blue">import</span> java.util.Scanner;<br />
-                            <span class="programming-blue">public class LeapYear</span><br />
+                            <span class="programming-blue">public class Q3</span><br />
                             {<br />
                             &emsp;<span class="programming-blue">public static void</span>
                             <span class="programming-green">main</span> (String[] args)<br />

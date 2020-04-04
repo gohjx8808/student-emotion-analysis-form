@@ -91,7 +91,7 @@
                     <div class="programming-bg">
                         <p>
                             <span class="programming-blue">import</span> java.util.Scanner;<br />
-                            <span class="programming-blue">public class SortOrder</span><br />
+                            <span class="programming-blue">public class Q1</span><br />
                             {<br />
                             &emsp;<span class="programming-blue">public static void</span>
                             <span class="programming-green">main</span> (String[] args)<br />
@@ -165,7 +165,7 @@
                         4.534<br />Output: Decreasing order</p>
                     <div class="programming-bg">
                         <span class="programming-blue">import</span> java.util.Scanner;<br />
-                        <span class="programming-blue">public class SortOrder</span><br />
+                        <span class="programming-blue">public class Q1</span><br />
                         {<br />
                         &emsp;<span class="programming-blue">public static void</span>
                         <span class="programming-green">main</span> (String[] args)<br />
@@ -278,7 +278,7 @@
                         Increasing order</p>
                     <div class="programming-bg">
                         <span class="programming-blue">import</span> java.util.Scanner;<br />
-                        <span class="programming-blue">public class SortOrder</span><br />
+                        <span class="programming-blue">public class Q1</span><br />
                         {<br />
                         &emsp;<span class="programming-blue">public static void</span>
                         <span class="programming-green">main</span> (String[] args)<br />
