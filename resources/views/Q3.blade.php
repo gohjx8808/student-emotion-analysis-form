@@ -91,37 +91,35 @@
                     <p class="programming-bg" style="font-weight:bold">Input the year: 2024<br />Output: 2024 is a leap
                         year</p>
                     <div class="programming-bg">
-                        <p>
-                            <span class="programming-blue">import</span> java.util.Scanner;<br />
-                            <span class="programming-blue">public class Q3</span><br />
-                            {<br />
-                            &emsp;<span class="programming-blue">public static void</span>
-                            <span class="programming-green">main</span> (String[] args)<br />
-                            &emsp;{<br />
-                            &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
-                            &emsp;&emsp;System.out.<span class="programming-green">print</span>(<span
-                                class="programming-green">"Input the year: "</span>)<br />
-                            &emsp;&emsp;<span class="programming-blue">int</span> year = in.<span
-                                class="programming-green">nextInt</span>(); <br />
-                            &emsp;&emsp;<span class="programming-blue">boolean</span> x = (year % 4) == 0;<br />
-                            &emsp;&emsp;<span class="programming-blue">boolean</span> y = (year % 100) != 0;<br />
-                            &emsp;&emsp;<span class="programming-blue">boolean</span> z = (year % 100 == 0) && (year %
-                            400 == 0);<br />
-                            &emsp;&emsp;<span class="programming-blue">if</span> (
-                            ( <u style="font-weight: bold">[i]</u> || <u style="font-weight: bold">[ii]</u> ) && <u
-                                style="font-weight: bold">[iii]</u>)<br />
-                            &emsp;&emsp;{ <br />
-                            &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(year + <span
-                                class="programming-green">"is a leap year"</span>)<br />
-                            &emsp;&emsp;}<br />
-                            &emsp;&emsp;<span class="programming-blue">else</span><br />
-                            &emsp;&emsp;{ <br />
-                            &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(year + <span
-                                class="programming-green">"is not a leap year"</span>)<br />
-                            &emsp;&emsp;}<br />
-                            &emsp;}<br />
-                            }
-                        </p>
+                        <span class="programming-blue">import</span> java.util.Scanner;<br />
+                        <span class="programming-blue">public class Q3</span><br />
+                        {<br />
+                        &emsp;<span class="programming-blue">public static void</span>
+                        <span class="programming-green">main</span> (String[] args)<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
+                        &emsp;&emsp;System.out.<span class="programming-green">print</span>(<span
+                            class="programming-green">"Input the year: "</span>)<br />
+                        &emsp;&emsp;<span class="programming-blue">int</span> year = in.<span
+                            class="programming-green">nextInt</span>(); <br />
+                        &emsp;&emsp;<span class="programming-blue">boolean</span> x = (year % 4) == 0;<br />
+                        &emsp;&emsp;<span class="programming-blue">boolean</span> y = (year % 100) != 0;<br />
+                        &emsp;&emsp;<span class="programming-blue">boolean</span> z = (year % 100 == 0) && (year %
+                        400 == 0);<br />
+                        &emsp;&emsp;<span class="programming-blue">if</span> (
+                        ( <u style="font-weight: bold">[i]</u> || <u style="font-weight: bold">[ii]</u> ) && <u
+                            style="font-weight: bold">[iii]</u>)<br />
+                        &emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(year + <span
+                            class="programming-green">"is a leap year"</span>)<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;&emsp;<span class="programming-blue">else</span><br />
+                        &emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(year + <span
+                            class="programming-green">"is not a leap year"</span>)<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;}<br />
+                        }
                     </div>
                     <br />
                     <div class="form-control"
@@ -174,79 +172,77 @@
                     <label for="Q3" class="white-label" style="margin-top: 15px">
                         Please select the appropriate input to produce the following output.</label>
                     <p class="programming-bg" style="font-weight:bold">Input the year: 1537<br />Output: 1537 is
-                        not a leap year
-                        <div class="programming-bg">
-                            <span class="programming-blue">import</span> java.util.Scanner;<br />
-                            <span class="programming-blue">public class Q3</span><br />
-                            {<br />
-                            &emsp;<span class="programming-blue">public static void</span>
-                            <span class="programming-green">main</span> (String[] args)<br />
-                            &emsp;{<br />
-                            &emsp;&emsp;Scanner in = <span class="programming-blue">new
-                                Scanner</span>(System.in);<br />
-                            &emsp;&emsp;System.out.<span class="programming-green">print</span>(<span
-                                class="programming-green">"Input the year: "</span>)<br />
-                            &emsp;&emsp;<span class="programming-blue">int</span> year = in.<span
-                                class="programming-green">nextInt</span>(); <br />
-                            &emsp;&emsp;<span class="programming-blue">boolean</span> x = (year % 4) == 0;<br />
-                            &emsp;&emsp;<span class="programming-blue">boolean</span> y = (year % 100) != 0;<br />
-                            &emsp;&emsp;<span class="programming-blue">boolean</span> z = (year % 100 == 0) && (year
-                            %
-                            400 == 0);<br />
-                            &emsp;&emsp;<span class="programming-blue">if</span> (
-                            ( <select class="form-control" name="Q3_1A" required style="display: inline; width:60px;"
-                                {{old("flag")?'disabled':''}}>
-                                <option value="" disabled selected />
-                                <option value='x' {{old("Q3_1A")=='x'?'selected':''}}>x</option>
-                                <option value='y' {{old("Q3_1A")=='y'?'selected':''}}>y</option>
-                                <option value='z' {{old("Q3_1A")=='z'?'selected':''}}>z</option>
-                            </select>
-                            @if(Session::has('endResult'))
-                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                <ion-icon name="{{Session::get('endResult')[0]?'checkmark-circle':'close-circle'}}"
-                                    style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
-                            </div>
-                            @endif
-                            ||
-                            <select class="form-control" name="Q3_1B" required style="display: inline; width:60px;"
-                                {{old("flag")?'disabled':''}}>
-                                <option value="" disabled selected />
-                                <option value='x' {{old("Q3_1B")=='x'?'selected':''}}>x</option>
-                                <option value='y' {{old("Q3_1B")=='y'?'selected':''}}>y</option>
-                                <option value='z' {{old("Q3_1B")=='z'?'selected':''}}>z</option>
-                            </select>
-                            @if(Session::has('endResult'))
-                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
-                                    style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
-                            </div>
-                            @endif ) && <select class="form-control" name="Q3_1C" required
-                                style="display: inline; width:60px;" {{old("flag")?'disabled':''}}>
-                                <option value="" disabled selected />
-                                <option value='x' {{old("Q3_1C")=='x'?'selected':''}}>x</option>
-                                <option value='y' {{old("Q3_1C")=='y'?'selected':''}}>y</option>
-                                <option value='z' {{old("Q3_1C")=='z'?'selected':''}}>z</option>
-                            </select>
-                            @if(Session::has('endResult'))
-                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                <ion-icon name="{{Session::get('endResult')[2]?'checkmark-circle':'close-circle'}}"
-                                    style="color: {{Session::get('endResult')[2]?'green':'red'}};"></ion-icon>
-                            </div>
-                            @endif
-                            )<br />
-                            &emsp;&emsp;{ <br />
-                            &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(year + <span
-                                class="programming-green">"is a leap year"</span>)<br />
-                            &emsp;&emsp;}<br />
-                            &emsp;&emsp;<span class="programming-blue">else</span><br />
-                            &emsp;&emsp;{ <br />
-                            &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(year + <span
-                                class="programming-green">"is not a leap year"</span>)<br />
-                            &emsp;&emsp;}<br />
-                            &emsp;}<br />
-                            }
+                        not a leap year</p>
+                    <div class="programming-bg">
+                        <span class="programming-blue">import</span> java.util.Scanner;<br />
+                        <span class="programming-blue">public class Q3</span><br />
+                        {<br />
+                        &emsp;<span class="programming-blue">public static void</span>
+                        <span class="programming-green">main</span> (String[] args)<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;Scanner in = <span class="programming-blue">new
+                            Scanner</span>(System.in);<br />
+                        &emsp;&emsp;System.out.<span class="programming-green">print</span>(<span
+                            class="programming-green">"Input the year: "</span>)<br />
+                        &emsp;&emsp;<span class="programming-blue">int</span> year = in.<span
+                            class="programming-green">nextInt</span>(); <br />
+                        &emsp;&emsp;<span class="programming-blue">boolean</span> x = (year % 4) == 0;<br />
+                        &emsp;&emsp;<span class="programming-blue">boolean</span> y = (year % 100) != 0;<br />
+                        &emsp;&emsp;<span class="programming-blue">boolean</span> z = (year % 100 == 0) && (year
+                        % 400 == 0);<br />
+                        &emsp;&emsp;<span class="programming-blue">if</span> (
+                        ( <select class="form-control" name="Q3_1A" required style="display: inline; width:60px;"
+                            {{old("flag")?'disabled':''}}>
+                            <option value="" disabled selected />
+                            <option value='x' {{old("Q3_1A")=='x'?'selected':''}}>x</option>
+                            <option value='y' {{old("Q3_1A")=='y'?'selected':''}}>y</option>
+                            <option value='z' {{old("Q3_1A")=='z'?'selected':''}}>z</option>
+                        </select>
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[0]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
                         </div>
-                    </p>
+                        @endif
+                        ||
+                        <select class="form-control" name="Q3_1B" required style="display: inline; width:60px;"
+                            {{old("flag")?'disabled':''}}>
+                            <option value="" disabled selected />
+                            <option value='x' {{old("Q3_1B")=='x'?'selected':''}}>x</option>
+                            <option value='y' {{old("Q3_1B")=='y'?'selected':''}}>y</option>
+                            <option value='z' {{old("Q3_1B")=='z'?'selected':''}}>z</option>
+                        </select>
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif ) && <select class="form-control" name="Q3_1C" required
+                            style="display: inline; width:60px;" {{old("flag")?'disabled':''}}>
+                            <option value="" disabled selected />
+                            <option value='x' {{old("Q3_1C")=='x'?'selected':''}}>x</option>
+                            <option value='y' {{old("Q3_1C")=='y'?'selected':''}}>y</option>
+                            <option value='z' {{old("Q3_1C")=='z'?'selected':''}}>z</option>
+                        </select>
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[2]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[2]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif
+                        )<br />
+                        &emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(year + <span
+                            class="programming-green">"is a leap year"</span>)<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;&emsp;<span class="programming-blue">else</span><br />
+                        &emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(year + <span
+                            class="programming-green">"is not a leap year"</span>)<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;}<br />
+                        }
+                    </div>
                 </div>
                 @elseif($Qformat==3)
                 {{-- fill-in-blank --}}
@@ -254,70 +250,71 @@
                     <label for=" Q3" class="white-label" style="margin-top: 15px">
                         Please enter the appropriate input to produce the following output.</label>
                     <p class="programming-bg" style="font-weight:bold">Input the year: 1673<br />Output: 1673 is
-                        not a leap year
-                        <div class="programming-bg">
-                            <span class="programming-blue">import</span> java.util.Scanner;<br />
-                            <span class="programming-blue">public class Q3</span><br />
-                            {<br />
-                            &emsp;<span class="programming-blue">public static void</span>
-                            <span class="programming-green">main</span> (String[] args)<br />
-                            &emsp;{<br />
-                            &emsp;&emsp;Scanner in = <span class="programming-blue">new
-                                Scanner</span>(System.in);<br />
-                            &emsp;&emsp;System.out.<span class="programming-green">print</span>(<span
-                                class="programming-green">"Input the year: "</span>)<br />
-                            &emsp;&emsp;<span class="programming-blue">int</span> year = in.<span
-                                class="programming-green">nextInt</span>(); <br />
-                            &emsp;&emsp;<span class="programming-blue">boolean</span> x = (year % 4) == 0;<br />
-                            &emsp;&emsp;<span class="programming-blue">boolean</span> y = (year % 100) != 0;<br />
-                            &emsp;&emsp;<span class="programming-blue">boolean</span> z = (year % 100 == 0) && (year
-                            %
-                            400 == 0);<br />
-                            &emsp;&emsp;<span class="programming-blue">if</span> (
-                            ( <input class="form-control" name="Q3_1A" required style="display: inline; width:60px;"
-                                {{old("flag")?'disabled':''}} value='{{old('Q3_1A')}}' maxlength=1 />
-                            @if(Session::has('endResult'))
-                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                <ion-icon name="{{Session::get('endResult')[0]?'checkmark-circle':'close-circle'}}"
-                                    style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
-                            </div>
-                            @endif
-                            ||
-                            <input class="form-control" name="Q3_1B" required style="display: inline; width:60px;"
-                                {{old("flag")?'disabled':''}} value='{{old('Q3_1B')}}' maxlength=1 />
-                            @if(Session::has('endResult'))
-                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
-                                    style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
-                            </div>
-                            @endif ) && <input class="form-control" name="Q3_1C" required style="display: inline; width:60px;"
-                            {{old("flag")?'disabled':''}} value='{{old('Q3_1C')}}' maxlength=1 />
-                            @if(Session::has('endResult'))
-                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                <ion-icon name="{{Session::get('endResult')[2]?'checkmark-circle':'close-circle'}}"
-                                    style="color: {{Session::get('endResult')[2]?'green':'red'}};"></ion-icon>
-                            </div>
-                            @endif
-                            )<br />
-                            &emsp;&emsp;{ <br />
-                            &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(year + <span
-                                class="programming-green">"is a leap year"</span>)<br />
-                            &emsp;&emsp;}<br />
-                            &emsp;&emsp;<span class="programming-blue">else</span><br />
-                            &emsp;&emsp;{ <br />
-                            &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(year + <span
-                                class="programming-green">"is not a leap year"</span>)<br />
-                            &emsp;&emsp;}<br />
-                            &emsp;}<br />
-                            }
+                        not a leap year</p>
+                    <div class="programming-bg">
+                        <span class="programming-blue">import</span> java.util.Scanner;<br />
+                        <span class="programming-blue">public class Q3</span><br />
+                        {<br />
+                        &emsp;<span class="programming-blue">public static void</span>
+                        <span class="programming-green">main</span> (String[] args)<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;Scanner in = <span class="programming-blue">new
+                            Scanner</span>(System.in);<br />
+                        &emsp;&emsp;System.out.<span class="programming-green">print</span>(<span
+                            class="programming-green">"Input the year: "</span>)<br />
+                        &emsp;&emsp;<span class="programming-blue">int</span> year = in.<span
+                            class="programming-green">nextInt</span>(); <br />
+                        &emsp;&emsp;<span class="programming-blue">boolean</span> x = (year % 4) == 0;<br />
+                        &emsp;&emsp;<span class="programming-blue">boolean</span> y = (year % 100) != 0;<br />
+                        &emsp;&emsp;<span class="programming-blue">boolean</span> z = (year % 100 == 0) && (year
+                        %
+                        400 == 0);<br />
+                        &emsp;&emsp;<span class="programming-blue">if</span> (
+                        ( <input class="form-control" name="Q3_1A" required style="display: inline; width:60px;"
+                            {{old("flag")?'disabled':''}} value='{{old('Q3_1A')}}' maxlength=1 />
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[0]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
                         </div>
-                    </p>
+                        @endif
+                        ||
+                        <input class="form-control" name="Q3_1B" required style="display: inline; width:60px;"
+                            {{old("flag")?'disabled':''}} value='{{old('Q3_1B')}}' maxlength=1 />
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif ) && <input class="form-control" name="Q3_1C" required
+                            style="display: inline; width:60px;" {{old("flag")?'disabled':''}} value='{{old('Q3_1C')}}'
+                            maxlength=1 />
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[2]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[2]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif
+                        )<br />
+                        &emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(year + <span
+                            class="programming-green">"is a leap year"</span>)<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;&emsp;<span class="programming-blue">else</span><br />
+                        &emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(year + <span
+                            class="programming-green">"is not a leap year"</span>)<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;}<br />
+                        }
+                    </div>
                 </div>
                 @elseif($Qformat==4)
                 {{-- code --}}
-                <div style="display: {{$Qformat==4?'block':'none'}}">
+                <div>
                     <label for=" Q3" class="white-label" style="margin-top: 15px">
-                        Please write a Java program that takes a year from user and print whether that year is a leap year or not.</label>
+                        Please write a Java program that takes a year from user and print whether that year is a leap
+                        year or not.</label>
                     <textarea class="form-control" rows="30" required name='Q3' {{old("flag")?'disabled':''}}>{{old('Q3')}}
                     </textarea>
                     @if(Session::has('endResult'))

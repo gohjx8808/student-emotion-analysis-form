@@ -89,36 +89,33 @@
                     <label for=" Q1" class="white-label" style="margin-top: 15px">
                         What will be the output of the following program?</label>
                     <div class="programming-bg">
-                        <p>
-                            <span class="programming-blue">import</span> java.util.Scanner;<br />
-                            <span class="programming-blue">public class Q1</span><br />
-                            {<br />
-                            &emsp;<span class="programming-blue">public static void</span>
-                            <span class="programming-green">main</span> (String[] args)<br />
-                            &emsp;{<br />
-                            &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
-                            &emsp;&emsp;<span class="programming-blue">double</span> x = 3.12; <br />
-                            &emsp;&emsp;<span class="programming-blue">double</span> y = 10.98; <br />
-                            &emsp;&emsp;<span class="programming-blue">double</span> z = 0.93; <br />
-                            &emsp;&emsp;<span class="programming-blue">if</span> (x
-                            < y && y < z)<br />
-                            &emsp;&emsp;{ <br />
-                            &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
-                                class="programming-green">"Increasing order"</span>);<br />
-                            &emsp;&emsp;}<br />
-                            &emsp;&emsp;<span class="programming-blue">else if</span> (x > y && y > z)<br />
-                            &emsp;&emsp;{ <br />
-                            &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
-                                class="programming-green">"Decreasing order"</span>);<br />
-                            &emsp;&emsp;}<br />
-                            &emsp;&emsp;<span class="programming-blue">else</span><br />
-                            &emsp;&emsp;{<br />
-                            &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
-                                class="programming-green">"Neither option"</span>);<br />
-                            &emsp;&emsp;}<br />
-                            &emsp;}<br />
-                            }
-                        </p>
+                        <span class="programming-blue">import</span> java.util.Scanner;<br />
+                        <span class="programming-blue">public class Q1</span><br />
+                        {<br />
+                        &emsp;<span class="programming-blue">public static void</span>
+                        <span class="programming-green">main</span> (String[] args)<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
+                        &emsp;&emsp;<span class="programming-blue">double</span> x = 3.12; <br />
+                        &emsp;&emsp;<span class="programming-blue">double</span> y = 10.98; <br />
+                        &emsp;&emsp;<span class="programming-blue">double</span> z = 0.93; <br />
+                        &emsp;&emsp;<span class="programming-blue">if</span> (x &lt; y && y &lt; z)<br />
+                        &emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"Increasing order"</span>);<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;&emsp;<span class="programming-blue">else if</span> (x &gt; y && y &gt; z)<br />
+                        &emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"Decreasing order"</span>);<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;&emsp;<span class="programming-blue">else</span><br />
+                        &emsp;&emsp;{<br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"Neither option"</span>);<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;}<br />
+                        }
                     </div>
                     <br />
                     <div class="form-control" style="border-bottom-width: 0;border-radius: 10px 10px 0px 0px;">
@@ -161,8 +158,8 @@
                 <div>
                     <label for=" Q1" class="white-label" style="margin-top: 15px">
                         Please select the appropriate input to produce the following output.</label>
-                    <p class="programming-bg" style="font-weight:bold">Input: x = 900.23 y = 23.45 z =
-                        4.534<br />Output: Decreasing order</p>
+                    <p class="programming-bg" style="font-weight:bold"><u>Input:</u> x = 900.23 y = 23.45 z =
+                        4.534<br /><u>Output:</u> Decreasing order</p>
                     <div class="programming-bg">
                         <span class="programming-blue">import</span> java.util.Scanner;<br />
                         <span class="programming-blue">public class Q1</span><br />
@@ -197,75 +194,76 @@
                                 style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
                         </div>
                         @endif
-                        < y && <select class="form-control" name="Q1_1B" required
+                        &lt; y &&
+                        <select class="form-control" name="Q1_1B" required
                             style="display: inline; width:70px;height:33px" {{old("flag")?'disabled':''}}>
                             <option value="" disabled selected />
                             <option value='x' {{old("Q1_1B")=='x'?'selected':''}}>x</option>
                             <option value='y' {{old("Q1_1B")=='y'?'selected':''}}>y</option>
                             <option value='z' {{old("Q1_1B")=='z'?'selected':''}}>z</option>
-                            </select>
-                            @if(Session::has('endResult'))
-                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
-                                    style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
-                            </div>
-                            @endif
-                            < <select class="form-control" name="Q1_1C" required
-                                style="display: inline; width:70px;height:33px" {{old("flag")?'disabled':''}}>
-                                <option value="" disabled selected />
-                                <option value='x' {{old("Q1_1C")=='x'?'selected':''}}>x</option>
-                                <option value='y' {{old("Q1_1C")=='y'?'selected':''}}>y</option>
-                                <option value='z' {{old("Q1_1C")=='z'?'selected':''}}>z</option>
-                                </select>
-                                @if(Session::has('endResult'))
-                                <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                    <ion-icon name="{{Session::get('endResult')[2]?'checkmark-circle':'close-circle'}}"
-                                        style="color: {{Session::get('endResult')[2]?'green':'red'}};"></ion-icon>
-                                </div>
-                                @endif)<br />
-                                &emsp;&emsp;{ <br />
-                                &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
-                                    class="programming-green">"Increasing order"</span>);<br />
-                                &emsp;&emsp;}<br />
-                                &emsp;&emsp;<span class="programming-blue">else if</span> (
-                                    <select class="form-control"
-                                    name="Q1_1D" required style="display: inline; width:70px;height:33px"
-                                    {{old("flag")?'disabled':''}}>
-                                    <option value="" disabled selected />
-                                    <option value='x' {{old("Q1_1D")=='x'?'selected':''}}>x</option>
-                                    <option value='y' {{old("Q1_1D")=='y'?'selected':''}}>y</option>
-                                    <option value='z' {{old("Q1_1D")=='z'?'selected':''}}>z</option>
-                                </select>
-                                @if(Session::has('endResult'))
-                                <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                    <ion-icon name="{{Session::get('endResult')[3]?'checkmark-circle':'close-circle'}}"
-                                        style="color: {{Session::get('endResult')[3]?'green':'red'}};"></ion-icon>
-                                </div>
-                                @endif > y && <select class="form-control" name="Q1_1E" required
-                                    style="display: inline; width:70px;height:33px" {{old("flag")?'disabled':''}}>
-                                    <option value="" disabled selected />
-                                    <option value='x' {{old("Q1_1E")=='x'?'selected':''}}>x</option>
-                                    <option value='y' {{old("Q1_1E")=='y'?'selected':''}}>y</option>
-                                    <option value='z' {{old("Q1_1E")=='z'?'selected':''}}>z</option>
-                                </select>
-                                @if(Session::has('endResult'))
-                                <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                    <ion-icon name="{{Session::get('endResult')[4]?'checkmark-circle':'close-circle'}}"
-                                        style="color: {{Session::get('endResult')[4]?'green':'red'}};"></ion-icon>
-                                </div>
-                                @endif > z)<br />
-                                &emsp;&emsp;{ <br />
-                                &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
-                                    class="programming-green">"Decreasing order"</span>);<br />
-                                &emsp;&emsp;}<br />
-                                &emsp;&emsp;<span class="programming-blue">else</span><br />
-                                &emsp;&emsp;{<br />
-                                &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
-                                    class="programming-green">"Neither option"</span>);<br />
-                                &emsp;&emsp;}<br />
-                                &emsp;}<br />
-                                }
-                                </p>
+                        </select>
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif
+                        &lt; <select class="form-control" name="Q1_1C" required
+                            style="display: inline; width:70px;height:33px" {{old("flag")?'disabled':''}}>
+                            <option value="" disabled selected />
+                            <option value='x' {{old("Q1_1C")=='x'?'selected':''}}>x</option>
+                            <option value='y' {{old("Q1_1C")=='y'?'selected':''}}>y</option>
+                            <option value='z' {{old("Q1_1C")=='z'?'selected':''}}>z</option>
+                        </select>
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[2]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[2]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif)<br />
+                        &emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"Increasing order"</span>);<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;&emsp;<span class="programming-blue">else if</span> (
+                        <select class="form-control" name="Q1_1D" required
+                            style="display: inline; width:70px;height:33px" {{old("flag")?'disabled':''}}>
+                            <option value="" disabled selected />
+                            <option value='x' {{old("Q1_1D")=='x'?'selected':''}}>x</option>
+                            <option value='y' {{old("Q1_1D")=='y'?'selected':''}}>y</option>
+                            <option value='z' {{old("Q1_1D")=='z'?'selected':''}}>z</option>
+                        </select>
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[3]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[3]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif &gt; y &&
+                        <select class="form-control" name="Q1_1E" required
+                            style="display: inline; width:70px;height:33px" {{old("flag")?'disabled':''}}>
+                            <option value="" disabled selected />
+                            <option value='x' {{old("Q1_1E")=='x'?'selected':''}}>x</option>
+                            <option value='y' {{old("Q1_1E")=='y'?'selected':''}}>y</option>
+                            <option value='z' {{old("Q1_1E")=='z'?'selected':''}}>z</option>
+                        </select>
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[4]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[4]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif &gt; z)<br />
+                        &emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"Decreasing order"</span>);<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;&emsp;<span class="programming-blue">else</span><br />
+                        &emsp;&emsp;{<br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"Neither option"</span>);<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;}<br />
+                        }
+                        </p>
                     </div>
                 </div>
                 @elseif($Qformat==3)
@@ -273,8 +271,8 @@
                 <div>
                     <label for=" Q1" class="white-label" style="margin-top: 15px">
                         Please fill in the approriate variables to produce the following output.</label>
-                    <p class="programming-bg" style="font-weight:bold">Input: x = 1.2234 y = 7.823 z = 1080.32
-                        <br />Output:
+                    <p class="programming-bg" style="font-weight:bold"><u>Input:</u> x = 1.2234 y = 7.823 z = 1080.32
+                        <br /><u>Output:</u>
                         Increasing order</p>
                     <div class="programming-bg">
                         <span class="programming-blue">import</span> java.util.Scanner;<br />
@@ -306,65 +304,67 @@
                                 style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
                         </div>
                         @endif
-                        < y && <input class="form-control" name="Q1_1B" required type='text' maxlength=1
+                        &lt; y && <input class="form-control" name="Q1_1B" required type='text' maxlength=1
                             style="display: inline; width:40px;height:33px" {{old("flag")?'disabled':''}}
                             value={{old("Q1_1B")}}>
-                            @if(Session::has('endResult'))
-                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
-                                    style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
-                            </div>
-                            @endif
-                            < <input class="form-control" name="Q1_1C" required type='text' maxlength=1
-                                style="display: inline; width:40px;height:33px" {{old("flag")?'disabled':''}}
-                                value={{old("Q1_1C")}}>
-                                @if(Session::has('endResult'))
-                                <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                    <ion-icon name="{{Session::get('endResult')[2]?'checkmark-circle':'close-circle'}}"
-                                        style="color: {{Session::get('endResult')[2]?'green':'red'}};"></ion-icon>
-                                </div>
-                                @endif)<br />
-                                &emsp;&emsp;{ <br />
-                                &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
-                                    class="programming-green">"Increasing order"</span>);<br />
-                                &emsp;&emsp;}<br />
-                                &emsp;&emsp;<span class="programming-blue">else if</span> (<input class="form-control"
-                                    name="Q1_1D" required type='text' maxlength=1
-                                    style="display: inline; width:40px;height:33px" {{old("flag")?'disabled':''}}
-                                    value={{old("Q1_1D")}}>
-                                @if(Session::has('endResult'))
-                                <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                    <ion-icon name="{{Session::get('endResult')[3]?'checkmark-circle':'close-circle'}}"
-                                        style="color: {{Session::get('endResult')[3]?'green':'red'}};"></ion-icon>
-                                </div>
-                                @endif > y && <input class="form-control" name="Q1_1E" required type='text' maxlength=1
-                                    style="display: inline; width:40px;height:33px" {{old("flag")?'disabled':''}}
-                                    value={{old("Q1_1E")}}>
-                                @if(Session::has('endResult'))
-                                <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                    <ion-icon name="{{Session::get('endResult')[4]?'checkmark-circle':'close-circle'}}"
-                                        style="color: {{Session::get('endResult')[4]?'green':'red'}};"></ion-icon>
-                                </div>
-                                @endif > z)<br />
-                                &emsp;&emsp;{ <br />
-                                &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
-                                    class="programming-green">"Decreasing order"</span>);<br />
-                                &emsp;&emsp;}<br />
-                                &emsp;&emsp;<span class="programming-blue">else</span><br />
-                                &emsp;&emsp;{<br />
-                                &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
-                                    class="programming-green">"Neither option"</span>);<br />
-                                &emsp;&emsp;}<br />
-                                &emsp;}<br />
-                                }
-                                </p>
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif
+                        &lt; <input class="form-control" name="Q1_1C" required type='text' maxlength=1
+                            style="display: inline; width:40px;height:33px" {{old("flag")?'disabled':''}}
+                            value={{old("Q1_1C")}}>
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[2]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[2]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif)<br />
+                        &emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"Increasing order"</span>);<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;&emsp;<span class="programming-blue">else if</span> (
+                        <input class="form-control" name="Q1_1D" required type='text' maxlength=1
+                            style="display: inline; width:40px;height:33px" {{old("flag")?'disabled':''}}
+                            value={{old("Q1_1D")}}>
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[3]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[3]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif &gt; y &&
+                        <input class="form-control" name="Q1_1E" required type='text' maxlength=1
+                            style="display: inline; width:40px;height:33px" {{old("flag")?'disabled':''}}
+                            value={{old("Q1_1E")}}>
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[4]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[4]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif
+                        &gt; z)<br />
+                        &emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"Decreasing order"</span>);<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;&emsp;<span class="programming-blue">else</span><br />
+                        &emsp;&emsp;{<br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"Neither option"</span>);<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;}<br />
+                        }
+                        </p>
                     </div>
                 </div>
                 @elseif($Qformat==4)
                 {{-- code --}}
                 <div>
                     <label for=" Q1" class="white-label" style="margin-top: 15px">
-                        Please write a program that accepts three numbers from the user and prints "increasing" if the
+                        Please write a Java program that accepts three numbers from the user and prints "increasing" if the
                         numbers are in increasing order, "decreasing" if the numbers are in decreasing order, and
                         "Neither increasing or decreasing order" otherwise.</label>
                     <textarea class="form-control" rows="30" required name='Q1' {{old("flag")?'disabled':''}}>{{old('Q1')}}

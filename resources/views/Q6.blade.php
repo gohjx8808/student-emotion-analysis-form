@@ -79,14 +79,14 @@
         </p>
         <hr style="background-color:white" />
         <p class="white-label"><u>Question 6</u></p>
-        <form action="Q4/save" method="POST">
+        <form action="Q6/save" method="POST">
             {{ csrf_field() }}
             <div class="form-group">
                 @if($Qformat!=null)
                 {{-- mcq --}}
                 @if($Qformat==1)
                 <div>
-                    <label for=" Q4" class="white-label" style="margin-top: 15px">
+                    <label for=" Q6" class="white-label" style="margin-top: 15px">
                         What is the output of the following program?</label>
                     <div class="programming-bg">
                         <span class="programming-blue">class </span>Base<br />
@@ -111,7 +111,7 @@
                         &emsp;<span class="programming-blue">public static void</span>
                         <span class="programming-green">DoPrint</span> (Base o)<br />
                         &emsp;{<br />
-                        &emsp;&emsp;o.Print();<br/>
+                        &emsp;&emsp;o.Print();<br />
                         &emsp;}<br />
                         &emsp;<span class="programming-blue">public static void</span>
                         <span class="programming-green">main</span> (String[] args)<br />
@@ -119,39 +119,40 @@
                         &emsp;&emsp;Base x = <span class="programming-blue">new</span> Base();<br />
                         &emsp;&emsp;Base y = <span class="programming-blue">new</span> Derived();<br />
                         &emsp;&emsp;Derived z = <span class="programming-blue">new</span> Derived();<br />
-                        &emsp;&emsp;DoPrint(x);<br/>
-                        &emsp;&emsp;DoPrint(y);<br/>
-                        &emsp;&emsp;DoPrint(z);<br/>
+                        &emsp;&emsp;DoPrint(x);<br />
+                        &emsp;&emsp;DoPrint(y);<br />
+                        &emsp;&emsp;DoPrint(z);<br />
                         &emsp;}<br />
                         }
                     </div>
                     <br />
-                    <div class="form-control" style="border-bottom-width: 0;border-radius: 10px 10px 0px 0px;">
-                        <input class="form-control-input" type="radio" id="Q4_1a" name="Q4_1" value="a" required"
-                            {{old("Q4_1")=='a'?'checked':''}} {{old("flag")?'disabled':''}} />
-                        <label class="form-check-label" for="Q4_1a" style="padding-left: 15px;">
-                            Factorial of 6 is 28
+                    <div class="form-control"
+                        style="border-bottom-width: 0;border-radius: 10px 10px 0px 0px; height:85px">
+                        <input class="form-control-input" type="radio" id="Q6_1a" name="Q6_1" value="a" required"
+                            {{old("Q6_1")=='a'?'checked':''}} {{old("flag")?'disabled':''}} />
+                        <label class="form-check-label" for="Q6_1a" style="padding-left: 15px;">
+                            Base<br />Derived<br />Derived
                         </label>
                     </div>
-                    <div class="form-control radio-center">
-                        <input class="form-control-input" type="radio" id="Q4_1b" name="Q4_1" value="b"
-                            {{old("Q4_1")=='b'?'checked':''}} {{old("flag")?'disabled':''}} />
-                        <label class="form-check-label" for="Q4_1b" style="padding-left: 15px">
-                            Factorial of 6 is 120
+                    <div class="form-control radio-center" style="height:85px">
+                        <input class="form-control-input" type="radio" id="Q6_1b" name="Q6_1" value="b"
+                            {{old("Q6_1")=='b'?'checked':''}} {{old("flag")?'disabled':''}} />
+                        <label class="form-check-label" for="Q6_1b" style="padding-left: 15px">
+                            Base<br />Derived<br />Base
                         </label>
                     </div>
-                    <div class="form-control radio-center">
-                        <input class="form-control-input" type="radio" id="Q4_1c" name="Q4_1" value="c"
-                            {{old("Q4_1")=='c'?'checked':''}} {{old("flag")?'disabled':''}} />
-                        <label class="form-check-label" for="Q4_1c" style="padding-left: 15px">
-                            Factorial of 6 is 5040
+                    <div class="form-control radio-center" style="height:85px">
+                        <input class="form-control-input" type="radio" id="Q6_1c" name="Q6_1" value="c"
+                            {{old("Q6_1")=='c'?'checked':''}} {{old("flag")?'disabled':''}} />
+                        <label class="form-check-label" for="Q6_1c" style="padding-left: 15px">
+                            Base<br />Base<br />Derived
                         </label>
                     </div>
                     <div class="form-control" style="border-radius: 0px 0px 10px 10px;">
-                        <input class="form-control-input" type="radio" id="Q4_1d" name="Q4_1" value="d"
-                            {{old("Q4_1")=='d'?'checked':''}} {{old("flag")?'disabled':''}} />
-                        <label class="form-check-label" for="Q4_1d" style="padding-left: 15px">
-                            Factorial of 6 is 2520
+                        <input class="form-control-input" type="radio" id="Q6_1d" name="Q6_1" value="d"
+                            {{old("Q6_1")=='d'?'checked':''}} {{old("flag")?'disabled':''}} />
+                        <label class="form-check-label" for="Q6_1d" style="padding-left: 15px">
+                            Compiler Error
                         </label>
                     </div>
                     @if(Session::has('endResult'))
@@ -164,124 +165,203 @@
                 @elseif($Qformat==2)
                 {{-- matching --}}
                 <div>
-                    <label for="Q4" class="white-label" style="margin-top: 15px">
+                    <label for="Q6" class="white-label" style="margin-top: 15px">
                         Please select the appropriate algorithm to produce the following output.</label>
-                    <p class="programming-bg" style="font-weight:bold">Output: 362880
-                        <div class="programming-bg">
-                            <span class="programming-blue">public class Factorial</span><br />
-                            {<br />
-                            &emsp;<span class="programming-blue">static int </span>factorial(<span
-                                class="programming-blue">int</span> n)<br />
-                            &emsp;{<br />
-                            &emsp;&emsp;<span class="programming-blue">if </span>(n == 0)<br />
-                            &emsp;&emsp;&emsp;<span class="programming-blue">return </span><select class="form-control"
-                                name="Q4_1A" required style="display: inline; width:220px;"
-                                {{old("flag")?'disabled':''}}>
-                                <option value="" disabled selected />
-                                <option value='0' {{old("Q4_1A")=='0'?'selected':''}}>0</option>
-                                <option value='1' {{old("Q4_1A")=='1'?'selected':''}}>1</option>
-                                <option value='2' {{old("Q4_1A")=='2'?'selected':''}}>2</option>
-                            </select>@if(Session::has('endResult'))
-                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                <ion-icon name="{{Session::get('endResult')[0]?'checkmark-circle':'close-circle'}}"
-                                    style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
-                            </div>
-                            @endif;<br />
-                            &emsp;&emsp;<span class="programming-blue">return </span><select class="form-control"
-                                name="Q4_1B" required style="display: inline; width:220px;"
-                                {{old("flag")?'disabled':''}}>
-                                <option value="" disabled selected />
-                                <option value='a' {{old("Q4_1B")=='a'?'selected':''}}>n*factorial(n-1)</option>
-                                <option value='b' {{old("Q4_1B")=='b'?'selected':''}}>n*factorial(n+1)</option>
-                                <option value='c' {{old("Q4_1B")=='c'?'selected':''}}>n*factorial(n*1)</option>
-                            </select>
-                            @if(Session::has('endResult'))
-                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
-                                    style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
-                            </div>
-                            @endif;<br />
-                            &emsp;}<br /><br />
-                            &emsp;<span class="programming-blue">public static void</span>
-                            <span class="programming-green">main</span> (String[] args)<br />
-                            &emsp;{<br />
-                            &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
-                            &emsp;&emsp;<span class="programming-blue">int</span> num = 7;<br />
-                            &emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
-                                class="programming-green">"Factorial of "</span> + num + <span
-                                class="programming-green">"
-                                is "</span> + factorial(num))<br />
-                            &emsp;}<br />
-                            }
+                    <p class="programming-bg" style="font-weight:bold">
+                        <u>Output:</u><br />Derived<br />Base<br />Derived </p>
+                    <div class="programming-bg">
+                        <span class="programming-blue">class </span>Base<br />
+                        {<br />
+                        &emsp;<span class="programming-blue">public void </span>Print()<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"Base"</span>);<br />
+                        &emsp;}<br />
+                        }<br /><br />
+                        <span class="programming-blue">class </span>Derived<span class="programming-blue"> extends
+                        </span>Base<br />
+                        {<br />
+                        &emsp;<span class="programming-blue">public void </span>Print()<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"Derived"</span>);<br />
+                        &emsp;}<br />
+                        }<br /><br />
+                        <span class="programming-blue">class </span>Q6<br />
+                        {<br />
+                        &emsp;<span class="programming-blue">public static void</span>
+                        <span class="programming-green">DoPrint</span> (Base o)<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;o.Print();<br />
+                        &emsp;}<br />
+                        &emsp;<span class="programming-blue">public static void</span>
+                        <span class="programming-green">main</span> (String[] args)<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;Derived x = <span class="programming-blue">new </span><select class="form-control"
+                            name="Q6_1A" required style="display: inline; width:130px;" {{old("flag")?'disabled':''}}>
+                            <option value="" disabled selected />
+                            <option value='Base()' {{old("Q6_1A")=='Base()'?'selected':''}}>Base()</option>
+                            <option value='Derived()' {{old("Q6_1A")=='Derived()'?'selected':''}}>Derived()</option>
+                        </select>
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[0]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
                         </div>
-                    </p>
+                        @endif;<br />
+                        &emsp;&emsp;Base y = <span class="programming-blue">new </span><select class="form-control"
+                            name="Q6_1B" required style="display: inline; width:130px;" {{old("flag")?'disabled':''}}>
+                            <option value="" disabled selected />
+                            <option value='Base()' {{old("Q6_1B")=='Base()'?'selected':''}}>Base()</option>
+                            <option value='Derived()' {{old("Q6_1B")=='Derived()'?'selected':''}}>Derived()</option>
+                        </select>
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif;<br />
+                        &emsp;&emsp;Base z = <span class="programming-blue">new </span><select class="form-control"
+                            name="Q6_1C" required style="display: inline; width:130px;" {{old("flag")?'disabled':''}}>
+                            <option value="" disabled selected />
+                            <option value='Base()' {{old("Q6_1C")=='Base()'?'selected':''}}>Base()</option>
+                            <option value='Derived()' {{old("Q6_1C")=='Derived()'?'selected':''}}>Derived()</option>
+                        </select>
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[2]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[2]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif;<br />
+                        &emsp;&emsp;DoPrint(x);<br />
+                        &emsp;&emsp;DoPrint(y);<br />
+                        &emsp;&emsp;DoPrint(z);<br />
+                        &emsp;}<br />
+                        }
+                    </div>
                 </div>
                 @elseif($Qformat==3)
                 {{-- fill-in-blank --}}
                 <div>
-                    <label for="Q4" class="white-label" style="margin-top: 15px">
+                    <label for="Q6" class="white-label" style="margin-top: 15px">
                         Please enter the appropriate algorithm to produce the following output.</label>
-                    <p class="programming-bg" style="font-weight:bold">Output: 120
-                        <div class="programming-bg">
-                            <span class="programming-blue">public class Factorial</span><br />
-                            {<br />
-                            &emsp;<span class="programming-blue">static int </span>factorial(<span
-                                class="programming-blue">int</span> n)<br />
-                            &emsp;{<br />
-                            &emsp;&emsp;<span class="programming-blue">if </span>(n == 0)<br />
-                            &emsp;&emsp;&emsp;<span class="programming-blue">return </span><input class="form-control"
-                                name="Q4_1A" required style="display: inline; width:220px;"
-                                {{old("flag")?'disabled':''}} value="{{old('Q4_1A')}}" />
-                            @if(Session::has('endResult'))
-                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                <ion-icon name="{{Session::get('endResult')[0]?'checkmark-circle':'close-circle'}}"
-                                    style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
-                            </div>
-                            @endif;<br />
-                            &emsp;&emsp;<span class="programming-blue">return </span>
-                            <input class="form-control" name="Q4_1B" required style="display: inline; width:220px;"
-                                {{old("flag")?'disabled':''}} value="{{old('Q4_1B')}}" />
-                            @if(Session::has('endResult'))
-                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
-                                    style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
-                            </div>
-                            @endif;<br />
-                            &emsp;}<br /><br />
-                            &emsp;<span class="programming-blue">public static void</span>
-                            <span class="programming-green">main</span> (String[] args)<br />
-                            &emsp;{<br />
-                            &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
-                            &emsp;&emsp;<span class="programming-blue">int</span> num = 5;<br />
-                            &emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
-                                class="programming-green">"Factorial of "</span> + num + <span
-                                class="programming-green">"
-                                is "</span> + factorial(num))<br />
-                            &emsp;}<br />
-                            }
+                    <p class="programming-bg" style="font-weight:bold">
+                        <u>Output:</u><br />Derived<br />Base<br />Derived</p>
+                    <div class="programming-bg">
+                        <span class="programming-blue">class </span>Base<br />
+                        {<br />
+                        &emsp;<span class="programming-blue">public void </span>Print()<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"Base"</span>);<br />
+                        &emsp;}<br />
+                        }<br /><br />
+                        <span class="programming-blue">class </span>Derived<span class="programming-blue"> extends
+                        </span>Base<br />
+                        {<br />
+                        &emsp;<span class="programming-blue">public void </span>Print()<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"Derived"</span>);<br />
+                        &emsp;}<br />
+                        }<br /><br />
+                        <span class="programming-blue">class </span>Q6<br />
+                        {<br />
+                        &emsp;<span class="programming-blue">public static void</span>
+                        <span class="programming-green">DoPrint</span> (Base o)<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;o.Print();<br />
+                        &emsp;}<br />
+                        &emsp;<span class="programming-blue">public static void</span>
+                        <span class="programming-green">main</span> (String[] args)<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;Derived x = <span class="programming-blue">new </span>
+                        <input class="form-control" name="Q6_1A" required style="display: inline; width:130px;"
+                            {{old("flag")?'disabled':''}} value="{{old('Q6_1A')}}" />
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[0]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
                         </div>
-                    </p>
-                    @if(Session::has('endResult'))
-                    @if(Session::get('endResult')[0]==false || Session::get('endResult')[1]==false)
-                    <p class="rounded resultMsg" style="color: red;" />
-                    {{Session::get('endResult')[2]}}
-                    </p>
-                    @endif
-                    @endif
+                        @endif;<br />
+                        &emsp;&emsp;Base y = <span class="programming-blue">new </span>
+                        <input class="form-control" name="Q6_1B" required style="display: inline; width:130px;"
+                            {{old("flag")?'disabled':''}} value="{{old('Q6_1B')}}" />
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif;<br />
+                        &emsp;&emsp;Base z = <span class="programming-blue">new </span>
+                        <input class="form-control" name="Q6_1C" required style="display: inline; width:130px;"
+                            {{old("flag")?'disabled':''}} value="{{old('Q6_1C')}}" />
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[2]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[2]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif;<br />
+                        &emsp;&emsp;DoPrint(x);<br />
+                        &emsp;&emsp;DoPrint(y);<br />
+                        &emsp;&emsp;DoPrint(z);<br />
+                        &emsp;}<br />
+                        }
+                    </div>
                 </div>
                 @elseif($Qformat==4)
                 {{-- code --}}
-                <div style="display: {{$Qformat==4?'block':'none'}}">
-                    <label for=" Q4" class="white-label" style="margin-top: 15px">
-                        Please write a program to find the factorial value of any number entered through the
-                        keyboard</label>
-                    <textarea class="form-control" rows="30" required name='Q4' {{old("flag")?'disabled':''}}>{{old('Q4')}}
-                    </textarea>
+                <div>
+                    <label for="Q6" class="white-label" style="margin-top: 15px">
+                        Please write the remaining short codes to produce the following output.</label>
+                    <p class="programming-bg" style="font-weight:bold">
+                        <u>Output:</u><br />Base<br />Derived<br />Derived</p>
+                    <div class="programming-bg">
+                        <span class="programming-blue">class </span>Base<br />
+                        {<br />
+                        &emsp;<span class="programming-blue">public void </span>Print()<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"Base"</span>);<br />
+                        &emsp;}<br />
+                        }<br /><br />
+                        <span class="programming-blue">class </span>Derived<span class="programming-blue"> extends
+                        </span>Base<br />
+                        {<br />
+                        &emsp;<span class="programming-blue">public void </span>Print()<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"Derived"</span>);<br />
+                        &emsp;}<br />
+                        }<br /><br />
+                        <span class="programming-blue">class </span>Q6<br />
+                        {<br />
+                        &emsp;<span class="programming-blue">public static void</span>
+                        <span class="programming-green">DoPrint</span> (Base o)<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;o.Print();<br />
+                        &emsp;}<br />
+                        &emsp;<span class="programming-blue">public static void</span>
+                        <span class="programming-green">main</span> (String[] args)<br />
+                        &emsp;{
+                        &emsp;&emsp;<textarea class="form-control" rows="10" required name='Q6'
+                            {{old("flag")?'disabled':''}}>{{old('Q6')}}
+                        </textarea>
+                        &emsp;}<br />
+                        }
+                    </div>
                     @if(Session::has('endResult'))
                     <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
                         <p class="rounded resultMsg" type='text'
                             style="display: {{old('flag')?'block': 'none' }};color:green;">
-                            {{Session::get('endResult')[0]}}</p>
+                            <u>The answer is:</u><br />
+                            {{Session::get('endResult')[0]}}<br />
+                            {{Session::get('endResult')[1]}}<br />
+                            {{Session::get('endResult')[2]}}<br />
+                            {{Session::get('endResult')[3]}}<br />
+                            {{Session::get('endResult')[4]}}<br />
+                            {{Session::get('endResult')[5]}}
+                        </p>
                     </div>
                     @endif
                 </div>
@@ -303,7 +383,7 @@
         </form>
         <div style=" text-align: center;">
             <button type="button" class="btn btn-primary" style="width:15%" id='submit' {{old("flag")?'':'disabled'}}
-                onclick="window.location='{{ url("SAMQ4") }}'">
+                onclick="window.location='{{ url("SAMQ6") }}'">
                 Next
             </button>
         </div>

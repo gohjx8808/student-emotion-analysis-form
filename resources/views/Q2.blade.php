@@ -88,48 +88,46 @@
                 <div>
                     <label for=" Q2" class="white-label" style="margin-top: 15px">
                         What will be the output of the following program?</label>
-                    <p class="programming-bg" style="font-weight:bold">Input:<br />100<br />93<br />
+                    <p class="programming-bg" style="font-weight:bold"><u>Input:</u><br />100<br />93<br />
                         4<br />53<br />8<br />-1<br />48<br />-22<br /></p>
                     <div class="programming-bg">
-                        <p>
-                            <span class="programming-blue">import</span> java.util.Scanner;<br />
-                            <span class="programming-blue">public class Q2</span><br />
-                            {<br />
-                            &emsp;<span class="programming-blue">public static void</span>
-                            <span class="programming-green">main</span> (String[] args)<br />
-                            &emsp;{<br />
-                            &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
-                            &emsp;&emsp;<span class="programming-blue">int</span> x = 10; <br />
-                            &emsp;&emsp;<span class="programming-blue">int</span> even = 0; <br />
-                            &emsp;&emsp;<span class="programming-blue">int</span> odd = 0; <br />
-                            &emsp;&emsp;<span class="programming-blue">int</span> total = 0; <br />
-                            &emsp;&emsp;<span class="programming-blue">int</span> counter = 0; <br />
-                            &emsp;&emsp;<span class="programming-blue">while</span> (x >= 0) <br />
-                            &emsp;&emsp;{<br />
-                            &emsp;&emsp;&emsp;<span class="programming-blue">int</span> x = in.<span
-                                class="programming-green">nextInt</span>(); <br />
-                            &emsp;&emsp;&emsp;counter += 1;<br />
-                            &emsp;&emsp;&emsp;total += x;<br />
-                            &emsp;&emsp;&emsp;<span class="programming-blue">if</span> (x >= 0)<br />
-                            &emsp;&emsp;&emsp;{ <br />
-                            &emsp;&emsp;&emsp;&emsp;<span class="programming-blue">if</span> (x % 2 == 1)<br />
-                            &emsp;&emsp;&emsp;&emsp;{ <br />
-                            &emsp;&emsp;&emsp;&emsp;&emsp;odd += x;<br />
-                            &emsp;&emsp;&emsp;&emsp;}<br />
-                            &emsp;&emsp;&emsp;&emsp;<span class="programming-blue">else if</span> (x % 2 == 0)<br />
-                            &emsp;&emsp;&emsp;&emsp;{ <br />
-                            &emsp;&emsp;&emsp;&emsp;&emsp;even += x;<br />
-                            &emsp;&emsp;&emsp;&emsp;}<br />
-                            &emsp;&emsp;&emsp;}<br />
-                            &emsp;&emsp;}<br />
-                            &emsp;<span class="programming-blue">double</span> average = total / counter;<br />
-                            &emsp;System.out.<span class="programming-green">println</span>(<span
-                                class="programming-green">"Average = "</span> + average + <span
-                                class="programming-green">"\nTotal of Odd Number = "</span> + odd + <span
-                                class="programming-green">"\nTotal of Even Number = "</span> + even);<br />
-                            &emsp;}<br />
-                            }
-                        </p>
+                        <span class="programming-blue">import</span> java.util.Scanner;<br />
+                        <span class="programming-blue">public class Q2</span><br />
+                        {<br />
+                        &emsp;<span class="programming-blue">public static void</span>
+                        <span class="programming-green">main</span> (String[] args)<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
+                        &emsp;&emsp;<span class="programming-blue">int</span> x = 10; <br />
+                        &emsp;&emsp;<span class="programming-blue">int</span> even = 0; <br />
+                        &emsp;&emsp;<span class="programming-blue">int</span> odd = 0; <br />
+                        &emsp;&emsp;<span class="programming-blue">int</span> total = 0; <br />
+                        &emsp;&emsp;<span class="programming-blue">int</span> counter = 0; <br />
+                        &emsp;&emsp;<span class="programming-blue">while</span> (x >= 0) <br />
+                        &emsp;&emsp;{<br />
+                        &emsp;&emsp;&emsp;<span class="programming-blue">int</span> x = in.<span
+                            class="programming-green">nextInt</span>(); <br />
+                        &emsp;&emsp;&emsp;counter += 1;<br />
+                        &emsp;&emsp;&emsp;total += x;<br />
+                        &emsp;&emsp;&emsp;<span class="programming-blue">if</span> (x >= 0)<br />
+                        &emsp;&emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;&emsp;<span class="programming-blue">if</span> (x % 2 == 1)<br />
+                        &emsp;&emsp;&emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;&emsp;&emsp;odd += x;<br />
+                        &emsp;&emsp;&emsp;&emsp;}<br />
+                        &emsp;&emsp;&emsp;&emsp;<span class="programming-blue">else if</span> (x % 2 == 0)<br />
+                        &emsp;&emsp;&emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;&emsp;&emsp;even += x;<br />
+                        &emsp;&emsp;&emsp;&emsp;}<br />
+                        &emsp;&emsp;&emsp;}<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;<span class="programming-blue">double</span> average = total / counter;<br />
+                        &emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"Average = "</span> + average + <span
+                            class="programming-green">"\nTotal of Odd Number = "</span> + odd + <span
+                            class="programming-green">"\nTotal of Even Number = "</span> + even);<br />
+                        &emsp;}<br />
+                        }
                     </div>
                     <br />
                     <div class="form-control"
@@ -181,119 +179,120 @@
                 <div>
                     <label for=" Q1" class="white-label" style="margin-top: 15px">
                         Please select the appropriate input to produce the following output.</label>
-                    <p class="programming-bg" style="font-weight:bold">Input:<br />100<br />93<br />
-                        4<br />53<br />8<br />-1<br />48<br />-22<br /><br /> Output:<br /> Average = 51.6<br />
+                    <p class="programming-bg" style="font-weight:bold"><u>Input:</u><br />100<br />93<br />
+                        4<br />53<br />8<br />-1<br />48<br />-22<br /><br /><u>Output:</u><br /> Average = 51.6<br />
                         Total of Odd Number = 146<br />
-                        Total of Even Number = 112<br />
-                        <div class="programming-bg">
-                            <span class="programming-blue">import</span> java.util.Scanner;<br />
-                            <span class="programming-blue">public class Q2</span><br />
-                            {<br />
-                            &emsp;<span class="programming-blue">public static void</span>
-                            <span class="programming-green">main</span> (String[] args)<br />
-                            &emsp;{<br />
-                            &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
-                            &emsp;&emsp;<span class="programming-blue">int</span> x = 10; <br />
-                            &emsp;&emsp;<span class="programming-blue">int</span> even = 0; <br />
-                            &emsp;&emsp;<span class="programming-blue">int</span> odd = 0; <br />
-                            &emsp;&emsp;<span class="programming-blue">int</span> total = 0; <br />
-                            &emsp;&emsp;<span class="programming-blue">int</span> counter = 0; <br />
-                            &emsp;&emsp;<select class="form-control" name="Q2_1A" required
-                                style="display: inline; width:500px;" {{old("flag")?'disabled':''}}>
-                                <option value="" disabled selected />
-                                <option value='a' {{old("Q2_1A")=='a'?'selected':''}}>while (x != -1 && x >= 0)</option>
-                                <option value='b' {{old("Q2_1A")=='b'?'selected':''}}>while (x != -1 && x > 0)</option>
-                                <option value='c' {{old("Q2_1A")=='c'?'selected':''}}>while (x == -1 && x > 0)</option>
-                            </select>
-                            @if(Session::has('endResult'))
-                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                <ion-icon name="{{Session::get('endResult')[0]?'checkmark-circle':'close-circle'}}"
-                                    style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
-                            </div>
-                            @endif<br />
-                            &emsp;&emsp;{<br />
-                            &emsp;&emsp;&emsp;<span class="programming-blue">int</span> x = in.<span
-                                class="programming-green">nextInt</span>(); <br />
-                            &emsp;&emsp;&emsp;<span class="programming-blue">if</span> (x != -1 && x >= 0)<br />
-                            &emsp;&emsp;&emsp;{ <br />
-                            &emsp;&emsp;&emsp;&emsp;counter += 1;<br />
-                            &emsp;&emsp;&emsp;&emsp;total += x;<br />
-                            &emsp;&emsp;&emsp;&emsp;<span class="programming-blue">if</span> (x % 2 == 1)<br />
-                            &emsp;&emsp;&emsp;&emsp;{ <br />
-                            &emsp;&emsp;&emsp;&emsp;&emsp;odd += x;<br />
-                            &emsp;&emsp;&emsp;&emsp;}<br />
-                            &emsp;&emsp;&emsp;&emsp;<span class="programming-blue">else if</span> (x % 2 == 0)<br />
-                            &emsp;&emsp;&emsp;&emsp;{ <br />
-                            &emsp;&emsp;&emsp;&emsp;&emsp;even += x;<br />
-                            &emsp;&emsp;&emsp;&emsp;}<br />
-                            &emsp;&emsp;&emsp;}<br />
-                            &emsp;&emsp;}<br />
-                            &emsp;<span class="programming-blue">double</span> average = total / counter;<br />
-                            &emsp;System.out.<span class="programming-green">println</span>(<span
-                                class="programming-green">"Average = "</span> + average + <span
-                                class="programming-green">"\nTotal of Odd Number = "</span> + odd + <span
-                                class="programming-green">"\nTotal of Even Number = "</span> + even);<br />
-                            &emsp;}<br />
-                            }
-                    </p>
+                        Total of Even Number = 112<br /></p>
+                    <div class="programming-bg">
+                        <span class="programming-blue">import</span> java.util.Scanner;<br />
+                        <span class="programming-blue">public class Q2</span><br />
+                        {<br />
+                        &emsp;<span class="programming-blue">public static void</span>
+                        <span class="programming-green">main</span> (String[] args)<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
+                        &emsp;&emsp;<span class="programming-blue">int</span> x = 10; <br />
+                        &emsp;&emsp;<span class="programming-blue">int</span> even = 0; <br />
+                        &emsp;&emsp;<span class="programming-blue">int</span> odd = 0; <br />
+                        &emsp;&emsp;<span class="programming-blue">int</span> total = 0; <br />
+                        &emsp;&emsp;<span class="programming-blue">int</span> counter = 0; <br />
+                        &emsp;&emsp;<select class="form-control" name="Q2_1A" required
+                            style="display: inline; width:500px;" {{old("flag")?'disabled':''}}>
+                            <option value="" disabled selected />
+                            <option value='a' {{old("Q2_1A")=='a'?'selected':''}}>while (x != -1 && x >= 0)</option>
+                            <option value='b' {{old("Q2_1A")=='b'?'selected':''}}>while (x != -1 && x > 0)</option>
+                            <option value='c' {{old("Q2_1A")=='c'?'selected':''}}>while (x == -1 && x > 0)</option>
+                        </select>
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[0]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif<br />
+                        &emsp;&emsp;{<br />
+                        &emsp;&emsp;&emsp;<span class="programming-blue">int</span> x = in.<span
+                            class="programming-green">nextInt</span>(); <br />
+                        &emsp;&emsp;&emsp;<span class="programming-blue">if</span> (x != -1 && x >= 0)<br />
+                        &emsp;&emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;&emsp;counter += 1;<br />
+                        &emsp;&emsp;&emsp;&emsp;total += x;<br />
+                        &emsp;&emsp;&emsp;&emsp;<span class="programming-blue">if</span> (x % 2 == 1)<br />
+                        &emsp;&emsp;&emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;&emsp;&emsp;odd += x;<br />
+                        &emsp;&emsp;&emsp;&emsp;}<br />
+                        &emsp;&emsp;&emsp;&emsp;<span class="programming-blue">else if</span> (x % 2 == 0)<br />
+                        &emsp;&emsp;&emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;&emsp;&emsp;even += x;<br />
+                        &emsp;&emsp;&emsp;&emsp;}<br />
+                        &emsp;&emsp;&emsp;}<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;<span class="programming-blue">double</span> average = total / counter;<br />
+                        &emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"Average = "</span> + average + <span
+                            class="programming-green">"\nTotal of Odd Number = "</span> + odd + <span
+                            class="programming-green">"\nTotal of Even Number = "</span> + even);<br />
+                        &emsp;}<br />
+                        }
+                    </div>
                 </div>
                 @elseif($Qformat==3)
                 {{-- fill-in-blank --}}
                 <div>
                     <label for=" Q1" class="white-label" style="margin-top: 15px">
                         Please select the appropriate input to produce the following output.</label>
-                    <p class="programming-bg" style="font-weight:bold">Input:<br />100<br />93<br />0<br />
-                        4<br />53<br />8<br />-1<br />48<br />-22<br /><br /> Output:<br /> Average = 51.6<br />
+                    <p class="programming-bg" style="font-weight:bold"><u>Input:</u><br />100<br />93<br />0<br />
+                        4<br />53<br />8<br />-1<br />48<br />-22<br /><br /><u>Output:</u><br /> Average = 51.6<br />
                         Total of Odd Number = 146<br />
                         Total of Even Number = 112<br />
-                        <div class="programming-bg">
-                            <span class="programming-blue">import</span> java.util.Scanner;<br />
-                            <span class="programming-blue">public class Q2</span><br />
-                            {<br />
-                            &emsp;<span class="programming-blue">public static void</span>
-                            <span class="programming-green">main</span> (String[] args)<br />
-                            &emsp;{<br />
-                            &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
-                            &emsp;&emsp;<span class="programming-blue">int</span> x = 10; <br />
-                            &emsp;&emsp;<span class="programming-blue">int</span> even = 0; <br />
-                            &emsp;&emsp;<span class="programming-blue">int</span> odd = 0; <br />
-                            &emsp;&emsp;<span class="programming-blue">int</span> total = 0; <br />
-                            &emsp;&emsp;<span class="programming-blue">int</span> counter = 0; <br />
-                            &emsp;&emsp;<input class="form-control" name="Q2_1A" required type="text"
-                                style="display: inline; width:500px;" value='{{old("Q2_1A")}}'
-                                {{old("flag")?'disabled':''}} />
-                            @if(Session::has('endResult'))
-                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                <ion-icon name="{{Session::get('endResult')[0]?'checkmark-circle':'close-circle'}}"
-                                    style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
-                            </div>
-                            @endif<br />
-                            &emsp;&emsp;{<br />
-                            &emsp;&emsp;&emsp;<span class="programming-blue">int</span> x = in.<span
-                                class="programming-green">nextInt</span>(); <br />
-                            &emsp;&emsp;&emsp;<span class="programming-blue">if</span> (x > 0)<br />
-                            &emsp;&emsp;&emsp;{ <br />
-                            &emsp;&emsp;&emsp;&emsp;counter += 1;<br />
-                            &emsp;&emsp;&emsp;&emsp;total += x;<br />
-                            &emsp;&emsp;&emsp;&emsp;<span class="programming-blue">if</span> (x % 2 == 1)<br />
-                            &emsp;&emsp;&emsp;&emsp;{ <br />
-                            &emsp;&emsp;&emsp;&emsp;&emsp;odd += x;<br />
-                            &emsp;&emsp;&emsp;&emsp;}<br />
-                            &emsp;&emsp;&emsp;&emsp;<span class="programming-blue">else if</span> (x % 2 == 0)<br />
-                            &emsp;&emsp;&emsp;&emsp;{ <br />
-                            &emsp;&emsp;&emsp;&emsp;&emsp;even += x;<br />
-                            &emsp;&emsp;&emsp;&emsp;}<br />
-                            &emsp;&emsp;&emsp;}<br />
-                            &emsp;&emsp;}<br />
-                            &emsp;<span class="programming-blue">double</span> average = total / counter;<br />
-                            &emsp;System.out.<span class="programming-green">println</span>(<span
-                                class="programming-green">"Average = "</span> + average + <span
-                                class="programming-green">"\nTotal of Odd Number = "</span> + odd + <span
-                                class="programming-green">"\nTotal of Even Number = "</span> + even);<br />
-                            &emsp;}<br />
-                            }
-                        </div>
                     </p>
+                    <div class="programming-bg">
+                        <span class="programming-blue">import</span> java.util.Scanner;<br />
+                        <span class="programming-blue">public class Q2</span><br />
+                        {<br />
+                        &emsp;<span class="programming-blue">public static void</span>
+                        <span class="programming-green">main</span> (String[] args)<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;Scanner in = <span class="programming-blue">new
+                            Scanner</span>(System.in);<br />
+                        &emsp;&emsp;<span class="programming-blue">int</span> x = 10; <br />
+                        &emsp;&emsp;<span class="programming-blue">int</span> even = 0; <br />
+                        &emsp;&emsp;<span class="programming-blue">int</span> odd = 0; <br />
+                        &emsp;&emsp;<span class="programming-blue">int</span> total = 0; <br />
+                        &emsp;&emsp;<span class="programming-blue">int</span> counter = 0; <br />
+                        &emsp;&emsp;<input class="form-control" name="Q2_1A" required type="text"
+                            style="display: inline; width:500px;" value='{{old("Q2_1A")}}'
+                            {{old("flag")?'disabled':''}} />
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[0]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif<br />
+                        &emsp;&emsp;{<br />
+                        &emsp;&emsp;&emsp;<span class="programming-blue">int</span> x = in.<span
+                            class="programming-green">nextInt</span>(); <br />
+                        &emsp;&emsp;&emsp;<span class="programming-blue">if</span> (x > 0)<br />
+                        &emsp;&emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;&emsp;counter += 1;<br />
+                        &emsp;&emsp;&emsp;&emsp;total += x;<br />
+                        &emsp;&emsp;&emsp;&emsp;<span class="programming-blue">if</span> (x % 2 == 1)<br />
+                        &emsp;&emsp;&emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;&emsp;&emsp;odd += x;<br />
+                        &emsp;&emsp;&emsp;&emsp;}<br />
+                        &emsp;&emsp;&emsp;&emsp;<span class="programming-blue">else if</span> (x % 2 == 0)<br />
+                        &emsp;&emsp;&emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;&emsp;&emsp;even += x;<br />
+                        &emsp;&emsp;&emsp;&emsp;}<br />
+                        &emsp;&emsp;&emsp;}<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;<span class="programming-blue">double</span> average = total / counter;<br />
+                        &emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"Average = "</span> + average + <span
+                            class="programming-green">"\nTotal of Odd Number = "</span> + odd + <span
+                            class="programming-green">"\nTotal of Even Number = "</span> + even);<br />
+                        &emsp;}<br />
+                        }
+                    </div>
                     @if(Session::has('endResult'))
                     @if(Session::get('endResult')[0]==false)
                     <p class="rounded resultMsg" style="color: red;" />
@@ -304,9 +303,9 @@
                 </div>
                 @elseif($Qformat==4)
                 {{-- code --}}
-                <div style="display: {{$Qformat==4?'block':'none'}}">
+                <div>
                     <label for=" Q2" class="white-label" style="margin-top: 15px">
-                        Please write a program that accepts integers and output the total of odd and even numbers
+                        Please write a Java program that accepts integers and output the total of odd and even numbers
                         and the average of all the numbers. The program must stop when it encounters integer smaller
                         than 0.</label>
                     <textarea class="form-control" rows="30" required name='Q2' {{old("flag")?'disabled':''}}>{{old('Q2')}}
