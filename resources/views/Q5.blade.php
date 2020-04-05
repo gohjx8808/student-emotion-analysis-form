@@ -154,7 +154,7 @@
                 {{-- matching --}}
                 <div>
                     <label for="Q5" class="white-label" style="margin-top: 15px">
-                        Please select the appropriate algorithm to produce the following output.</label>
+                        Please select the appropriate variables to produce the following output.</label>
                     <p class="programming-bg" style="font-weight:bold">Input: 4<br />Output:<br /> 1<br />2 3<br />4 5
                         6<br />7 8 9 10
                         <div class="programming-bg">
@@ -164,14 +164,14 @@
                             <span class="programming-green">main</span> (String[] args)<br />
                             &emsp;{<br />
                             &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
-                            &emsp;&emsp;<span class="programming-blue">int </span>n, num = 1, c, d;<br />
-                            &emsp;&emsp;n = in.<span class="programming-green">nextInt</span>(); <br />
-                            &emsp;&emsp;<span class="programming-blue">for</span> (c = 1;
-                            <select class="form-control" name="Q5_1A" required style="display: inline; width:60px;"
+                            &emsp;&emsp;<span class="programming-blue">int </span>rows, num = 1, counter, d;<br />
+                            &emsp;&emsp;rows = in.<span class="programming-green">nextInt</span>(); <br />
+                            &emsp;&emsp;<span class="programming-blue">for</span> (counter = 1;
+                            <select class="form-control" name="Q5_1A" required style="display: inline; width:120px;"
                                 {{old("flag")?'disabled':''}}>
                                 <option value="" disabled selected />
-                                <option value='n' {{old("Q5_1A")=='n'?'selected':''}}>n</option>
-                                <option value='c' {{old("Q5_1A")=='c'?'selected':''}}>c</option>
+                                <option value='rows' {{old("Q5_1A")=='rows'?'selected':''}}>rows</option>
+                                <option value='counter' {{old("Q5_1A")=='counter'?'selected':''}}>counter</option>
                                 <option value='d' {{old("Q5_1A")=='d'?'selected':''}}>d</option>
                             </select>@if(Session::has('endResult'))
                             <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
@@ -179,26 +179,26 @@
                                     style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
                             </div>
                             @endif
-                            <= <select class="form-control" name="Q5_1A" required style="display: inline; width:60px;"
+                            <= <select class="form-control" name="Q5_1B" required style="display: inline; width:120px;"
                                 {{old("flag")?'disabled':''}}>
                                 <option value="" disabled selected />
-                                <option value='n' {{old("Q5_1A")=='n'?'selected':''}}>n</option>
-                                <option value='c' {{old("Q5_1A")=='c'?'selected':''}}>c</option>
-                                <option value='d' {{old("Q5_1A")=='d'?'selected':''}}>d</option>
+                                <option value='rows' {{old("Q5_1B")=='rows'?'selected':''}}>rows</option>
+                                <option value='counter' {{old("Q5_1B")=='counter'?'selected':''}}>counter</option>
+                                <option value='d' {{old("Q5_1B")=='d'?'selected':''}}>d</option>
                                 </select>
                                 @if(Session::has('endResult'))
                                 <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
                                     <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
                                         style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
                                 </div>
-                                @endif ; c++)<br />
+                                @endif ; counter++)<br />
                                 &emsp;&emsp;{<br />
                                 &emsp;&emsp;&emsp;<span class="programming-blue">for</span> (d = 1;
-                                <select class="form-control" name="Q5_1A" required style="display: inline; width:60px;"
+                                <select class="form-control" name="Q5_1C" required style="display: inline; width:120px;"
                                     {{old("flag")?'disabled':''}}>
                                     <option value="" disabled selected />
-                                    <option value='n' {{old("Q5_1C")=='n'?'selected':''}}>n</option>
-                                    <option value='c' {{old("Q5_1C")=='c'?'selected':''}}>c</option>
+                                    <option value='rows' {{old("Q5_1C")=='rows'?'selected':''}}>rows</option>
+                                    <option value='counter' {{old("Q5_1C")=='counter'?'selected':''}}>counter</option>
                                     <option value='d' {{old("Q5_1C")=='d'?'selected':''}}>d</option>
                                 </select>@if(Session::has('endResult'))
                                 <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
@@ -206,11 +206,11 @@
                                         style="color: {{Session::get('endResult')[2]?'green':'red'}};"></ion-icon>
                                 </div>
                                 @endif
-                                <= <select class="form-control" name="Q5_1A" required
-                                    style="display: inline; width:60px;" {{old("flag")?'disabled':''}}>
+                                <= <select class="form-control" name="Q5_1D" required
+                                    style="display: inline; width:120px;" {{old("flag")?'disabled':''}}>
                                     <option value="" disabled selected />
-                                    <option value='n' {{old("Q5_1D")=='n'?'selected':''}}>n</option>
-                                    <option value='c' {{old("Q5_1D")=='c'?'selected':''}}>c</option>
+                                    <option value='rows' {{old("Q5_1D")=='rows'?'selected':''}}>rows</option>
+                                    <option value='counter' {{old("Q5_1D")=='counter'?'selected':''}}>counter</option>
                                     <option value='d' {{old("Q5_1D")=='d'?'selected':''}}>d</option>
                                     </select>
                                     @if(Session::has('endResult'))
@@ -232,56 +232,82 @@
                                     }
                         </div>
                     </p>
+                    @if(Session::has('endResult'))
+                    @if(Session::get('endResult')[4]!='')
+                    <p class="rounded resultMsg" type='text'
+                        style="display: {{old('flag')?'block': 'none' }};color: red" />
+                    {{Session::get('endResult')[4]}}
+                    </p>
+                    @endif
+                    @endif
                 </div>
                 @elseif($Qformat==3)
                 {{-- fill-in-blank --}}
                 <div>
                     <label for="Q5" class="white-label" style="margin-top: 15px">
-                        Please enter the appropriate algorithm to produce the following output.</label>
-                    <p class="programming-bg" style="font-weight:bold">Output: 120
+                        Please input the appropriate variables to produce the following output.</label>
+                    <p class="programming-bg" style="font-weight:bold">Input: 7<br />Output:<br /> 1<br />2 3<br />4 5
+                        6<br />7 8 9 10<br />11 12 13 14 15<br />16 17 18 19 20 21<br />22 23 24 25 26 27 28 29
                         <div class="programming-bg">
-                            <span class="programming-blue">public class Factorial</span><br />
+                            <span class="programming-blue">public class Q5</span><br />
                             {<br />
-                            &emsp;<span class="programming-blue">static int </span>factorial(<span
-                                class="programming-blue">int</span> n)<br />
+                            &emsp;<span class="programming-blue">public static void</span>
+                            <span class="programming-green">main</span> (String[] args)<br />
                             &emsp;{<br />
-                            &emsp;&emsp;<span class="programming-blue">if </span>(n == 0)<br />
-                            &emsp;&emsp;&emsp;<span class="programming-blue">return </span><input class="form-control"
-                                name="Q5_1A" required style="display: inline; width:220px;"
-                                {{old("flag")?'disabled':''}} value="{{old('Q5_1A')}}" />
+                            &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
+                            &emsp;&emsp;<span class="programming-blue">int </span>rows, num = 1, counter, d;<br />
+                            &emsp;&emsp;rows = in.<span class="programming-green">nextInt</span>(); <br />
+                            &emsp;&emsp;<span class="programming-blue">for</span> (counter = 1;
+                            <input class="form-control" name="Q5_1A" required style="display: inline; width:120px;"
+                                {{old("flag")?'disabled':''}} type="text" value="{{old('Q5_1A')}}" />
                             @if(Session::has('endResult'))
                             <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
                                 <ion-icon name="{{Session::get('endResult')[0]?'checkmark-circle':'close-circle'}}"
                                     style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
                             </div>
-                            @endif;<br />
-                            &emsp;&emsp;<span class="programming-blue">return </span>
-                            <input class="form-control" name="Q5_1B" required style="display: inline; width:220px;"
-                                {{old("flag")?'disabled':''}} value="{{old('Q5_1B')}}" />
+                            @endif
+                            <= <input class="form-control" name="Q5_1B" required style="display: inline; width:120px;"
+                                {{old("flag")?'disabled':''}} type="text" value="{{old('Q5_1B')}}" />
                             @if(Session::has('endResult'))
                             <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
                                 <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
                                     style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
                             </div>
-                            @endif;<br />
-                            &emsp;}<br /><br />
-                            &emsp;<span class="programming-blue">public static void</span>
-                            <span class="programming-green">main</span> (String[] args)<br />
-                            &emsp;{<br />
-                            &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
-                            &emsp;&emsp;<span class="programming-blue">int</span> num = 5;<br />
-                            &emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
-                                class="programming-green">"Factorial of "</span> + num + <span
-                                class="programming-green">"
-                                is "</span> + factorial(num))<br />
+                            @endif ; counter++)<br />
+                            &emsp;&emsp;{<br />
+                            &emsp;&emsp;&emsp;<span class="programming-blue">for</span> (d = 1;
+                            <input class="form-control" name="Q5_1C" required style="display: inline; width:120px;"
+                                {{old("flag")?'disabled':''}} type="text"
+                                value="{{old('Q5_1C')}}" />@if(Session::has('endResult'))
+                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                                <ion-icon name="{{Session::get('endResult')[2]?'checkmark-circle':'close-circle'}}"
+                                    style="color: {{Session::get('endResult')[2]?'green':'red'}};"></ion-icon>
+                            </div>
+                            @endif
+                            <= <input class="form-control" name="Q5_1D" required style="display: inline; width:120px;"
+                                {{old("flag")?'disabled':''}} type="text" value="{{old('Q5_1D')}}" />
+                            @if(Session::has('endResult'))
+                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                                <ion-icon name="{{Session::get('endResult')[3]?'checkmark-circle':'close-circle'}}"
+                                    style="color: {{Session::get('endResult')[3]?'green':'red'}};"></ion-icon>
+                            </div>
+                            @endif ; d++)<br />
+                            &emsp;&emsp;&emsp;{<br />
+                            &emsp;&emsp;&emsp;&emsp;System.out.<span class="programming-green">print</span>(num
+                            + <span class="programming-green">" "</span>);<br />
+                            &emsp;&emsp;&emsp;&emsp;num++;<br />
+                            &emsp;&emsp;&emsp;}<br />
+                            &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>();<br />
+                            &emsp;&emsp;}<br />
                             &emsp;}<br />
                             }
                         </div>
                     </p>
                     @if(Session::has('endResult'))
-                    @if(Session::get('endResult')[0]==false || Session::get('endResult')[1]==false)
-                    <p class="rounded resultMsg" style="color: red;" />
-                    {{Session::get('endResult')[2]}}
+                    @if(Session::get('endResult')[4]!='')
+                    <p class="rounded resultMsg" type='text'
+                        style="display: {{old('flag')?'block': 'none' }};color: red" />
+                    {{Session::get('endResult')[4]}}
                     </p>
                     @endif
                     @endif
@@ -290,8 +316,8 @@
                 {{-- code --}}
                 <div style="display: {{$Qformat==4?'block':'none'}}">
                     <label for=" Q5" class="white-label" style="margin-top: 15px">
-                        Please write a program to find the factorial value of any number entered through the
-                        keyboard</label>
+                        Please write a program that will prompt user for number of rows and based on the input, it would
+                        print the Floyd's triangle having the same number of rows</label>
                     <textarea class="form-control" rows="30" required name='Q5' {{old("flag")?'disabled':''}}>{{old('Q5')}}
                     </textarea>
                     @if(Session::has('endResult'))

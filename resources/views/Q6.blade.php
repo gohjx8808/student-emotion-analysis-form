@@ -78,7 +78,7 @@
             Please answer the questions as best as you can. Good luck!
         </p>
         <hr style="background-color:white" />
-        <p class="white-label"><u>Question 4</u></p>
+        <p class="white-label"><u>Question 6</u></p>
         <form action="Q4/save" method="POST">
             {{ csrf_field() }}
             <div class="form-group">
@@ -89,23 +89,39 @@
                     <label for=" Q4" class="white-label" style="margin-top: 15px">
                         What is the output of the following program?</label>
                     <div class="programming-bg">
-                        <span class="programming-blue">public class Factorial</span><br />
+                        <span class="programming-blue">class </span>Base<br />
                         {<br />
-                        &emsp;<span class="programming-blue">static int </span>factorial(<span
-                            class="programming-blue">int</span> n)<br />
+                        &emsp;<span class="programming-blue">public void </span>Print()<br />
                         &emsp;{<br />
-                        &emsp;&emsp;<span class="programming-blue">if </span>(n == 0)<br />
-                        &emsp;&emsp;&emsp;<span class="programming-blue">return</span> 1;<br />
-                        &emsp;&emsp;<span class="programming-blue">return </span>n*factorial(n-1);<br />
-                        &emsp;}<br /><br />
+                        &emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"Base"</span>);<br />
+                        &emsp;}<br />
+                        }<br /><br />
+                        <span class="programming-blue">class </span>Derived<span class="programming-blue"> extends
+                        </span>Base<br />
+                        {<br />
+                        &emsp;<span class="programming-blue">public void </span>Print()<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"Derived"</span>);<br />
+                        &emsp;}<br />
+                        }<br /><br />
+                        <span class="programming-blue">class </span>Q6<br />
+                        {<br />
+                        &emsp;<span class="programming-blue">public static void</span>
+                        <span class="programming-green">DoPrint</span> (Base o)<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;o.Print();<br/>
+                        &emsp;}<br />
                         &emsp;<span class="programming-blue">public static void</span>
                         <span class="programming-green">main</span> (String[] args)<br />
                         &emsp;{<br />
-                        &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
-                        &emsp;&emsp;<span class="programming-blue">int</span> num = 7;<br />
-                        &emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
-                            class="programming-green">"Factorial of "</span> + num + <span class="programming-green">"
-                            is "</span> + factorial(num))<br />
+                        &emsp;&emsp;Base x = <span class="programming-blue">new</span> Base();<br />
+                        &emsp;&emsp;Base y = <span class="programming-blue">new</span> Derived();<br />
+                        &emsp;&emsp;Derived z = <span class="programming-blue">new</span> Derived();<br />
+                        &emsp;&emsp;DoPrint(x);<br/>
+                        &emsp;&emsp;DoPrint(y);<br/>
+                        &emsp;&emsp;DoPrint(z);<br/>
                         &emsp;}<br />
                         }
                     </div>
@@ -257,7 +273,8 @@
                 {{-- code --}}
                 <div style="display: {{$Qformat==4?'block':'none'}}">
                     <label for=" Q4" class="white-label" style="margin-top: 15px">
-                        Please write a program to find the factorial value of any number entered through the keyboard</label>
+                        Please write a program to find the factorial value of any number entered through the
+                        keyboard</label>
                     <textarea class="form-control" rows="30" required name='Q4' {{old("flag")?'disabled':''}}>{{old('Q4')}}
                     </textarea>
                     @if(Session::has('endResult'))

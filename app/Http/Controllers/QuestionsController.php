@@ -197,7 +197,7 @@ class QuestionsController extends Controller
         } else {
             $Qformat = rand(1, 4);
         }
-        return view('Q5')->with('Qformat', 2);
+        return view('Q5')->with('Qformat', $Qformat);
     }
 
     public function saveQ5(Request $request)
@@ -212,22 +212,20 @@ class QuestionsController extends Controller
             $added = $request->session()->get('Q5');
             $added['correct'] = strval($displayedResult[0][2] ? 1 : 0) . '/1';
             $request->session()->put('Q5', $added);
-        } else if ($random == 2) {
-            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q4_1A'), '1'));
-            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q4_1B'), 'a'));
+        } else if ($random == 2 || $random == 3) {
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q5_1A'), 'rows'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q5_1B'), 'counter'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q5_1C'), 'd'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q5_1D'), 'counter'));
             $correct = $this->checkCorrectness($displayedResult);
             $added = $request->session()->get('Q4');
-            $added['correct'] = strval($correct) . '/2';
+            $added['correct'] = strval($correct) . '/4';
             $request->session()->put('Q4', $added);
-            // dd($displayedResult);
-        } else if ($random == 3) {
-            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q4_1A'), '1'));
-            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q4_1B'), 'n*factorial(n-1)'));
-            $correct = $this->checkCorrectness($displayedResult);
-            $added = $request->session()->get('Q4');
-            $added['correct'] = strval($correct) . '/2';
-            $request->session()->put('Q4', $added);
-            array_push($displayedResult, 'The appropriate answer is 1 and n*factorial(n-1). Your answer is correct as long as it fits the logic.');
+            if ($correct < 4) {
+                array_push($displayedResult, "This is a Floyd's Triangle algorithm.");
+            } else {
+                array_push($displayedResult, "");
+            }
             // dd($displayedResult);
         } else if ($random == 4) {
             array_push($displayedResult, 'Thank you for the answer. We will look through it.');
@@ -239,12 +237,12 @@ class QuestionsController extends Controller
     public function displayQ6(Request $request)
     {
         // dd($request->session()->all());
-        if ($request->session()->has('Q4')) {
-            $Qformat = $request->session()->get('Q4')['Qformat'];
+        if ($request->session()->has('Q6')) {
+            $Qformat = $request->session()->get('Q6')['Qformat'];
         } else {
             $Qformat = rand(1, 4);
         }
-        return view('Q4')->with('Qformat', $Qformat);
+        return view('Q6')->with('Qformat', 1);
     }
 
     public function saveQ6(Request $request)

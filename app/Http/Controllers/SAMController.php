@@ -70,7 +70,7 @@ class SAMController extends Controller
     {
         $request->session()->put('SAMQ10', $request->except('_token'));
         // dd(session()->all());
-        $serviceAccount = ServiceAccount::fromJsonFile(__DIR__ . '/student-emotion-analysis-d61dc-3e42dda5c936.json');
+        $serviceAccount = ServiceAccount::fromJsonFile(base_path() . '/student-emotion-analysis-d61dc-3e42dda5c936.json');
         $firebase = (new Factory)
             ->withServiceAccount($serviceAccount)
             ->withDatabaseUri('https://student-emotion-analysis-d61dc.firebaseio.com/')
