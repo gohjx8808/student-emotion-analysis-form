@@ -78,64 +78,72 @@
             Please answer the questions as best as you can. Good luck!
         </p>
         <hr style="background-color:white" />
-        <p class="white-label"><u>Question 4</u></p>
-        <form action="Q4/save" method="POST">
+        <p class="white-label"><u>Question 8</u></p>
+        <form action="Q8/save" method="POST">
             {{ csrf_field() }}
             <div class="form-group">
                 @if($Qformat!=null)
                 {{-- mcq --}}
                 @if($Qformat==1)
                 <div>
-                    <label for=" Q4" class="white-label" style="margin-top: 15px">
+                    <label for=" Q8" class="white-label" style="margin-top: 15px">
                         What is the output of the following program?</label>
                     <div class="programming-bg">
-                        <span class="programming-blue">public class Factorial</span><br />
+                        <span class="programming-blue">public class Q8</span><br />
                         {<br />
-                        &emsp;<span class="programming-blue">static int </span>factorial(<span
-                            class="programming-blue">int</span> n)<br />
+                        &emsp;<span class="programming-blue">static void </span>findLeader(<span
+                            class="programming-blue">int</span> inputArray[])<br />
                         &emsp;{<br />
-                        &emsp;&emsp;<span class="programming-blue">if </span>(n == 0)<br />
-                        &emsp;&emsp;&emsp;<span class="programming-blue">return</span> 1;<br />
-                        &emsp;&emsp;<span class="programming-blue">return </span>n*factorial(n-1);<br />
+                        &emsp;&emsp;<span class="programming-blue">int </span>arrLength = inputArray.length;<br />
+                        &emsp;&emsp;<span class="programming-blue">int </span>max = inputArray[arrLength-1];<br />
+                        &emsp;&emsp;System.out.<span
+                            class="programming-green">println</span>(inputArray[arrLength-1]);<br />
+                        &emsp;&emsp;<span class="programming-blue">for </span>(<span class="programming-blue">int
+                        </span>i = arrLength-2; i &gt;= 0; i--)<br />
+                        &emsp;&emsp;{<br />
+                        &emsp;&emsp;&emsp;<span class="programming-blue">if </span>(inputArray[i] &gt; max)<br />
+                        &emsp;&emsp;&emsp;{<br />
+                        &emsp;&emsp;&emsp;&emsp;System.out.<span class="programming-green">print</span>(inputArray[i] +
+                        <span class="programming-green">" "</span>)<br />
+                        &emsp;&emsp;&emsp;&emsp;max = inputArray[i];<br />
+                        &emsp;&emsp;&emsp;}<br />
+                        &emsp;&emsp;}<br />
                         &emsp;}<br /><br />
                         &emsp;<span class="programming-blue">public static void</span>
                         <span class="programming-green">main</span> (String[] args)<br />
                         &emsp;{<br />
-                        &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
-                        &emsp;&emsp;<span class="programming-blue">int</span> num = 7;<br />
-                        &emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
-                            class="programming-green">"Factorial of "</span> + num + <span class="programming-green">"
-                            is "</span> + factorial(num))<br />
+                        &emsp;&emsp;findLeader(<span class="programming-blue">new int</span>[] {55, 12, 65, 29, 45, 3,
+                        1});<br />
                         &emsp;}<br />
                         }
                     </div>
                     <br />
                     <div class="form-control" style="border-bottom-width: 0;border-radius: 10px 10px 0px 0px;">
-                        <input class="form-control-input" type="radio" id="Q4_1a" name="Q4_1" value="a" required"
-                            {{old("Q4_1")=='a'?'checked':''}} {{old("flag")?'disabled':''}} />
-                        <label class="form-check-label" for="Q4_1a" style="padding-left: 15px;">
-                            Factorial of 6 is 28
+                        <input class="form-control-input" type="radio" id="Q8_1a" name="Q8_1" value="a" required"
+                            {{old("Q8_1")=='a'?'checked':''}} {{old("flag")?'disabled':''}} />
+                        <label class="form-check-label" for="Q8_1a" style="padding-left: 15px;">
+                            1 29 12
                         </label>
                     </div>
                     <div class="form-control radio-center">
-                        <input class="form-control-input" type="radio" id="Q4_1b" name="Q4_1" value="b"
-                            {{old("Q4_1")=='b'?'checked':''}} {{old("flag")?'disabled':''}} />
-                        <label class="form-check-label" for="Q4_1b" style="padding-left: 15px">
-                            Factorial of 6 is 120
+                        <input class="form-control-input" type="radio" id="Q8_1b" name="Q8_1" value="b"
+                            {{old("Q8_1")=='b'?'checked':''}} {{old("flag")?'disabled':''}} />
+                        <label class="form-check-label" for="Q8_1b" style="padding-left: 15px">
+                            1 3 45 65
                         </label>
                     </div>
                     <div class="form-control radio-center">
-                        <input class="form-control-input" type="radio" id="Q4_1c" name="Q4_1" value="c"
-                            {{old("Q4_1")=='c'?'checked':''}} {{old("flag")?'disabled':''}} />
-                        <label class="form-check-label" for="Q4_1c" style="padding-left: 15px">
-                            Factorial of 6 is 5040
+                        <input class="form-control-input" type="radio" id="Q8_1c" name="Q8_1" value="c"
+                            {{old("Q8_1")=='c'?'checked':''}} {{old("flag")?'disabled':''}} />
+                        <label class="form-check-label" for="Q8_1c" style="padding-left: 15px">
+                            45 65 55
                         </label>
                     </div>
                     <div class="form-control" style="border-radius: 0px 0px 10px 10px;">
-                        <input class="form-control-input" type="radio" id="Q4_1d" name="Q4_1" value="d"
-                            {{old("Q4_1")=='d'?'checked':''}} {{old("flag")?'disabled':''}} />
-                        <label class="form-check-label" for="Q4_1d" style="padding-left: 15px">
-                            Factorial of 6 is 2520
+                        <input class="form-control-input" type="radio" id="Q8_1d" name="Q8_1" value="d"
+                            {{old("Q8_1")=='d'?'checked':''}} {{old("flag")?'disabled':''}} />
+                        <label class="form-check-label" for="Q8_1d" style="padding-left: 15px">
+                            3 29 12 55
                         </label>
                     </div>
                     @if(Session::has('endResult'))
@@ -148,107 +156,139 @@
                 @elseif($Qformat==2)
                 {{-- matching --}}
                 <div>
-                    <label for="Q4" class="white-label" style="margin-top: 15px">
-                        Please select the appropriate algorithm to produce the following output.</label>
-                    <p class="programming-bg" style="font-weight:bold">Output: 362880
-                        <div class="programming-bg">
-                            <span class="programming-blue">public class Factorial</span><br />
-                            {<br />
-                            &emsp;<span class="programming-blue">static int </span>factorial(<span
-                                class="programming-blue">int</span> n)<br />
-                            &emsp;{<br />
-                            &emsp;&emsp;<span class="programming-blue">if </span>(n == 0)<br />
-                            &emsp;&emsp;&emsp;<span class="programming-blue">return </span><select class="form-control"
-                                name="Q4_1A" required style="display: inline; width:220px;"
-                                {{old("flag")?'disabled':''}}>
-                                <option value="" disabled selected />
-                                <option value='0' {{old("Q4_1A")=='0'?'selected':''}}>0</option>
-                                <option value='1' {{old("Q4_1A")=='1'?'selected':''}}>1</option>
-                                <option value='2' {{old("Q4_1A")=='2'?'selected':''}}>2</option>
-                            </select>@if(Session::has('endResult'))
-                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                <ion-icon name="{{Session::get('endResult')[0]?'checkmark-circle':'close-circle'}}"
-                                    style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
-                            </div>
-                            @endif;<br />
-                            &emsp;&emsp;<span class="programming-blue">return </span><select class="form-control"
-                                name="Q4_1B" required style="display: inline; width:220px;"
-                                {{old("flag")?'disabled':''}}>
-                                <option value="" disabled selected />
-                                <option value='a' {{old("Q4_1B")=='a'?'selected':''}}>n*factorial(n-1)</option>
-                                <option value='b' {{old("Q4_1B")=='b'?'selected':''}}>n*factorial(n+1)</option>
-                                <option value='c' {{old("Q4_1B")=='c'?'selected':''}}>n*factorial(n*1)</option>
-                            </select>
-                            @if(Session::has('endResult'))
-                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
-                                    style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
-                            </div>
-                            @endif;<br />
-                            &emsp;}<br /><br />
-                            &emsp;<span class="programming-blue">public static void</span>
-                            <span class="programming-green">main</span> (String[] args)<br />
-                            &emsp;{<br />
-                            &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
-                            &emsp;&emsp;<span class="programming-blue">int</span> num = 7;<br />
-                            &emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
-                                class="programming-green">"Factorial of "</span> + num + <span
-                                class="programming-green">"
-                                is "</span> + factorial(num))<br />
-                            &emsp;}<br />
-                            }
+                    <label for="Q8" class="white-label" style="margin-top: 15px">
+                        This is a Java program to find all the leader elements in the given array. For example, if {14,
+                        9, 11, 7, 8, 5, 3} is the given array then {14, 11, 8, 5, 3} are the leaders in this array.
+                        <br />Please select the appropriate options to produce the following output.</label>
+                    <p class="programming-bg" style="font-weight:bold">Output: 10 33 39 65 87 100</p>
+                    <div class="programming-bg">
+                        <span class="programming-blue">public class Q8</span><br />
+                        {<br />
+                        &emsp;<span class="programming-blue">static void </span>findLeader(<span
+                            class="programming-blue">int</span> inputArray[])<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;<span class="programming-blue">int </span>arrLength = inputArray.length;<br />
+                        &emsp;&emsp;<span class="programming-blue">int </span>max = inputArray[arrLength-1];<br />
+                        &emsp;&emsp;System.out.<span
+                            class="programming-green">println</span>(inputArray[arrLength-1]);<br />
+                        &emsp;&emsp;<span class="programming-blue">for </span>(<span class="programming-blue">int
+                        </span>
+                        i =
+                        <select class="form-control" name="Q8_1A" required style="display: inline; width:155px;"
+                            {{old("flag")?'disabled':''}}>
+                            <option value="" disabled selected />
+                            <option value='a' {{old("Q8_1A")=='a'?'selected':''}}>arrLength-1</option>
+                            <option value='b' {{old("Q8_1A")=='b'?'selected':''}}>arrLength</option>
+                            <option value='c' {{old("Q8_1A")=='c'?'selected':''}}>arrLength-2</option>
+                        </select>
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[0]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
                         </div>
+                        @endif; i &gt;= 0; i--)<br />
+                        &emsp;&emsp;{<br />
+                        &emsp;&emsp;&emsp;<span class="programming-blue">if </span>(inputArray[i]
+                        <select class="form-control" name="Q8_1B" required style="display: inline; width:70px;"
+                            {{old("flag")?'disabled':''}}>
+                            <option value="" disabled selected />
+                            <option value='>' {{old("Q8_1B")=='>'?'selected':''}}>&gt;</option>
+                            <option value='<' {{old("Q8_1B")=='<'?'selected':''}}>&lt;</option>
+                            <option value='==' {{old("Q8_1B")=='=='?'selected':''}}>==</option>
+                        </select>
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif
+                        max)<br />
+                        &emsp;&emsp;&emsp;{<br />
+                        &emsp;&emsp;&emsp;&emsp;System.out.<span class="programming-green">print</span>(inputArray[i] +
+                        <span class="programming-green">" "</span>)<br />
+                        &emsp;&emsp;&emsp;&emsp;max = inputArray[i];<br />
+                        &emsp;&emsp;&emsp;}<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;}<br /><br />
+                        &emsp;<span class="programming-blue">public static void</span>
+                        <span class="programming-green">main</span> (String[] args)<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;findLeader(<span class="programming-blue">new int</span>[] {100, 87, 65, 29, 39, 33,
+                        10});<br />
+                        &emsp;}<br />
+                        }
+                    </div>
+                    @if(Session::has('endResult'))
+                    @if(Session::get('endResult')[2][0]!='')
+                    <p class="rounded resultMsg" type='text'
+                        style="display: {{old('flag')?'block': 'none' }};color: red;font-family: 'Courier New', Courier, monospace;">
+                        <u>The answers are as below:</u><br />
+                        {{Session::get('endResult')[2][0]}}<br />{{Session::get('endResult')[2][1]}}
                     </p>
+                    @endif
+                    @endif
                 </div>
                 @elseif($Qformat==3)
                 {{-- fill-in-blank --}}
                 <div>
-                    <label for="Q4" class="white-label" style="margin-top: 15px">
-                        Please enter the appropriate algorithm to produce the following output.</label>
-                    <p class="programming-bg" style="font-weight:bold">Output: 120
-                        <div class="programming-bg">
-                            <span class="programming-blue">public class Factorial</span><br />
-                            {<br />
-                            &emsp;<span class="programming-blue">static int </span>factorial(<span
-                                class="programming-blue">int</span> n)<br />
-                            &emsp;{<br />
-                            &emsp;&emsp;<span class="programming-blue">if </span>(n == 0)<br />
-                            &emsp;&emsp;&emsp;<span class="programming-blue">return </span><input class="form-control"
-                                name="Q4_1A" required style="display: inline; width:220px;"
-                                {{old("flag")?'disabled':''}} value="{{old('Q4_1A')}}" />
-                            @if(Session::has('endResult'))
-                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                <ion-icon name="{{Session::get('endResult')[0]?'checkmark-circle':'close-circle'}}"
-                                    style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
-                            </div>
-                            @endif;<br />
-                            &emsp;&emsp;<span class="programming-blue">return </span>
-                            <input class="form-control" name="Q4_1B" required style="display: inline; width:220px;"
-                                {{old("flag")?'disabled':''}} value="{{old('Q4_1B')}}" />
-                            @if(Session::has('endResult'))
-                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
-                                    style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
-                            </div>
-                            @endif;<br />
-                            &emsp;}<br /><br />
-                            &emsp;<span class="programming-blue">public static void</span>
-                            <span class="programming-green">main</span> (String[] args)<br />
-                            &emsp;{<br />
-                            &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
-                            &emsp;&emsp;<span class="programming-blue">int</span> num = 5;<br />
-                            &emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
-                                class="programming-green">"Factorial of "</span> + num + <span
-                                class="programming-green">"
-                                is "</span> + factorial(num))<br />
-                            &emsp;}<br />
-                            }
+                    <label for="Q8" class="white-label" style="margin-top: 15px">
+                        This is a Java program to find all the leader elements in the given array. For example, if {14,
+                        9, 11, 7, 8, 5, 3} is the given array then {14, 11, 8, 5, 3} are the leaders in this array.
+                        <br />Please select the appropriate options to produce the following output.</label>
+                    <p class="programming-bg" style="font-weight:bold">Output: 10 33 39 65 87 100</p>
+                    <div class="programming-bg">
+                        <span class="programming-blue">public class Q8</span><br />
+                        {<br />
+                        &emsp;<span class="programming-blue">static void </span>findLeader(<span
+                            class="programming-blue">int</span> inputArray[])<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;<span class="programming-blue">int </span>arrLength = inputArray.length;<br />
+                        &emsp;&emsp;<span class="programming-blue">int </span>max = inputArray[arrLength-1];<br />
+                        &emsp;&emsp;System.out.<span
+                            class="programming-green">println</span>(inputArray[arrLength-1]);<br />
+                        &emsp;&emsp;<span class="programming-blue">for </span>(<span class="programming-blue">int
+                        </span>
+                        i =
+                        <input class="form-control" name="Q8_1A" required style="display: inline; width:155px;"
+                            {{old("flag")?'disabled':''}} value="{{old('Q8_1A')}}" />
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[0]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
                         </div>
-                    </p>
+                        @endif; i &gt;= 0; i--)<br />
+                        &emsp;&emsp;{<br />
+                        &emsp;&emsp;&emsp;<span class="programming-blue">if </span>(inputArray[i]
+                        <input class="form-control" name="Q8_1B" required style="display: inline; width:60px;"
+                            {{old("flag")?'disabled':''}} value="{{old('Q8_1B')}}" maxlength="2" />
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif
+                        max)<br />
+                        &emsp;&emsp;&emsp;{<br />
+                        &emsp;&emsp;&emsp;&emsp;System.out.<span class="programming-green">print</span>(inputArray[i] +
+                        <span class="programming-green">" "</span>)<br />
+                        &emsp;&emsp;&emsp;&emsp;max = inputArray[i];<br />
+                        &emsp;&emsp;&emsp;}<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;}<br /><br />
+                        &emsp;<span class="programming-blue">public static void</span>
+                        <span class="programming-green">main</span> (String[] args)<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;findLeader(<span class="programming-blue">new int</span>[] {100, 87, 65, 29, 39, 33,
+                        10});<br />
+                        &emsp;}<br />
+                        }
+                    </div>
                     @if(Session::has('endResult'))
-                    @if(Session::get('endResult')[0]==false || Session::get('endResult')[1]==false)
-                    <p class="rounded resultMsg" style="color: red;" />
-                    {{Session::get('endResult')[2]}}
+                    @if(Session::get('endResult')[2][0]!='')
+                    <p class="rounded resultMsg" type='text'
+                        style="display: {{old('flag')?'block': 'none' }};color: red;font-family: 'Courier New', Courier, monospace;">
+                        <u>The answers are as below:</u><br />
+                        {{Session::get('endResult')[2][0]}}<br />{{Session::get('endResult')[2][1]}}
                     </p>
                     @endif
                     @endif
@@ -256,15 +296,22 @@
                 @elseif($Qformat==4)
                 {{-- code --}}
                 <div style="display: {{$Qformat==4?'block':'none'}}">
-                    <label for=" Q4" class="white-label" style="margin-top: 15px">
-                        Please write a program to find the factorial value of any number entered through the keyboard</label>
-                    <textarea class="form-control" rows="30" required name='Q4' {{old("flag")?'disabled':''}}>{{old('Q4')}}
+                    <label for=" Q8" class="white-label" style="margin-top: 15px">
+                        Given an integer array, you have to find all the leader elements in this array. An element is
+                        said to be leader if all the elements on it’s right side are smaller than it. Rightmost element
+                        is always a leader. For example, if {14, 9, 11, 7, 8, 5, 3} is the given array then {14, 11, 8,
+                        5, 3} are the leaders in this array.<br />
+                        Please write a Java program for the problem above.
+                    </label>
+                    <textarea class="form-control" rows="50" required name='Q8' {{old("flag")?'disabled':''}}>{{old('Q8')}}
                     </textarea>
                     @if(Session::has('endResult'))
                     <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
                         <p class="rounded resultMsg" type='text'
                             style="display: {{old('flag')?'block': 'none' }};color:green;">
-                            {{Session::get('endResult')[0]}}</p>
+                            {{Session::get('endResult')[0][0]}}<br />
+                            {{Session::get('endResult')[0][1]}}
+                        </p>
                     </div>
                     @endif
                 </div>
@@ -286,7 +333,7 @@
         </form>
         <div style=" text-align: center;">
             <button type="button" class="btn btn-primary" style="width:15%" id='submit' {{old("flag")?'':'disabled'}}
-                onclick="window.location='{{ url("SAMQ4") }}'">
+                onclick="window.location='{{ url("SAMQ8") }}'">
                 Next
             </button>
         </div>

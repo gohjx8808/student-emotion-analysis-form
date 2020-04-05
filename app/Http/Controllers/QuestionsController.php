@@ -286,7 +286,7 @@ class QuestionsController extends Controller
         } else {
             $Qformat = rand(1, 4);
         }
-        return view('Q7')->with('Qformat', 4);
+        return view('Q7')->with('Qformat', $Qformat);
     }
 
     public function saveQ7(Request $request)
@@ -337,88 +337,96 @@ class QuestionsController extends Controller
     public function displayQ8(Request $request)
     {
         // dd($request->session()->all());
-        if ($request->session()->has('Q4')) {
-            $Qformat = $request->session()->get('Q4')['Qformat'];
+        if ($request->session()->has('Q8')) {
+            $Qformat = $request->session()->get('Q8')['Qformat'];
         } else {
             $Qformat = rand(1, 4);
         }
-        return view('Q4')->with('Qformat', $Qformat);
+        return view('Q8')->with('Qformat', $Qformat);
     }
 
     public function saveQ8(Request $request)
     {
-        $request->session()->put('Q4', $request->except('_token'));
+        $request->session()->put('Q8', $request->except('_token'));
         // dd($request->input());
         $displayedResult = array();
         $random = $request->input('Qformat');
         // dd($random);
         if ($random == 1) {
-            array_push($displayedResult, $this->checkMCQ($request->input('Q4_1'), 'c', ''));
-            $added = $request->session()->get('Q4');
+            array_push($displayedResult, $this->checkMCQ($request->input('Q8_1'), 'b', ''));
+            $added = $request->session()->get('Q8');
             $added['correct'] = strval($displayedResult[0][2] ? 1 : 0) . '/1';
-            $request->session()->put('Q4', $added);
+            $request->session()->put('Q8', $added);
         } else if ($random == 2) {
-            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q4_1A'), '1'));
-            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q4_1B'), 'a'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q8_1A'), 'c'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q8_1B'), '>'));
             $correct = $this->checkCorrectness($displayedResult);
-            $added = $request->session()->get('Q4');
+            $added = $request->session()->get('Q8');
             $added['correct'] = strval($correct) . '/2';
-            $request->session()->put('Q4', $added);
+            $request->session()->put('Q8', $added);
+            if ($correct < 2) {
+                array_push($displayedResult, ['arrLength-2', '>']);
+            } else {
+                array_push($displayedResult, ['']);
+            }
             // dd($displayedResult);
         } else if ($random == 3) {
-            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q4_1A'), '1'));
-            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q4_1B'), 'n*factorial(n-1)'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q8_1A'), 'arrlength-2'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q8_1B'), '>'));
             $correct = $this->checkCorrectness($displayedResult);
-            $added = $request->session()->get('Q4');
+            $added = $request->session()->get('Q8');
             $added['correct'] = strval($correct) . '/2';
-            $request->session()->put('Q4', $added);
-            array_push($displayedResult, 'The appropriate answer is 1 and n*factorial(n-1). Your answer is correct as long as it fits the logic.');
-            // dd($displayedResult);
+            $request->session()->put('Q8', $added);
+            if ($correct < 2) {
+                array_push($displayedResult, ['arrLength-2', '>']);
+            } else {
+                array_push($displayedResult, ['']);
+            }
         } else if ($random == 4) {
-            array_push($displayedResult, 'Thank you for the answer. We will look through it.');
+            array_push($displayedResult, ['Thanks for answering the question.', 'If you wish to check your answer, you may google "Java Program To Find All The Leaders In An Integer Array".']);
+            // dd($displayedResult);
         }
-
         return redirect()->back()->withInput()->with(['endResult' => $displayedResult]);
     }
 
     public function displayQ9(Request $request)
     {
         // dd($request->session()->all());
-        if ($request->session()->has('Q4')) {
-            $Qformat = $request->session()->get('Q4')['Qformat'];
+        if ($request->session()->has('Q9')) {
+            $Qformat = $request->session()->get('Q9')['Qformat'];
         } else {
             $Qformat = rand(1, 4);
         }
-        return view('Q4')->with('Qformat', $Qformat);
+        return view('Q9')->with('Qformat', 1);
     }
 
     public function saveQ9(Request $request)
     {
-        $request->session()->put('Q4', $request->except('_token'));
+        $request->session()->put('Q9', $request->except('_token'));
         // dd($request->input());
         $displayedResult = array();
         $random = $request->input('Qformat');
         // dd($random);
         if ($random == 1) {
-            array_push($displayedResult, $this->checkMCQ($request->input('Q4_1'), 'c', ''));
-            $added = $request->session()->get('Q4');
+            array_push($displayedResult, $this->checkMCQ($request->input('Q9_1'), 'c', ''));
+            $added = $request->session()->get('Q9');
             $added['correct'] = strval($displayedResult[0][2] ? 1 : 0) . '/1';
-            $request->session()->put('Q4', $added);
+            $request->session()->put('Q9', $added);
         } else if ($random == 2) {
-            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q4_1A'), '1'));
-            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q4_1B'), 'a'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q9_1A'), '1'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q9_1B'), 'a'));
             $correct = $this->checkCorrectness($displayedResult);
-            $added = $request->session()->get('Q4');
+            $added = $request->session()->get('Q9');
             $added['correct'] = strval($correct) . '/2';
-            $request->session()->put('Q4', $added);
+            $request->session()->put('Q9', $added);
             // dd($displayedResult);
         } else if ($random == 3) {
-            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q4_1A'), '1'));
-            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q4_1B'), 'n*factorial(n-1)'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q9_1A'), '1'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q9_1B'), 'n*factorial(n-1)'));
             $correct = $this->checkCorrectness($displayedResult);
-            $added = $request->session()->get('Q4');
+            $added = $request->session()->get('Q9');
             $added['correct'] = strval($correct) . '/2';
-            $request->session()->put('Q4', $added);
+            $request->session()->put('Q9', $added);
             array_push($displayedResult, 'The appropriate answer is 1 and n*factorial(n-1). Your answer is correct as long as it fits the logic.');
             // dd($displayedResult);
         } else if ($random == 4) {

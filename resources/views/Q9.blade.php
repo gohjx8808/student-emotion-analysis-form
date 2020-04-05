@@ -78,15 +78,15 @@
             Please answer the questions as best as you can. Good luck!
         </p>
         <hr style="background-color:white" />
-        <p class="white-label"><u>Question 4</u></p>
-        <form action="Q4/save" method="POST">
+        <p class="white-label"><u>Question 9</u></p>
+        <form action="Q9/save" method="POST">
             {{ csrf_field() }}
             <div class="form-group">
                 @if($Qformat!=null)
                 {{-- mcq --}}
                 @if($Qformat==1)
                 <div>
-                    <label for=" Q4" class="white-label" style="margin-top: 15px">
+                    <label for=" Q9" class="white-label" style="margin-top: 15px">
                         What is the output of the following program?</label>
                     <div class="programming-bg">
                         <span class="programming-blue">public class Factorial</span><br />
@@ -111,30 +111,30 @@
                     </div>
                     <br />
                     <div class="form-control" style="border-bottom-width: 0;border-radius: 10px 10px 0px 0px;">
-                        <input class="form-control-input" type="radio" id="Q4_1a" name="Q4_1" value="a" required"
-                            {{old("Q4_1")=='a'?'checked':''}} {{old("flag")?'disabled':''}} />
-                        <label class="form-check-label" for="Q4_1a" style="padding-left: 15px;">
+                        <input class="form-control-input" type="radio" id="Q9_1a" name="Q9_1" value="a" required"
+                            {{old("Q9_1")=='a'?'checked':''}} {{old("flag")?'disabled':''}} />
+                        <label class="form-check-label" for="Q9_1a" style="padding-left: 15px;">
                             Factorial of 6 is 28
                         </label>
                     </div>
                     <div class="form-control radio-center">
-                        <input class="form-control-input" type="radio" id="Q4_1b" name="Q4_1" value="b"
-                            {{old("Q4_1")=='b'?'checked':''}} {{old("flag")?'disabled':''}} />
-                        <label class="form-check-label" for="Q4_1b" style="padding-left: 15px">
+                        <input class="form-control-input" type="radio" id="Q9_1b" name="Q9_1" value="b"
+                            {{old("Q9_1")=='b'?'checked':''}} {{old("flag")?'disabled':''}} />
+                        <label class="form-check-label" for="Q9_1b" style="padding-left: 15px">
                             Factorial of 6 is 120
                         </label>
                     </div>
                     <div class="form-control radio-center">
-                        <input class="form-control-input" type="radio" id="Q4_1c" name="Q4_1" value="c"
-                            {{old("Q4_1")=='c'?'checked':''}} {{old("flag")?'disabled':''}} />
-                        <label class="form-check-label" for="Q4_1c" style="padding-left: 15px">
+                        <input class="form-control-input" type="radio" id="Q9_1c" name="Q9_1" value="c"
+                            {{old("Q9_1")=='c'?'checked':''}} {{old("flag")?'disabled':''}} />
+                        <label class="form-check-label" for="Q9_1c" style="padding-left: 15px">
                             Factorial of 6 is 5040
                         </label>
                     </div>
                     <div class="form-control" style="border-radius: 0px 0px 10px 10px;">
-                        <input class="form-control-input" type="radio" id="Q4_1d" name="Q4_1" value="d"
-                            {{old("Q4_1")=='d'?'checked':''}} {{old("flag")?'disabled':''}} />
-                        <label class="form-check-label" for="Q4_1d" style="padding-left: 15px">
+                        <input class="form-control-input" type="radio" id="Q9_1d" name="Q9_1" value="d"
+                            {{old("Q9_1")=='d'?'checked':''}} {{old("flag")?'disabled':''}} />
+                        <label class="form-check-label" for="Q9_1d" style="padding-left: 15px">
                             Factorial of 6 is 2520
                         </label>
                     </div>
@@ -148,7 +148,7 @@
                 @elseif($Qformat==2)
                 {{-- matching --}}
                 <div>
-                    <label for="Q4" class="white-label" style="margin-top: 15px">
+                    <label for="Q9" class="white-label" style="margin-top: 15px">
                         Please select the appropriate algorithm to produce the following output.</label>
                     <p class="programming-bg" style="font-weight:bold">Output: 362880
                         <div class="programming-bg">
@@ -159,12 +159,12 @@
                             &emsp;{<br />
                             &emsp;&emsp;<span class="programming-blue">if </span>(n == 0)<br />
                             &emsp;&emsp;&emsp;<span class="programming-blue">return </span><select class="form-control"
-                                name="Q4_1A" required style="display: inline; width:220px;"
+                                name="Q9_1A" required style="display: inline; width:220px;"
                                 {{old("flag")?'disabled':''}}>
                                 <option value="" disabled selected />
-                                <option value='0' {{old("Q4_1A")=='0'?'selected':''}}>0</option>
-                                <option value='1' {{old("Q4_1A")=='1'?'selected':''}}>1</option>
-                                <option value='2' {{old("Q4_1A")=='2'?'selected':''}}>2</option>
+                                <option value='0' {{old("Q9_1A")=='0'?'selected':''}}>0</option>
+                                <option value='1' {{old("Q9_1A")=='1'?'selected':''}}>1</option>
+                                <option value='2' {{old("Q9_1A")=='2'?'selected':''}}>2</option>
                             </select>@if(Session::has('endResult'))
                             <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
                                 <ion-icon name="{{Session::get('endResult')[0]?'checkmark-circle':'close-circle'}}"
@@ -172,12 +172,12 @@
                             </div>
                             @endif;<br />
                             &emsp;&emsp;<span class="programming-blue">return </span><select class="form-control"
-                                name="Q4_1B" required style="display: inline; width:220px;"
+                                name="Q9_1B" required style="display: inline; width:220px;"
                                 {{old("flag")?'disabled':''}}>
                                 <option value="" disabled selected />
-                                <option value='a' {{old("Q4_1B")=='a'?'selected':''}}>n*factorial(n-1)</option>
-                                <option value='b' {{old("Q4_1B")=='b'?'selected':''}}>n*factorial(n+1)</option>
-                                <option value='c' {{old("Q4_1B")=='c'?'selected':''}}>n*factorial(n*1)</option>
+                                <option value='a' {{old("Q9_1B")=='a'?'selected':''}}>n*factorial(n-1)</option>
+                                <option value='b' {{old("Q9_1B")=='b'?'selected':''}}>n*factorial(n+1)</option>
+                                <option value='c' {{old("Q9_1B")=='c'?'selected':''}}>n*factorial(n*1)</option>
                             </select>
                             @if(Session::has('endResult'))
                             <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
@@ -203,7 +203,7 @@
                 @elseif($Qformat==3)
                 {{-- fill-in-blank --}}
                 <div>
-                    <label for="Q4" class="white-label" style="margin-top: 15px">
+                    <label for="Q9" class="white-label" style="margin-top: 15px">
                         Please enter the appropriate algorithm to produce the following output.</label>
                     <p class="programming-bg" style="font-weight:bold">Output: 120
                         <div class="programming-bg">
@@ -214,8 +214,8 @@
                             &emsp;{<br />
                             &emsp;&emsp;<span class="programming-blue">if </span>(n == 0)<br />
                             &emsp;&emsp;&emsp;<span class="programming-blue">return </span><input class="form-control"
-                                name="Q4_1A" required style="display: inline; width:220px;"
-                                {{old("flag")?'disabled':''}} value="{{old('Q4_1A')}}" />
+                                name="Q9_1A" required style="display: inline; width:220px;"
+                                {{old("flag")?'disabled':''}} value="{{old('Q9_1A')}}" />
                             @if(Session::has('endResult'))
                             <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
                                 <ion-icon name="{{Session::get('endResult')[0]?'checkmark-circle':'close-circle'}}"
@@ -223,8 +223,8 @@
                             </div>
                             @endif;<br />
                             &emsp;&emsp;<span class="programming-blue">return </span>
-                            <input class="form-control" name="Q4_1B" required style="display: inline; width:220px;"
-                                {{old("flag")?'disabled':''}} value="{{old('Q4_1B')}}" />
+                            <input class="form-control" name="Q9_1B" required style="display: inline; width:220px;"
+                                {{old("flag")?'disabled':''}} value="{{old('Q9_1B')}}" />
                             @if(Session::has('endResult'))
                             <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
                                 <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
@@ -256,9 +256,9 @@
                 @elseif($Qformat==4)
                 {{-- code --}}
                 <div style="display: {{$Qformat==4?'block':'none'}}">
-                    <label for=" Q4" class="white-label" style="margin-top: 15px">
+                    <label for=" Q9" class="white-label" style="margin-top: 15px">
                         Please write a program to find the factorial value of any number entered through the keyboard</label>
-                    <textarea class="form-control" rows="30" required name='Q4' {{old("flag")?'disabled':''}}>{{old('Q4')}}
+                    <textarea class="form-control" rows="30" required name='Q9' {{old("flag")?'disabled':''}}>{{old('Q9')}}
                     </textarea>
                     @if(Session::has('endResult'))
                     <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
@@ -286,7 +286,7 @@
         </form>
         <div style=" text-align: center;">
             <button type="button" class="btn btn-primary" style="width:15%" id='submit' {{old("flag")?'':'disabled'}}
-                onclick="window.location='{{ url("SAMQ4") }}'">
+                onclick="window.location='{{ url("SAMQ9") }}'">
                 Next
             </button>
         </div>
