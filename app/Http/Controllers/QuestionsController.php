@@ -397,7 +397,7 @@ class QuestionsController extends Controller
         } else {
             $Qformat = rand(1, 4);
         }
-        return view('Q9')->with('Qformat', 4);
+        return view('Q9')->with('Qformat', $Qformat);
     }
 
     public function saveQ9(Request $request)
@@ -458,45 +458,55 @@ class QuestionsController extends Controller
     public function displayQ10(Request $request)
     {
         // dd($request->session()->all());
-        if ($request->session()->has('Q4')) {
-            $Qformat = $request->session()->get('Q4')['Qformat'];
+        if ($request->session()->has('Q10')) {
+            $Qformat = $request->session()->get('Q10')['Qformat'];
         } else {
             $Qformat = rand(1, 4);
         }
-        return view('Q4')->with('Qformat', $Qformat);
+        return view('Q10')->with('Qformat', 4);
     }
 
     public function saveQ10(Request $request)
     {
-        $request->session()->put('Q4', $request->except('_token'));
+        $request->session()->put('Q10', $request->except('_token'));
         // dd($request->input());
         $displayedResult = array();
         $random = $request->input('Qformat');
         // dd($random);
         if ($random == 1) {
-            array_push($displayedResult, $this->checkMCQ($request->input('Q4_1'), 'c', ''));
-            $added = $request->session()->get('Q4');
+            array_push($displayedResult, $this->checkMCQ($request->input('Q10_1'), 'c', ''));
+            $added = $request->session()->get('Q10');
             $added['correct'] = strval($displayedResult[0][2] ? 1 : 0) . '/1';
-            $request->session()->put('Q4', $added);
+            $request->session()->put('Q10', $added);
+            array_push($displayedResult, 'This is a program to count all Palindrome sub-strings.');
         } else if ($random == 2) {
-            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q4_1A'), '1'));
-            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q4_1B'), 'a'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q10_1A'), 'a'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q10_1B'), 'a'));
             $correct = $this->checkCorrectness($displayedResult);
             $added = $request->session()->get('Q4');
             $added['correct'] = strval($correct) . '/2';
             $request->session()->put('Q4', $added);
+            if ($correct == 2) {
+                array_push($displayedResult, ['']);
+            } else {
+                array_push($displayedResult, ['The answers are', '==', 'true']);
+            }
             // dd($displayedResult);
         } else if ($random == 3) {
-            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q4_1A'), '1'));
-            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q4_1B'), 'n*factorial(n-1)'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q10_1A'), '=='));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q10_1B'), 'true'));
             $correct = $this->checkCorrectness($displayedResult);
-            $added = $request->session()->get('Q4');
+            $added = $request->session()->get('Q10');
             $added['correct'] = strval($correct) . '/2';
-            $request->session()->put('Q4', $added);
-            array_push($displayedResult, 'The appropriate answer is 1 and n*factorial(n-1). Your answer is correct as long as it fits the logic.');
+            $request->session()->put('Q10', $added);
+            if ($correct == 2) {
+                array_push($displayedResult, ['']);
+            } else {
+                array_push($displayedResult, ['The answers are', '==', 'true']);
+            }
             // dd($displayedResult);
         } else if ($random == 4) {
-            array_push($displayedResult, 'Thank you for the answer. We will look through it.');
+            array_push($displayedResult, ['Thank you for the answer.', 'You may check your answer by googling the keyword stated above in the topic.']);
         }
 
         return redirect()->back()->withInput()->with(['endResult' => $displayedResult]);
