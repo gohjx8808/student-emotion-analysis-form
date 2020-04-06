@@ -218,9 +218,9 @@ class QuestionsController extends Controller
             array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q5_1C'), 'd'));
             array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q5_1D'), 'counter'));
             $correct = $this->checkCorrectness($displayedResult);
-            $added = $request->session()->get('Q4');
+            $added = $request->session()->get('Q5');
             $added['correct'] = strval($correct) . '/4';
-            $request->session()->put('Q4', $added);
+            $request->session()->put('Q5', $added);
             if ($correct < 4) {
                 array_push($displayedResult, "This is a Floyd's Triangle algorithm.");
             } else {
@@ -483,9 +483,9 @@ class QuestionsController extends Controller
             array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q10_1A'), 'a'));
             array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q10_1B'), 'a'));
             $correct = $this->checkCorrectness($displayedResult);
-            $added = $request->session()->get('Q4');
+            $added = $request->session()->get('10');
             $added['correct'] = strval($correct) . '/2';
-            $request->session()->put('Q4', $added);
+            $request->session()->put('Q10', $added);
             if ($correct == 2) {
                 array_push($displayedResult, ['']);
             } else {
