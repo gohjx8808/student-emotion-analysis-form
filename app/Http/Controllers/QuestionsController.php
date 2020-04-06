@@ -397,7 +397,7 @@ class QuestionsController extends Controller
         } else {
             $Qformat = rand(1, 4);
         }
-        return view('Q9')->with('Qformat', 1);
+        return view('Q9')->with('Qformat', 4);
     }
 
     public function saveQ9(Request $request)
@@ -408,29 +408,48 @@ class QuestionsController extends Controller
         $random = $request->input('Qformat');
         // dd($random);
         if ($random == 1) {
-            array_push($displayedResult, $this->checkMCQ($request->input('Q9_1'), 'c', ''));
+            array_push($displayedResult, $this->checkMCQ($request->input('Q9_1'), 'a', ''));
             $added = $request->session()->get('Q9');
             $added['correct'] = strval($displayedResult[0][2] ? 1 : 0) . '/1';
             $request->session()->put('Q9', $added);
+            if ($displayedResult[0][2]) {
+                array_push($displayedResult, '');
+            } else {
+                array_push($displayedResult, 'This is a palindrome checker program.');
+            }
+            // dd($displayedResult);
         } else if ($random == 2) {
-            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q9_1A'), '1'));
-            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q9_1B'), 'a'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q9_1A'), 'b'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q9_1B'), 'c'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q9_1C'), 'b'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q9_1D'), 'c'));
             $correct = $this->checkCorrectness($displayedResult);
             $added = $request->session()->get('Q9');
-            $added['correct'] = strval($correct) . '/2';
+            $added['correct'] = strval($correct) . '/4';
             $request->session()->put('Q9', $added);
+            if ($correct == 4) {
+                array_push($displayedResult, '');
+            } else {
+                array_push($displayedResult, 'Please check your answer again. This is a palindrome checker program.');
+            }
             // dd($displayedResult);
         } else if ($random == 3) {
-            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q9_1A'), '1'));
-            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q9_1B'), 'n*factorial(n-1)'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q9_1A'), 'str.charat(i)'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q9_1B'), 'str.charat(j)'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q9_1C'), 'i++'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q9_1D'), 'j--'));
             $correct = $this->checkCorrectness($displayedResult);
             $added = $request->session()->get('Q9');
-            $added['correct'] = strval($correct) . '/2';
+            $added['correct'] = strval($correct) . '/4';
             $request->session()->put('Q9', $added);
-            array_push($displayedResult, 'The appropriate answer is 1 and n*factorial(n-1). Your answer is correct as long as it fits the logic.');
-            // dd($displayedResult);
+            array_push($displayedResult, ['str.charAt(i)', 'str.charAt(j)', 'i++', 'j--']);
+            if ($correct == 4) {
+                array_push($displayedResult, '');
+            } else {
+                array_push($displayedResult, 'Please check your answer again. This is a palindrome checker program.');
+            }
         } else if ($random == 4) {
-            array_push($displayedResult, 'Thank you for the answer. We will look through it.');
+            array_push($displayedResult, ['Thank you for the answer. We will look through it.', 'You may check your answer by googling "Java program to check whether a string is a Palindrome".']);
         }
 
         return redirect()->back()->withInput()->with(['endResult' => $displayedResult]);

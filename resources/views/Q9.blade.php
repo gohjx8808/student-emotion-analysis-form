@@ -88,25 +88,35 @@
                 <div>
                     <label for=" Q9" class="white-label" style="margin-top: 15px">
                         What is the output of the following program?</label>
+                    <p class="programming-bg" style="font-weight:bold">Input: laravel</p>
                     <div class="programming-bg">
-                        <span class="programming-blue">public class Factorial</span><br />
+                        <span class="programming-blue">public class Q9</span><br />
                         {<br />
-                        &emsp;<span class="programming-blue">static int </span>factorial(<span
-                            class="programming-blue">int</span> n)<br />
+                        &emsp;<span class="programming-blue">static boolean </span><span
+                            class="programming-green">isP</span>(String str)<br />
                         &emsp;{<br />
-                        &emsp;&emsp;<span class="programming-blue">if </span>(n == 0)<br />
-                        &emsp;&emsp;&emsp;<span class="programming-blue">return</span> 1;<br />
-                        &emsp;&emsp;<span class="programming-blue">return </span>n*factorial(n-1);<br />
+                        &emsp;&emsp;<span class="programming-blue">int </span>i = 0, j = str.length() - 1;<br />
+                        &emsp;&emsp;<span class="programming-blue">while </span>(i &lt; j)<br />
+                        &emsp;&emsp;{<br />
+                        &emsp;&emsp;&emsp;<span class="programming-blue">if </span>(str.charAt(i) !=
+                        str.charAt(j))<br />
+                        &emsp;&emsp;&emsp;&emsp;<span class="programming-blue">return false</span>;<br />
+                        &emsp;&emsp;&emsp;i++;<br />
+                        &emsp;&emsp;&emsp;j--;<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;&emsp;<span class="programming-blue">return true</span>;<br />
                         &emsp;}<br /><br />
                         &emsp;<span class="programming-blue">public static void</span>
                         <span class="programming-green">main</span> (String[] args)<br />
                         &emsp;{<br />
                         &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
-                        &emsp;&emsp;<span class="programming-blue">int</span> num = 7;<br />
-                        &emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
-                            class="programming-green">"Factorial of "</span> + num + <span class="programming-green">"
-                            is "</span> + factorial(num))<br />
-                        &emsp;}<br />
+                        &emsp;&emsp;String str = in.nextLine();<br />
+                        &emsp;&emsp;<span class="programming-blue">if </span>(isP(str))<br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"Yes"</span>);<br />
+                        &emsp;&emsp;<span class="programming-blue">else</span><br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"No"</span>);<br />
                         }
                     </div>
                     <br />
@@ -114,157 +124,235 @@
                         <input class="form-control-input" type="radio" id="Q9_1a" name="Q9_1" value="a" required"
                             {{old("Q9_1")=='a'?'checked':''}} {{old("flag")?'disabled':''}} />
                         <label class="form-check-label" for="Q9_1a" style="padding-left: 15px;">
-                            Factorial of 6 is 28
+                            No
                         </label>
                     </div>
                     <div class="form-control radio-center">
                         <input class="form-control-input" type="radio" id="Q9_1b" name="Q9_1" value="b"
                             {{old("Q9_1")=='b'?'checked':''}} {{old("flag")?'disabled':''}} />
                         <label class="form-check-label" for="Q9_1b" style="padding-left: 15px">
-                            Factorial of 6 is 120
+                            Compiler Error
                         </label>
                     </div>
                     <div class="form-control radio-center">
                         <input class="form-control-input" type="radio" id="Q9_1c" name="Q9_1" value="c"
                             {{old("Q9_1")=='c'?'checked':''}} {{old("flag")?'disabled':''}} />
                         <label class="form-check-label" for="Q9_1c" style="padding-left: 15px">
-                            Factorial of 6 is 5040
+                            Yes
                         </label>
                     </div>
                     <div class="form-control" style="border-radius: 0px 0px 10px 10px;">
                         <input class="form-control-input" type="radio" id="Q9_1d" name="Q9_1" value="d"
                             {{old("Q9_1")=='d'?'checked':''}} {{old("flag")?'disabled':''}} />
                         <label class="form-check-label" for="Q9_1d" style="padding-left: 15px">
-                            Factorial of 6 is 2520
+                            Syntax Error
                         </label>
                     </div>
                     @if(Session::has('endResult'))
                     <p class="rounded resultMsg" type='text'
-                        style="display: {{old('flag')?'block': 'none' }};color: {{Session::get('endResult')[0][2]?'green':'red'}}" />
-                    {{Session::get('endResult')[0][0]}}
+                        style="display: {{old('flag')?'block': 'none' }};color: {{Session::get('endResult')[0][2]?'green':'red'}}">
+                        {{Session::get('endResult')[0][0]}}<br />
+                        @if(Session::get('endResult')[1]!='')
+                        {{Session::get('endResult')[1]}}
+                        @endif
                     </p>
                     @endif
                 </div>
                 @elseif($Qformat==2)
                 {{-- matching --}}
                 <div>
-                    <label for="Q9" class="white-label" style="margin-top: 15px">
-                        Please select the appropriate algorithm to produce the following output.</label>
-                    <p class="programming-bg" style="font-weight:bold">Output: 362880
-                        <div class="programming-bg">
-                            <span class="programming-blue">public class Factorial</span><br />
-                            {<br />
-                            &emsp;<span class="programming-blue">static int </span>factorial(<span
-                                class="programming-blue">int</span> n)<br />
-                            &emsp;{<br />
-                            &emsp;&emsp;<span class="programming-blue">if </span>(n == 0)<br />
-                            &emsp;&emsp;&emsp;<span class="programming-blue">return </span><select class="form-control"
-                                name="Q9_1A" required style="display: inline; width:220px;"
-                                {{old("flag")?'disabled':''}}>
-                                <option value="" disabled selected />
-                                <option value='0' {{old("Q9_1A")=='0'?'selected':''}}>0</option>
-                                <option value='1' {{old("Q9_1A")=='1'?'selected':''}}>1</option>
-                                <option value='2' {{old("Q9_1A")=='2'?'selected':''}}>2</option>
-                            </select>@if(Session::has('endResult'))
-                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                <ion-icon name="{{Session::get('endResult')[0]?'checkmark-circle':'close-circle'}}"
-                                    style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
-                            </div>
-                            @endif;<br />
-                            &emsp;&emsp;<span class="programming-blue">return </span><select class="form-control"
-                                name="Q9_1B" required style="display: inline; width:220px;"
-                                {{old("flag")?'disabled':''}}>
-                                <option value="" disabled selected />
-                                <option value='a' {{old("Q9_1B")=='a'?'selected':''}}>n*factorial(n-1)</option>
-                                <option value='b' {{old("Q9_1B")=='b'?'selected':''}}>n*factorial(n+1)</option>
-                                <option value='c' {{old("Q9_1B")=='c'?'selected':''}}>n*factorial(n*1)</option>
-                            </select>
-                            @if(Session::has('endResult'))
-                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
-                                    style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
-                            </div>
-                            @endif;<br />
-                            &emsp;}<br /><br />
-                            &emsp;<span class="programming-blue">public static void</span>
-                            <span class="programming-green">main</span> (String[] args)<br />
-                            &emsp;{<br />
-                            &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
-                            &emsp;&emsp;<span class="programming-blue">int</span> num = 7;<br />
-                            &emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
-                                class="programming-green">"Factorial of "</span> + num + <span
-                                class="programming-green">"
-                                is "</span> + factorial(num))<br />
-                            &emsp;}<br />
-                            }
+                    <label for=" Q9" class="white-label" style="margin-top: 15px">
+                        This is a palindrome checker program.<br />Please select the appropriate algorithm to produce
+                        the following output.</label>
+                    <p class="programming-bg" style="font-weight:bold">Input: tacocat<br />Output: Yes</p>
+                    <div class="programming-bg">
+                        <span class="programming-blue">public class Q9</span><br />
+                        {<br />
+                        &emsp;<span class="programming-blue">static boolean </span><span
+                            class="programming-green">isP</span>(String str)<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;<span class="programming-blue">int </span>i = 0, j = str.length() - 1;<br />
+                        &emsp;&emsp;<span class="programming-blue">while </span>(i &lt; j)<br />
+                        &emsp;&emsp;{<br />
+                        &emsp;&emsp;&emsp;<span class="programming-blue">if </span>(
+                        <select class="form-control" name="Q9_1A" required style="display: inline; width:190px;"
+                            {{old("flag")?'disabled':''}}>
+                            <option value="" disabled selected />
+                            <option value='a' {{old("Q9_1A")=='a'?'selected':''}}>str.charAt(i-1)</option>
+                            <option value='b' {{old("Q9_1A")=='b'?'selected':''}}>str.charAt(i)</option>
+                            <option value='c' {{old("Q9_1A")=='c'?'selected':''}}>str.charAt(i+1)</option>
+                        </select>
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[0]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
                         </div>
+                        @endif !=
+                        <select class="form-control" name="Q9_1B" required style="display: inline; width:190px;"
+                            {{old("flag")?'disabled':''}}>
+                            <option value="" disabled selected />
+                            <option value='a' {{old("Q9_1B")=='a'?'selected':''}}>str.charAt(j-1)</option>
+                            <option value='b' {{old("Q9_1B")=='b'?'selected':''}}>str.charAt(j+1)</option>
+                            <option value='c' {{old("Q9_1B")=='c'?'selected':''}}>str.charAt(j)</option>
+                        </select>
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif )<br />
+                        &emsp;&emsp;&emsp;&emsp;<span class="programming-blue">return false</span>;<br />
+                        &emsp;&emsp;
+                        <select class="form-control" name="Q9_1C" required style="display: inline; width:90px;"
+                            {{old("flag")?'disabled':''}}>
+                            <option value="" disabled selected />
+                            <option value='a' {{old("Q9_1C")=='a'?'selected':''}}>i+=1</option>
+                            <option value='b' {{old("Q9_1C")=='b'?'selected':''}}>i++</option>
+                            <option value='c' {{old("Q9_1C")=='c'?'selected':''}}>i--</option>
+                        </select>
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[2]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[2]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif;<br />
+                        &emsp;&emsp;
+                        <select class="form-control" name="Q9_1D" required style="display: inline; width:90px;"
+                            {{old("flag")?'disabled':''}}>
+                            <option value="" disabled selected />
+                            <option value='a' {{old("Q9_1D")=='a'?'selected':''}}>j+=1</option>
+                            <option value='b' {{old("Q9_1D")=='b'?'selected':''}}>j++</option>
+                            <option value='c' {{old("Q9_1D")=='c'?'selected':''}}>j--</option>
+                        </select>
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[3]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[3]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif;<br /><br />
+                        &emsp;&emsp;}<br />
+                        &emsp;&emsp;<span class="programming-blue">return true</span>;<br />
+                        &emsp;}<br /><br />
+                        &emsp;<span class="programming-blue">public static void</span>
+                        <span class="programming-green">main</span> (String[] args)<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
+                        &emsp;&emsp;String str = in.nextLine();<br />
+                        &emsp;&emsp;<span class="programming-blue">if </span>(isP(str))<br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"Yes"</span>);<br />
+                        &emsp;&emsp;<span class="programming-blue">else</span><br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"No"</span>);<br />
+                        }
+                    </div>
+                    @if(Session::has('endResult'))
+                    <p class="rounded resultMsg" type='text'
+                        style="display: {{old('flag')?'block': 'none' }};color:red">
+                        @if(Session::get('endResult')[4]!='')
+                        {{Session::get('endResult')[4]}}
+                        @endif
                     </p>
+                    @endif
                 </div>
                 @elseif($Qformat==3)
                 {{-- fill-in-blank --}}
                 <div>
-                    <label for="Q9" class="white-label" style="margin-top: 15px">
-                        Please enter the appropriate algorithm to produce the following output.</label>
-                    <p class="programming-bg" style="font-weight:bold">Output: 120
-                        <div class="programming-bg">
-                            <span class="programming-blue">public class Factorial</span><br />
-                            {<br />
-                            &emsp;<span class="programming-blue">static int </span>factorial(<span
-                                class="programming-blue">int</span> n)<br />
-                            &emsp;{<br />
-                            &emsp;&emsp;<span class="programming-blue">if </span>(n == 0)<br />
-                            &emsp;&emsp;&emsp;<span class="programming-blue">return </span><input class="form-control"
-                                name="Q9_1A" required style="display: inline; width:220px;"
-                                {{old("flag")?'disabled':''}} value="{{old('Q9_1A')}}" />
-                            @if(Session::has('endResult'))
-                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                <ion-icon name="{{Session::get('endResult')[0]?'checkmark-circle':'close-circle'}}"
-                                    style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
-                            </div>
-                            @endif;<br />
-                            &emsp;&emsp;<span class="programming-blue">return </span>
-                            <input class="form-control" name="Q9_1B" required style="display: inline; width:220px;"
-                                {{old("flag")?'disabled':''}} value="{{old('Q9_1B')}}" />
-                            @if(Session::has('endResult'))
-                            <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
-                                <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
-                                    style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
-                            </div>
-                            @endif;<br />
-                            &emsp;}<br /><br />
-                            &emsp;<span class="programming-blue">public static void</span>
-                            <span class="programming-green">main</span> (String[] args)<br />
-                            &emsp;{<br />
-                            &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
-                            &emsp;&emsp;<span class="programming-blue">int</span> num = 5;<br />
-                            &emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
-                                class="programming-green">"Factorial of "</span> + num + <span
-                                class="programming-green">"
-                                is "</span> + factorial(num))<br />
-                            &emsp;}<br />
-                            }
+                    <label for=" Q9" class="white-label" style="margin-top: 15px">
+                        This is a palindrome checker program.<br />Please input the appropriate algorithm to produce
+                        the following output.</label>
+                    <p class="programming-bg" style="font-weight:bold">Input: durian<br />Output: No</p>
+                    <div class="programming-bg">
+                        <span class="programming-blue">public class Q9</span><br />
+                        {<br />
+                        &emsp;<span class="programming-blue">static boolean </span><span
+                            class="programming-green">isP</span>(String str)<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;<span class="programming-blue">int </span>i = 0, j = str.length() - 1;<br />
+                        &emsp;&emsp;<span class="programming-blue">while </span>(i &lt; j)<br />
+                        &emsp;&emsp;{<br />
+                        &emsp;&emsp;&emsp;<span class="programming-blue">if </span>(
+                        <input class="form-control" name="Q9_1A" required style="display: inline; width:190px;"
+                            {{old("flag")?'disabled':''}} value="{{old('Q9_1A')}}" />
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[0]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
                         </div>
-                    </p>
+                        @endif !=
+                        <input class="form-control" name="Q9_1B" required style="display: inline; width:190px;"
+                            {{old("flag")?'disabled':''}} value="{{old('Q9_1B')}}" />
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif )<br />
+                        &emsp;&emsp;&emsp;&emsp;<span class="programming-blue">return false</span>;<br />
+                        &emsp;&emsp;
+                        <input class="form-control" name="Q9_1C" required style="display: inline; width:190px;"
+                            {{old("flag")?'disabled':''}} value="{{old('Q9_1C')}}" />
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[2]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[2]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif;<br />
+                        &emsp;&emsp;
+                        <input class="form-control" name="Q9_1D" required style="display: inline; width:190px;"
+                            {{old("flag")?'disabled':''}} value="{{old('Q9_1D')}}" />
+                        @if(Session::has('endResult'))
+                        <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
+                            <ion-icon name="{{Session::get('endResult')[3]?'checkmark-circle':'close-circle'}}"
+                                style="color: {{Session::get('endResult')[3]?'green':'red'}};"></ion-icon>
+                        </div>
+                        @endif;<br /><br />
+                        &emsp;&emsp;}<br />
+                        &emsp;&emsp;<span class="programming-blue">return true</span>;<br />
+                        &emsp;}<br /><br />
+                        &emsp;<span class="programming-blue">public static void</span>
+                        <span class="programming-green">main</span> (String[] args)<br />
+                        &emsp;{<br />
+                        &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
+                        &emsp;&emsp;String str = in.nextLine();<br />
+                        &emsp;&emsp;<span class="programming-blue">if </span>(isP(str))<br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"Yes"</span>);<br />
+                        &emsp;&emsp;<span class="programming-blue">else</span><br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
+                            class="programming-green">"No"</span>);<br />
+                        }
+                    </div>
                     @if(Session::has('endResult'))
-                    @if(Session::get('endResult')[0]==false || Session::get('endResult')[1]==false)
-                    <p class="rounded resultMsg" style="color: red;" />
-                    {{Session::get('endResult')[2]}}
+                    <p class="rounded resultMsg" type='text'
+                        style="display: {{old('flag')?'block': 'none' }};color:red">
+                        @if(Session::get('endResult')[5]!='')
+                        {{Session::get('endResult')[5]}}<br /><br />
+                        @endif
+                        <span style="color:green">
+                            <u>The appropriate answers are:</u><br />
+                            {{Session::get('endResult')[4][0]}}<br />
+                            {{Session::get('endResult')[4][1]}}<br />
+                            {{Session::get('endResult')[4][2]}}<br />
+                            {{Session::get('endResult')[4][3]}}
+                        </span>
                     </p>
-                    @endif
                     @endif
                 </div>
                 @elseif($Qformat==4)
                 {{-- code --}}
                 <div style="display: {{$Qformat==4?'block':'none'}}">
                     <label for=" Q9" class="white-label" style="margin-top: 15px">
-                        Please write a program to find the factorial value of any number entered through the keyboard</label>
+                        Please write a Java program to determine if an input string is palindrome.</label>
                     <textarea class="form-control" rows="30" required name='Q9' {{old("flag")?'disabled':''}}>{{old('Q9')}}
                     </textarea>
                     @if(Session::has('endResult'))
                     <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
                         <p class="rounded resultMsg" type='text'
                             style="display: {{old('flag')?'block': 'none' }};color:green;">
-                            {{Session::get('endResult')[0]}}</p>
+                            {{Session::get('endResult')[0][0]}}<br/>
+                            {{Session::get('endResult')[0][1]}}
+                        </p>
                     </div>
                     @endif
                 </div>
