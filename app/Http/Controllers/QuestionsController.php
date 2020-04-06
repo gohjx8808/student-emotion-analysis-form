@@ -321,7 +321,7 @@ class QuestionsController extends Controller
             array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q7_1C'), 'arr[j+1]=temp'));
             $correct = $this->checkCorrectness($displayedResult);
             $added = $request->session()->get('Q7');
-            $added['correct'] = strval($correct) . '/2';
+            $added['correct'] = strval($correct) . '/3';
             $request->session()->put('Q7', $added);
             array_push($displayedResult, ['int temp = arr[j]', 'arr[j] = arr[j+1]', 'arr[j+1] = temp']);
             array_push($displayedResult, ['int temp = arr[j+1]', 'arr[j+1] = arr[j]', 'arr[j] = temp']);
@@ -463,7 +463,7 @@ class QuestionsController extends Controller
         } else {
             $Qformat = rand(1, 4);
         }
-        return view('Q10')->with('Qformat', 4);
+        return view('Q10')->with('Qformat', $Qformat);
     }
 
     public function saveQ10(Request $request)
