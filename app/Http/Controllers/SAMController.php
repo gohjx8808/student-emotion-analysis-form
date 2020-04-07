@@ -16,124 +16,134 @@ class SAMController extends Controller
     {
         $request->session()->put('SAMQ1', $request->except('_token'));
         // dd($request->session()->get('QuestionsRemaining'));
-        $randomQues = $this->randomizedQuestion($request);
 
         // dd(session()->all());
         if (count($request->session()->get('QuestionsRemaining')) > 0) {
+            $randomQues = $this->randomizedQuestion($request);
             return redirect('/Q' . $randomQues);
         }
         else{
             $this->saveToFirebase($request);
+            return redirect('/thankyou');
         }
     }
 
     public function saveSAMQ2(Request $request)
     {
-        $randomQues = $this->randomizedQuestion($request);
         // dd($request->session()->all());
         $request->session()->put('SAMQ2', $request->except('_token'));
         if (count($request->session()->get('QuestionsRemaining')) > 0) {
+            $randomQues = $this->randomizedQuestion($request);
             return redirect('/Q' . $randomQues);
         }
         else{
             $this->saveToFirebase($request);
+            return redirect('/thankyou');
         }
     }
 
     public function saveSAMQ3(Request $request)
     {
-        $randomQues = $this->randomizedQuestion($request);
         $request->session()->put('SAMQ3', $request->except('_token'));
         if (count($request->session()->get('QuestionsRemaining')) > 0) {
+            $randomQues = $this->randomizedQuestion($request);
             return redirect('/Q' . $randomQues);
         }
         else{
             $this->saveToFirebase($request);
+            return redirect('/thankyou');
         }
     }
 
     public function saveSAMQ4(Request $request)
     {
-        $randomQues = $this->randomizedQuestion($request);
         $request->session()->put('SAMQ4', $request->except('_token'));
         if (count($request->session()->get('QuestionsRemaining')) > 0) {
+            $randomQues = $this->randomizedQuestion($request);
             return redirect('/Q' . $randomQues);
         }
         else{
             $this->saveToFirebase($request);
+            return redirect('/thankyou');
         }
     }
 
     public function saveSAMQ5(Request $request)
     {
-        $randomQues = $this->randomizedQuestion($request);
         $request->session()->put('SAMQ5', $request->except('_token'));
         if (count($request->session()->get('QuestionsRemaining')) > 0) {
+            $randomQues = $this->randomizedQuestion($request);
             return redirect('/Q' . $randomQues);
         }
         else{
             $this->saveToFirebase($request);
+            return redirect('/thankyou');
         }
     }
 
     public function saveSAMQ6(Request $request)
     {
-        $randomQues = $this->randomizedQuestion($request);
         $request->session()->put('SAMQ6', $request->except('_token'));
         if (count($request->session()->get('QuestionsRemaining')) > 0) {
+            $randomQues = $this->randomizedQuestion($request);
             return redirect('/Q' . $randomQues);
         }
         else{
             $this->saveToFirebase($request);
+            return redirect('/thankyou');
         }
     }
 
     public function saveSAMQ7(Request $request)
     {
-        $randomQues = $this->randomizedQuestion($request);
         $request->session()->put('SAMQ7', $request->except('_token'));
         if (count($request->session()->get('QuestionsRemaining')) > 0) {
+            $randomQues = $this->randomizedQuestion($request);
             return redirect('/Q' . $randomQues);
         }
         else{
             $this->saveToFirebase($request);
+            return redirect('/thankyou');
         }
     }
 
     public function saveSAMQ8(Request $request)
     {
-        $randomQues = $this->randomizedQuestion($request);
         $request->session()->put('SAMQ8', $request->except('_token'));
         if (count($request->session()->get('QuestionsRemaining')) > 0) {
+            $randomQues = $this->randomizedQuestion($request);
             return redirect('/Q' . $randomQues);
         }
         else{
             $this->saveToFirebase($request);
+            return redirect('/thankyou');
         }
     }
 
     public function saveSAMQ9(Request $request)
     {
-        $randomQues = $this->randomizedQuestion($request);
         $request->session()->put('SAMQ9', $request->except('_token'));
         if (count($request->session()->get('QuestionsRemaining')) > 0) {
+            $randomQues = $this->randomizedQuestion($request);
             return redirect('/Q' . $randomQues);
         }
         else{
             $this->saveToFirebase($request);
+            return redirect('/thankyou');
         }
     }
 
     public function saveSAMQ10(Request $request)
     {
-        $randomQues = $this->randomizedQuestion($request);
         $request->session()->put('SAMQ10', $request->except('_token'));
         // dd(session()->all());
         if (count($request->session()->get('QuestionsRemaining')) > 0) {
+            $randomQues = $this->randomizedQuestion($request);
             return redirect('/Q' . $randomQues);
         }
         else{
             $this->saveToFirebase($request);
+            return redirect('/thankyou');
         }
     }
 
@@ -166,7 +176,5 @@ class SAMController extends Controller
         $database
             ->getReference(Carbon::now())
             ->push($request->session()->all());
-
-        return redirect('/thankyou');
     }
 }
