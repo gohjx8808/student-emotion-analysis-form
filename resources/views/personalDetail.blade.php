@@ -46,17 +46,6 @@
     <form class="form-background" action="personaldetail/post" method="POST">
         {{ csrf_field() }}
         <h1 class="white-label">Student Emotion Analysis</h1>
-        <p class="white-label">
-            The purpose of this survey is to collect data required for my
-            Final Year Project (FYP). The project is related to the emotion
-            of students while learning and answering questions. The
-            objective of the research project is to predict which type of
-            teaching method is suitable for the students with their
-            respective mood in real-time. For example, when students feel
-            bored, the lecturer should use MCQ to make the lecture more
-            interesting so the students are able to improve their learning
-            performance and hence improving their academic performance.
-        </p>
         <br />
         <h4 class="white-label">Part 1: Personal Detail</h4>
         <hr style="background-color: white" />

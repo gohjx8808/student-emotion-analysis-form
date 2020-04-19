@@ -78,7 +78,7 @@
             Please answer the questions as best as you can. Good luck!
         </p>
         <hr style="background-color:white" />
-        <p class="white-label"><u>Question 6</u></p>
+        <p class="white-label"><u>Question {{Session::get('counter')}}</u></p>
         <form action="Q6/save" method="POST">
             {{ csrf_field() }}
             <div class="form-group">
@@ -106,7 +106,7 @@
                             class="programming-green">"Derived"</span>);<br />
                         &emsp;}<br />
                         }<br /><br />
-                        <span class="programming-blue">class </span>Q6<br />
+                        <span class="programming-blue">class </span>Q{{Session::get('counter')}}<br />
                         {<br />
                         &emsp;<span class="programming-blue">public static void</span>
                         <span class="programming-green">DoPrint</span> (Base o)<br />
@@ -187,7 +187,7 @@
                             class="programming-green">"Derived"</span>);<br />
                         &emsp;}<br />
                         }<br /><br />
-                        <span class="programming-blue">class </span>Q6<br />
+                        <span class="programming-blue">class </span>Q{{Session::get('counter')}}<br />
                         {<br />
                         &emsp;<span class="programming-blue">public static void</span>
                         <span class="programming-green">DoPrint</span> (Base o)<br />
@@ -265,7 +265,7 @@
                             class="programming-green">"Derived"</span>);<br />
                         &emsp;}<br />
                         }<br /><br />
-                        <span class="programming-blue">class </span>Q6<br />
+                        <span class="programming-blue">class </span>Q{{Session::get('counter')}}<br />
                         {<br />
                         &emsp;<span class="programming-blue">public static void</span>
                         <span class="programming-green">DoPrint</span> (Base o)<br />
@@ -334,7 +334,7 @@
                             class="programming-green">"Derived"</span>);<br />
                         &emsp;}<br />
                         }<br /><br />
-                        <span class="programming-blue">class </span>Q6<br />
+                        <span class="programming-blue">class </span>Q{{Session::get('counter')}}<br />
                         {<br />
                         &emsp;<span class="programming-blue">public static void</span>
                         <span class="programming-green">DoPrint</span> (Base o)<br />
@@ -380,6 +380,7 @@
                 <input type="hidden" value="[0,0,0,0]" id="quadrantsCounter" name="quadrantsCounter" />
                 <input type="hidden" value="[0,0,0,0]" id="quadrantsTimer" name="quadrantsTimer" />
                 <input type="hidden" value={{$Qformat}} name="Qformat" />
+                <input type="hidden" value={{Session::get('counter')}} name="counter" />
         </form>
         <div style=" text-align: center;">
             <button type="button" class="btn btn-primary" style="width:15%" id='submit' {{old("flag")?'':'disabled'}}

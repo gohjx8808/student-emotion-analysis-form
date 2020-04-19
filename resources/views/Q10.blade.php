@@ -78,7 +78,7 @@
             Please answer the questions as best as you can. Good luck!
         </p>
         <hr style="background-color:white" />
-        <p class="white-label"><u>Question 10</u></p>
+        <p class="white-label"><u>Question {{Session::get('counter')}}</u></p>
         <form action="Q10/save" method="POST">
             {{ csrf_field() }}
             <div class="form-group">
@@ -90,7 +90,7 @@
                         What is the output of the following program?</label>
                     <p class="programming-bg" style="font-weight:bold">Input: abaab</p>
                     <div class="programming-bg">
-                        <span class="programming-blue">public class Q10</span><br />
+                        <span class="programming-blue">public class Q{{Session::get('counter')}}</span><br />
                         {<br />
                         &emsp;<span class="programming-blue">static int </span>CountPS(<span
                             class="programming-blue">char</span> str[], <span class="programming-blue">int</span>
@@ -187,7 +187,7 @@
                     </label>
                     <p class="programming-bg" style="font-weight:bold">Input: abbaeae<br />Output: 4</p>
                     <div class="programming-bg">
-                        <span class="programming-blue">public class Q10</span><br />
+                        <span class="programming-blue">public class Q{{Session::get('counter')}}</span><br />
                         {<br />
                         &emsp;<span class="programming-blue">static int </span>CountPS(<span
                             class="programming-blue">char</span> str[], <span class="programming-blue">int</span>
@@ -285,7 +285,7 @@
                     </label>
                     <p class="programming-bg" style="font-weight:bold">Input: abbaeae<br />Output: 4</p>
                     <div class="programming-bg">
-                        <span class="programming-blue">public class Q10</span><br />
+                        <span class="programming-blue">public class Q{{Session::get('counter')}}</span><br />
                         {<br />
                         &emsp;<span class="programming-blue">static int </span>CountPS(<span
                             class="programming-blue">char</span> str[], <span class="programming-blue">int</span>
@@ -397,6 +397,7 @@
                 <input type="hidden" value="[0,0,0,0]" id="quadrantsCounter" name="quadrantsCounter" />
                 <input type="hidden" value="[0,0,0,0]" id="quadrantsTimer" name="quadrantsTimer" />
                 <input type="hidden" value={{$Qformat}} name="Qformat" />
+                <input type="hidden" value={{Session::get('counter')}} name="counter" />
         </form>
         <div style=" text-align: center;">
             <button type="button" class="btn btn-primary" style="width:15%" id='submit' {{old("flag")?'':'disabled'}}

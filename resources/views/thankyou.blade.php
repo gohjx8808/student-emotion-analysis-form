@@ -35,11 +35,12 @@
 </head>
 
 <body class="background">
-    <form class="form-background" action="SAMQ4/save" method="POST">
+    <form class="form-background" action="" method="POST">
         {{ csrf_field() }}
         <h1 class="white-label">Student Emotion Analysis</h1>
         <br />
         <p class="white-label">Thank you for your participation!</p>
+    </form>
     <script></script>
 </body>
 

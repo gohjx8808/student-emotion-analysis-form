@@ -78,7 +78,7 @@
             Please answer the questions as best as you can. Good luck!
         </p>
         <hr style="background-color:white" />
-        <p class="white-label"><u>Question 1</u></p>
+        <p class="white-label"><u>Question {{Session::get('counter')}}</u></p>
         <form action="Q1/save" method="POST">
             {{ csrf_field() }}
             <div class="form-group">
@@ -90,7 +90,7 @@
                         What will be the output of the following program?</label>
                     <div class="programming-bg">
                         <span class="programming-blue">import</span> java.util.Scanner;<br />
-                        <span class="programming-blue">public class Q1</span><br />
+                        <span class="programming-blue">public class Q{{Session::get('counter')}}</span><br />
                         {<br />
                         &emsp;<span class="programming-blue">public static void</span>
                         <span class="programming-green">main</span> (String[] args)<br />
@@ -162,7 +162,7 @@
                         4.534<br /><u>Output:</u> Decreasing order</p>
                     <div class="programming-bg">
                         <span class="programming-blue">import</span> java.util.Scanner;<br />
-                        <span class="programming-blue">public class Q1</span><br />
+                        <span class="programming-blue">public class Q{{Session::get('counter')}}</span><br />
                         {<br />
                         &emsp;<span class="programming-blue">public static void</span>
                         <span class="programming-green">main</span> (String[] args)<br />
@@ -276,7 +276,7 @@
                         Increasing order</p>
                     <div class="programming-bg">
                         <span class="programming-blue">import</span> java.util.Scanner;<br />
-                        <span class="programming-blue">public class Q1</span><br />
+                        <span class="programming-blue">public class Q{{Session::get('counter')}}</span><br />
                         {<br />
                         &emsp;<span class="programming-blue">public static void</span>
                         <span class="programming-green">main</span> (String[] args)<br />
@@ -392,6 +392,7 @@
                 <input type="hidden" value="[0,0,0,0]" id="quadrantsCounter" name="quadrantsCounter" />
                 <input type="hidden" value="[0,0,0,0]" id="quadrantsTimer" name="quadrantsTimer" />
                 <input type="hidden" value={{$Qformat}} name="Qformat" />
+                <input type="hidden" value={{Session::get('counter')}} name="counter" />
         </form>
         <div style=" text-align: center;">
             <button type="button" class="btn btn-primary" style="width:15%" id='submit' {{old("flag")?'':'disabled'}}

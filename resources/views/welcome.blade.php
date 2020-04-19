@@ -1,100 +1,88 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
 
-        <title>Laravel</title>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <style>
+        .form-background {
+            padding: 50px;
+            background-color: midnightblue;
+            width: 85%;
+            margin: auto;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            position: relative;
+            border-radius: 10px;
+        }
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        .background {
+            background-image: url("/images/wooden_bg.jfif");
+            background-size: cover;
+        }
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+        .white-label {
+            color: white;
+        }
 
-            .full-height {
-                height: 100vh;
-            }
+        .radio-center {
+            margin-left: 6.5%;
+        }
+    </style>
+</head>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
+<body class="background">
+    <form class="form-background" action="" method="POST">
+        {{ csrf_field() }}
+        <h1 class="white-label">Student Emotion Analysis</h1>
+        <br />
+        <p class="white-label" style="font-size:20px">
+            Welcome to my emotion experiment!
+        </p>
+        <p class="white-label" style="font-size:20px">
+            I'm Goh Jing Xuan, a final year student from the faculty of Computer
+            Science, majoring in Artificial Intelligence (AI).
+        </p>
+        <p class="white-label" style="font-size:20px">
+            The purpose of this experiment is to collect data required for my
+            Final Year Project (FYP). The project is related to the emotion
+            of students while learning and answering questions. The
+            objective of the research project is to predict which type of
+            teaching method is suitable for the students with their
+            respective mood in real-time. For example, when students feel
+            bored, the lecturer should use MCQ to make the lecture more
+            interesting so the students are able to improve their learning
+            performance and hence improving their academic performance.
+        </p>
+        <p class="white-label" style="font-size:20px">
+            This experiment consists of 2 sections. <br />- The 1st section requires you to filled in your personal
+            information.<br />- The 2nd section requires you to answer 10 programming questions with different topics and
+            formats. After each question, you are required to record your emotion using the metrics provided, SAM
+            test. While you are filling up the SAM test, you will be given 20 - 30 seconds of nature sound to calm your
+            emotion.<br />
+        </p>
+        <span style="color:yellow; font-size:20px;">Note: <br />- This experiment is conducted anonymously, so please
+            provide the accurate information. <br />- Please wear your earphone for higher accuracy and better
+            experience.
+        </span>
+        <div style="text-align: center; margin-top:50px">
+            <button type="button" class="btn btn-primary" style="width:15%" id='submit'
+                onClick="window.location='{{url("personalDetail")}}'">
+                Next
+            </button>
         </div>
-    </body>
+    </form>
+
+</body>
+
 </html>

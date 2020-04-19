@@ -78,7 +78,7 @@
             Please answer the questions as best as you can. Good luck!
         </p>
         <hr style="background-color:white" />
-        <p class="white-label"><u>Question 7</u></p>
+        <p class="white-label"><u>Question {{Session::get('counter')}}</u></p>
         <form action="Q7/save" method="POST">
             {{ csrf_field() }}
             <div class="form-group">
@@ -92,7 +92,7 @@
                     <p class="programming-bg" style="font-weight:bold">
                         <u>Output:</u><br />11 13 23 67 98 100</p>
                     <div class="programming-bg">
-                        <span class="programming-blue">class Q7</span><br />
+                        <span class="programming-blue">class Q{{Session::get('counter')}}</span><br />
                         {<br />
                         &emsp;<span class="programming-blue">void </span>
                         <span class="programming-green">sort</span>(<span class="programming-blue">int
@@ -135,7 +135,7 @@
                         &emsp;<span class="programming-blue">public static void</span>
                         <span class="programming-green">main</span> (String[] args)<br />
                         &emsp;{<br />
-                        &emsp;&emsp;Q7 ob = <span class="programming-blue">new</span> Q7();<br />
+                        &emsp;&emsp;Q{{Session::get('counter')}} ob = <span class="programming-blue">new</span> Q{{Session::get('counter')}}();<br />
                         &emsp;&emsp;<span class="programming-blue">int </span>arr[] = {23, 67, 13, 100, 11,
                         98};<br />
                         &emsp;&emsp;ob.sort(arr);<br />
@@ -197,7 +197,7 @@
                         Please select the appropriate algorithm to produce the following output.</label>
                     <p class="programming-bg" style="font-weight:bold">Output: 8 10 56 64 99 105</p>
                     <div class="programming-bg">
-                        <span class="programming-blue">class Q7</span><br />
+                        <span class="programming-blue">class Q{{Session::get('counter')}}</span><br />
                         {<br />
                         &emsp;<span class="programming-blue">void </span>
                         <span class="programming-green">sort</span>(<span class="programming-blue">int
@@ -280,7 +280,7 @@
                         &emsp;<span class="programming-blue">public static void</span>
                         <span class="programming-green">main</span> (String[] args)<br />
                         &emsp;{<br />
-                        &emsp;&emsp;Q7 ob = <span class="programming-blue">new</span> Q7();<br />
+                        &emsp;&emsp;Q{{Session::get('counter')}} ob = <span class="programming-blue">new</span> Q{{Session::get('counter')}}();<br />
                         &emsp;&emsp;<span class="programming-blue">int </span>arr[] = {56, 10, 64, 8, 99,
                         105};<br />
                         &emsp;&emsp;ob.sort(arr);<br />
@@ -309,7 +309,7 @@
                         Please input the appropriate algorithm to produce the following output.</label>
                     <p class="programming-bg" style="font-weight:bold">Output: 100 98 67 23 13 11</p>
                     <div class="programming-bg">
-                        <span class="programming-blue">class Q7</span><br />
+                        <span class="programming-blue">class Q{{Session::get('counter')}}</span><br />
                         {<br />
                         &emsp;<span class="programming-blue">void </span>
                         <span class="programming-green">sort</span>(<span class="programming-blue">int
@@ -375,7 +375,7 @@
                         &emsp;<span class="programming-blue">public static void</span>
                         <span class="programming-green">main</span> (String[] args)<br />
                         &emsp;{<br />
-                        &emsp;&emsp;Q7 ob = <span class="programming-blue">new</span> Q7();<br />
+                        &emsp;&emsp;Q{{Session::get('counter')}} ob = <span class="programming-blue">new</span> Q{{Session::get('counter')}}();<br />
                         &emsp;&emsp;<span class="programming-blue">int </span>arr[] = {23, 67, 13, 100, 11,
                         98};<br />
                         &emsp;&emsp;ob.sort(arr);<br />
@@ -435,6 +435,7 @@
                 <input type="hidden" value="[0,0,0,0]" id="quadrantsCounter" name="quadrantsCounter" />
                 <input type="hidden" value="[0,0,0,0]" id="quadrantsTimer" name="quadrantsTimer" />
                 <input type="hidden" value={{$Qformat}} name="Qformat" />
+                <input type="hidden" value={{Session::get('counter')}} name="counter" />
         </form>
         <div style=" text-align: center;">
             <button type="button" class="btn btn-primary" style="width:15%" id='submit' {{old("flag")?'':'disabled'}}

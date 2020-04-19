@@ -20,6 +20,7 @@ class PersonalDetailController extends Controller
         $ques = array_values($ques);
         $request->session()->put('PersonalDetails', $request->input());
         $request->session()->put('QuestionsRemaining', $ques);
+        $request->session()->put('counter', 0);
 
         // dd($randomQues);
         // dd(session()->all());
