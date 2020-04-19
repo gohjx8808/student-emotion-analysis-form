@@ -31,6 +31,14 @@
         .radio-center {
             margin-left: 6.5%;
         }
+
+        .rate{
+            padding-right:80px;
+        }
+
+        .containerSpacing{
+            margin-bottom:30px;
+        }
     </style>
 </head>
 
@@ -52,9 +60,13 @@
         <div style="text-align: center">
             <label for="SAM1" class="white-label">How do you feel?</label>
             <br />
+            <label for="SAM1" class="white-label">
+                1 (Very Unpleasant) - 9 (Very Pleasant)
+            </label>
+            <br />
             <img src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/SAM1.png?alt=media&token=414e2593-346a-49b7-b3c0-8045ba9dcce7" class="img-fluid" alt="SAM1" />
             <br />
-            <div class="form-group">
+            <div class="form-group containerSpacing">
                 <div class="form-control" style="width: 620px; margin:auto">
                     <input type="radio" name="SAM1" style="margin-left: 4.3%" value="V1" required />
                     <input type="radio" name="SAM1" class="radio-center" value="V2" />
@@ -69,9 +81,13 @@
             </div>
             <label for="SAM2" class="white-label">How strong do you feel?</label>
             <br />
+            <label for="SAM2" class="white-label">
+                1 (Very Calm) - 9 (Very Excited)
+            </label>
+            <br />
             <img src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/SAM2.png?alt=media&token=9a832e2a-f8d0-43a1-875a-b4e1dd6fba14" class="img-fluid" alt="SAM2" />
             <br />
-            <div class="form-group">
+            <div class="form-group containerSpacing">
                 <div class="form-control" style="width: 620px;margin:auto">
                     <input type="radio" name="SAM2" style="margin-left: 4.3%" value="A1" required />
                     <input type="radio" name="SAM2" class="radio-center" value="A2" />
@@ -84,21 +100,34 @@
                     <input type="radio" name="SAM2" class="radio-center" value="A9" />
                 </div>
             </div>
-            <label for="SAM3" class="white-label">How strong does the emotion controls you?</label>
+            <label for="SAM3" class="white-label">Rate your progress</label>
             <br />
-            <img src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/SAM3.png?alt=media&token=d43d4bdf-cebe-4f74-a448-4280bf0c3b81" class="img-fluid" alt="SAM3" />
-            <br />
-            <div class="form-group">
-                <div class="form-control" style="width: 620px;margin:auto">
-                    <input type="radio" name="SAM3" style="margin-left: 4.3%;" value="D1" required />
-                    <input type="radio" name="SAM3" class="radio-center" value="D2" />
-                    <input type="radio" name="SAM3" class="radio-center" value="D3" />
-                    <input type="radio" name="SAM3" class="radio-center" value="D4" />
-                    <input type="radio" name="SAM3" class="radio-center" value="D5" />
-                    <input type="radio" name="SAM3" class="radio-center" value="D6" />
-                    <input type="radio" name="SAM3" class="radio-center" value="D7" />
-                    <input type="radio" name="SAM3" class="radio-center" value="D8" />
-                    <input type="radio" name="SAM3" class="radio-center" value="D9" />
+            <label for="SAM3" class="white-label">
+                1 (Completely Stuck) - 5 (Smooth Flow)
+            </label>
+            <br/>
+            <div class="form-group containerSpacing">
+                <div class="form-control" style="width: 620px;margin:auto;height:60px">
+                    <label class="form-check-label rate">
+                        <input type="radio" name="SAM3" class="radio-center" value="R1" required />
+                        1
+                    </label>
+                    <label class="form-check-label rate">
+                        <input type="radio" name="SAM3" class="radio-center" value="R2" />
+                        2
+                    </label>
+                    <label class="form-check-label rate">
+                        <input type="radio" name="SAM3" class="radio-center" value="R3" />
+                        3
+                    </label>
+                    <label class="form-check-label rate">
+                        <input type="radio" name="SAM3" class="radio-center" value="R4" />
+                        4
+                    </label>
+                    <label class="form-check-label">
+                        <input type="radio" name="SAM3" class="radio-center" value="R5" />
+                        5
+                    </label>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary" style="width:15%" id="submit">
