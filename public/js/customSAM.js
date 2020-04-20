@@ -1,6 +1,7 @@
 $(document).ready(function () {
     var counter = 15;
-    $("#nature").get(0).play();
+    var x = Math.floor((Math.random() * 2) + 1);
+    $("#nature"+x).get(0).play();
     $("#submit").attr("disabled", "disabled");
     $("#submit").text("Next (" + counter + ")");
     var interval = setInterval(function () {
@@ -13,7 +14,7 @@ $(document).ready(function () {
         }
     }, 1000);
     setTimeout(function () {
-        $("#nature").get(0).pause();
+        $("#nature"+x).get(0).pause();
         $("#submit").removeAttr("disabled");
     }, 15000);
 });

@@ -69,7 +69,7 @@
             information.<br />- The 2nd section requires you to answer 10 programming questions with different topics
             and
             formats. After each question, you are required to record your emotion using the metrics provided, SAM
-            test. While you are filling up the SAM test, you will be given 20 - 30 seconds of nature sound to calm your
+            test. While you are filling up the SAM test, you will be given 15 seconds of nature sound to calm your
             emotion.<br />
         </p>
         <span style="color:yellow; font-size:20px;">Note: <br />- This experiment is conducted anonymously, so please
