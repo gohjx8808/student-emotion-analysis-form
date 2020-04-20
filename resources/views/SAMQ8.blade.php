@@ -39,12 +39,12 @@
             margin-left: 6.5%;
         }
 
-        .rate{
-            padding-right:80px;
+        .rate {
+            padding-right: 80px;
         }
 
-        .containerSpacing{
-            margin-bottom:30px;
+        .containerSpacing {
+            margin-bottom: 30px;
         }
     </style>
 </head>
@@ -143,8 +143,9 @@
                 Next
             </button>
         </div>
+        <audio id="nature" src="{{url("/audio/nature1.mp3")}}" autoplay=""></audio>
     </form>
-    <script>
+    <script src="{{asset('js/customSAM.js')}}" type="text/javascript">
     </script>
 </body>
 

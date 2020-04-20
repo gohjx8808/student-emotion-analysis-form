@@ -66,7 +66,8 @@
         </p>
         <p class="white-label" style="font-size:20px">
             This experiment consists of 2 sections. <br />- The 1st section requires you to filled in your personal
-            information.<br />- The 2nd section requires you to answer 10 programming questions with different topics and
+            information.<br />- The 2nd section requires you to answer 10 programming questions with different topics
+            and
             formats. After each question, you are required to record your emotion using the metrics provided, SAM
             test. While you are filling up the SAM test, you will be given 20 - 30 seconds of nature sound to calm your
             emotion.<br />
@@ -82,7 +83,6 @@
             </button>
         </div>
     </form>
-
 </body>
 
 </html>

@@ -1,21 +1,21 @@
-$(document).ready(function() {
+$(document).ready(function () {
     let windowY = $(window).height() / 2;
     let windowX = $(window).width() / 2;
 
-    window.addEventListener("mousedown", function() {
+    window.addEventListener("mousedown", function () {
         let mouseClickedInt = $("#mouseClicked").val();
         mouseClickedInt++;
         $("#mouseClicked").val(mouseClickedInt);
     });
 
-    window.addEventListener("mousewheel", function() {
+    window.addEventListener("mousewheel", function () {
         let mouseWheelCounter = $("#mouseWheelCounter").val();
         mouseWheelCounter++;
 
         $("#mouseWheelCounter").val(mouseWheelCounter);
     });
 
-    setInterval(function() {
+    setInterval(function () {
         let counter = $("#timeTaken").val();
         counter++;
 
@@ -23,7 +23,7 @@ $(document).ready(function() {
     }, 1000);
 
     //quadrantsCounter=[topLeft, topRight, bottomLeft, bottomRight]
-    window.addEventListener("mousemove", function(event) {
+    window.addEventListener("mousemove", function (event) {
         let quadrantsCounter = JSON.parse($("#quadrantsCounter").val());
         let currentX = event.pageX;
         let currentY = event.pageY - $(window).scrollTop();
@@ -45,18 +45,18 @@ $(document).ready(function() {
 
     var idleState = false;
     var idleTimer = null;
-    var incrementTimer=null;
+    var incrementTimer = null;
 
     $("*").bind(
         "mousemove click mouseup mousedown keydown keypress keyup submit change mouseenter scroll resize dblclick",
-        function(event) {
+        function (event) {
             let quadrantsTimer = JSON.parse($("#quadrantsTimer").val());
             clearTimeout(idleTimer);
             clearInterval(incrementTimer);
             if (idleState == true) {
             }
             idleState = false;
-            idleTimer = setTimeout(function() {
+            idleTimer = setTimeout(function () {
                 let currentX = event.pageX;
                 let currentY = event.pageY - $(window).scrollTop();
                 let quad = 0;
@@ -73,7 +73,7 @@ $(document).ready(function() {
                         quad = 2;
                     }
                 }
-                incrementTimer = setInterval(function() {
+                incrementTimer = setInterval(function () {
                     quadrantsTimer[quad] += 1;
                     $("#quadrantsTimer").val(JSON.stringify(quadrantsTimer));
                 }, 1000);
@@ -82,4 +82,5 @@ $(document).ready(function() {
             }, 2000);
         }
     );
+
 });

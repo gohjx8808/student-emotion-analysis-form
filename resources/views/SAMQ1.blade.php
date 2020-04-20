@@ -134,8 +134,9 @@
                 Next
             </button>
         </div>
+        <audio id="nature" src="{{url("/audio/nature1.mp3")}}" autoplay=""></audio>
     </form>
-    <script>
+    <script src="{{asset('js/customSAM.js')}}" type="text/javascript">
     </script>
 </body>
 
