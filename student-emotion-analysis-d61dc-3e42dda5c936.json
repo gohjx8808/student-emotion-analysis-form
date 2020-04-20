@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "student-emotion-analysis-d61dc",
+  "private_key_id": "3e42dda5c936f53439b8f23ac818faf0aa5ee674",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCn/yATFO8pxnZ8\nuMbgRGuFcQhiUrhGacBcLyEyqgDz0IXterGQYBoBIqBOwbg3Wb308jGNpnsBJDam\nvMM08PRbyEOapO6LGIdCoab8vUN266aLJg+IDXUrBYiwbsdkkHIYWhISYmEZwWkm\ndlgmThpRqQvfBfXKlqZl3EPiVndtlTZ3YAzOv8lcg+UozJH26spSljruMD+4HDiq\nEIeyjNtMf8trYSWRwAT9b47lnM07tT+JHtNgbeRzRPhjk8o0sybbKU14mB41eCOe\nEuaWUt4TtNy29BtBzDa5llHQKwm1fa6n9RvcZUYIKiIMk+KF6xB7c/cfQaetRL3t\nzbALGdsrAgMBAAECggEADlPekxdgo690Fi8Bccm5YdLCDvX/FqzuOu50u7LEDLHm\nui+R9T48+YZ6eue1TliDsDWiWZ0D4JULaYJaeP6+gxVmrp8NDnqJDqW6wtNhbZhW\nG91NyyIFXCXyAm9wPKNqbP6W4U/X+C+xSBZ6bh87H2Z2HLnlZzccpJNPNtPTsQS6\nrigvEpxTUKBbVo8CMDoKQcsgrVm++HDFTIepVqmTzkvLjPuufSLKg8gUSFCJjk87\nltV+WlztMZifM1ZV+225AS3c1NvF7QdwiJLtezYTM2dISlVz/+bOhZ7ScwfaUdZa\n4+mIQJBozJnb1K850QU8m638mDzYbfPVPlvuMu+MAQKBgQDdHkdem9rCHkESpfPE\nJidomo82sX6lDduzCWYAYfV3jUNX1BzIQgQhhJg3O2nq1GuQLk6IRynwnZILO6kx\nsIOoOYJBjNSxr5KKQJQmfNP4ZgGJhlgwkE/B7ZwiMwavwGDhUxz9WiOhK862tzOq\nRzaShVvS25PrxVRIGQl0LCPONQKBgQDCf4+GYEvXQrvsVPAZFk9cDA47TJUxSE9I\nMakJ1ZZr757ujDANhK7V+uu8iESheqvrKyFmOEKhF+AUq1OyFZqHOzsrEEE4VWgn\nSctra+XPQnjlb7w8xMcIQhVrYFWSbf9lC1v1fyw1Hq2ZFGGCfkKGOYR3CGBEsaMf\ngHAd4Iev3wKBgFm+W0sbyIq2ysRt1GUM8zuyV2PkYDlPSZb9vodzOrReAjIYZeIl\nYRXVgg4QsCleM5XeJYOMFoqQ+WBTw5TmRlk1lhdSuFSxpLE2CqsgSMvtYrxVaV+0\ngpp7/L2ophMY6nkpSX/OYN2eMRTZgD+hDZYkSCNpeTzc5xsoBj0/WPztAoGBAK90\nQxUFaWUWXlAjjzQSXCS8+1mjDDMY9+w4YDTu6HMWBllLPU30k4OUh3PbuY2yC8Rp\ndAeyWOjZkNsUcrwDoRK86/M9Bpi68un+N/L/sp/1ZvoSgcyP9rwMYSYsEQW3FN0i\nEiK0RjzlH9Un/Y6qN3i+CjEW7UEKvgx84KcTFVQhAoGBAMcCG2NQBaVXsqSrw0iB\nAW0cz4LjwfqIUvy0F2b8mQuomBggMk8yxD/aooH1IfWnH33mcCiqNP71ttIzpPpb\njbrRLJfx3gbM7nvguoJeXdhOBof0iCrduaDHSEV4NuG8s8BjG4X8lWmZ9PErGQDF\nJrOToTfXYGQTDQDWuV2/v0bH\n-----END PRIVATE KEY-----\n",
+  "client_email": "student-emotion-analysis-d61dc@appspot.gserviceaccount.com",
+  "client_id": "102793427815761609217",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/student-emotion-analysis-d61dc%40appspot.gserviceaccount.com"
+}
