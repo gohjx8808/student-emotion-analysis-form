@@ -1,7 +1,7 @@
 /node_modules
 /public/hot
 /public/storage
-# /public/audio
+/public/audio
 /storage/*.key
 /vendor
 .env
@@ -11,4 +11,4 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-# student-emotion-analysis-d61dc-3e42dda5c936.json
+student-emotion-analysis-d61dc-3e42dda5c936.json
