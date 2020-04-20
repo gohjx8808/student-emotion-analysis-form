@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var counter = 20;
+    var counter = 15;
     $("#nature").get(0).play();
     $("#submit").attr("disabled", "disabled");
     $("#submit").text("Next (" + counter + ")");
@@ -15,5 +15,5 @@ $(document).ready(function () {
     setTimeout(function () {
         $("#nature").get(0).pause();
         $("#submit").removeAttr("disabled");
-    }, 20000);
+    }, 15000);
 });
