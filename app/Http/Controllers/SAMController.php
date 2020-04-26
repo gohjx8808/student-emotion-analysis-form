@@ -22,7 +22,7 @@ class SAMController extends Controller
         $ques = array_values($ques);
         $request->session()->put('QuestionsRemaining', $ques);
         $request->session()->put('counter', 0);
-
+        dd($request->session()->all());
         return redirect('/Q' . $randomQues);
     }
 

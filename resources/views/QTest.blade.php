@@ -86,61 +86,44 @@
                     <label for=" QTest" class="white-label" style="margin-top: 15px">
                         What will be the output of the following program?</label>
                     <div class="programming-bg">
-                        <span class="programming-blue">import</span> java.util.Scanner;<br />
-                        <span class="programming-blue">public class Q{{Session::get('counter')}}</span><br />
+                        <span class="programming-blue">public class QTest</span><br />
                         {<br />
                         &emsp;<span class="programming-blue">public static void</span>
                         <span class="programming-green">main</span> (String[] args)<br />
                         &emsp;{<br />
-                        &emsp;&emsp;Scanner in = <span class="programming-blue">new Scanner</span>(System.in);<br />
-                        &emsp;&emsp;<span class="programming-blue">double</span> x = 3.12; <br />
-                        &emsp;&emsp;<span class="programming-blue">double</span> y = 10.98; <br />
-                        &emsp;&emsp;<span class="programming-blue">double</span> z = 0.93; <br />
-                        &emsp;&emsp;<span class="programming-blue">if</span> (x &lt; y && y &lt; z)<br />
-                        &emsp;&emsp;{ <br />
-                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
-                            class="programming-green">"Increasing order"</span>);<br />
-                        &emsp;&emsp;}<br />
-                        &emsp;&emsp;<span class="programming-blue">else if</span> (x &gt; y && y &gt; z)<br />
-                        &emsp;&emsp;{ <br />
-                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
-                            class="programming-green">"Decreasing order"</span>);<br />
-                        &emsp;&emsp;}<br />
-                        &emsp;&emsp;<span class="programming-blue">else</span><br />
-                        &emsp;&emsp;{<br />
-                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(<span
-                            class="programming-green">"Neither option"</span>);<br />
-                        &emsp;&emsp;}<br />
+                        &emsp;&emsp;<span class="programming-blue">int</span> x = 38; <br />
+                        &emsp;&emsp;<span class="programming-blue">int</span> y = 10; <br />
+                        &emsp;&emsp;System.out.<span class="programming-green">println</span>(x+y);<br />
                         &emsp;}<br />
                         }
                     </div>
                     <br />
                     <div class="form-control" style="border-bottom-width: 0;border-radius: 10px 10px 0px 0px;">
-                        <input class="form-control-input" type="radio" id="Q1_1a" name="Q1_1" value="a" required"
-                            {{old("Q1_1")=='a'?'checked':''}} {{old("flag")?'disabled':''}} />
-                        <label class="form-check-label" for="Q1_1a" style="padding-left: 15px;">
-                            Decreasing order
+                        <input class="form-control-input" type="radio" id="QTest_1a" name="QTest_1" value="a" required"
+                            {{old("QTest_1")=='a'?'checked':''}} {{old("flag")?'disabled':''}} />
+                        <label class="form-check-label" for="QTest_1a" style="padding-left: 15px;">
+                            18
                         </label>
                     </div>
                     <div class="form-control radio-center">
-                        <input class="form-control-input" type="radio" id="Q1_1b" name="Q1_1" value="b"
-                            {{old("Q1_1")=='b'?'checked':''}} {{old("flag")?'disabled':''}} />
-                        <label class="form-check-label" for="Q1_1b" style="padding-left: 15px">
-                            Compilation Error
+                        <input class="form-control-input" type="radio" id="QTest_1b" name="QTest_1" value="b"
+                            {{old("QTest_1")=='b'?'checked':''}} {{old("flag")?'disabled':''}} />
+                        <label class="form-check-label" for="QTest_1b" style="padding-left: 15px">
+                            38
                         </label>
                     </div>
                     <div class="form-control radio-center">
-                        <input class="form-control-input" type="radio" id="Q1_1c" name="Q1_1" value="c"
-                            {{old("Q1_1")=='c'?'checked':''}} {{old("flag")?'disabled':''}} />
-                        <label class="form-check-label" for="Q1_1c" style="padding-left: 15px">
-                            Neither option
+                        <input class="form-control-input" type="radio" id="QTest_1c" name="QTest_1" value="c"
+                            {{old("QTest_1")=='c'?'checked':''}} {{old("flag")?'disabled':''}} />
+                        <label class="form-check-label" for="QTest_1c" style="padding-left: 15px">
+                            48
                         </label>
                     </div>
                     <div class="form-control" style="border-radius: 0px 0px 10px 10px;">
-                        <input class="form-control-input" type="radio" id="Q1_1d" name="Q1_1" value="d"
-                            {{old("Q1_1")=='d'?'checked':''}} {{old("flag")?'disabled':''}} />
-                        <label class="form-check-label" for="Q1_1d" style="padding-left: 15px">
-                            Increasing order
+                        <input class="form-control-input" type="radio" id="QTest_1d" name="QTest_1" value="d"
+                            {{old("QTest_1")=='d'?'checked':''}} {{old("flag")?'disabled':''}} />
+                        <label class="form-check-label" for="QTest_1d" style="padding-left: 15px">
+                            88
                         </label>
                     </div>
                     @if(Session::has('endResult'))
