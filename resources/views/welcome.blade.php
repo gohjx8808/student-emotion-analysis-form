@@ -59,18 +59,22 @@
             of students while learning and answering questions. The
             objective of the research project is to predict which type of
             teaching method is suitable for the students with their
-            respective mood in real-time. The outcome of this study will facilitate both teachers and students to have an
+            respective mood in real-time. The outcome of this study will facilitate both teachers and students to have
+            an
             improved teaching and learning experience
         </p>
         <p class="white-label" style="font-size:20px">
-            This experiment consists of 2 sections. <br />- The 1st section requires you to filled in your personal
-            information.<br />- The 2nd section requires you to answer 10 programming questions with different topics
-            and
-            formats. After each question, you are required to record your emotion using the metrics provided, SAM
-            test. While you are filling up the SAM test, you will be given 15 seconds of nature sound to calm your
-            emotion.<br />
+            This experiment consists of 3 sections. <br /><u>Section 1</u><br />You are required to fill in your
+            personal information.<br /><u>Section 2</u><br />- You will be given some videos as guidance on how to
+            answer the Self-Assessment Manikin(SAM) test to best describe your emotion at that time.<br />- You will
+            also be given one test run of the actual experiment so that you are familiar to the experiment.<br />- You
+            are required to answer 10 programming questions with different topics and formats.<br />- After each
+            question, you are required to record your emotion using the metrics provided, SAM test.<br />- While you are
+            filling up the SAM test, you will be given 15 seconds of nature sound to calm your emotion.<br />
+            <u>Section 3</u><br />You are required to fill in the post-experiment survey form for feedbacks and reviews
+            regarding the experiment.<br />
         </p>
-        <span style="color:yellow; font-size:20px;">Note: <br />- This experiment is conducted anonymously, so please
+        <span style="color:yellow; font-size:20px;">Note:<br />- This experiment is conducted anonymously, so please
             provide the accurate information. <br />- Please wear your earphone for higher accuracy and better
             experience.
         </span>
