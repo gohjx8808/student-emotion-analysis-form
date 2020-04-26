@@ -882,7 +882,7 @@
         </div>
         <div style="text-align: center;">
             <button type="submit" class="btn btn-primary" style="width:15%" id='submit'>
-                Next
+                Continue to Guide
             </button>
         </div>
     </form>

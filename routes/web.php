@@ -23,6 +23,18 @@ Route::get('/personalDetail', function () {
     return view('personalDetail');
 });
 
+Route::get('/QTest', function () {
+    return view('QTest');
+});
+
+Route::post('/QTest/save','QuestionsController@saveQTest');
+
+Route::get('/SAMQTest',function(){
+    return view('SAMQTest');
+});
+
+Route::post('/SAMQTest/save','SAMController@saveSAMQTest');
+
 Route::get('/endSurvey', function () {
     return view('endSurvey');
 });

@@ -8,6 +8,23 @@ use Illuminate\Support\Facades\Session;
 
 class QuestionsController extends Controller
 {
+    public function saveQTest(Request $request)
+    {
+        $request->session()->put('QTest', $request->input());
+
+        // dd(session()->all());
+        $displayedResult = array();
+
+        array_push($displayedResult, $this->checkMCQ($request->input('QTest_1'), 'c', ''));
+        $added = $request->session()->get('QTest');
+        $added['correct'] = strval($displayedResult[0][2] ? 1 : 0) . '/1';
+        $request->session()->put('QTest', $added);
+
+        // dd(session()->all());
+        // dd($displayedResult);
+
+        return redirect()->back()->withInput()->with(['endResult' => $displayedResult]);
+    }
 
     public function displayQ1(Request $request)
     {
