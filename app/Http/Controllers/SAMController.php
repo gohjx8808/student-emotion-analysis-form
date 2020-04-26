@@ -3,9 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Carbon\Carbon;
-use Kreait\Firebase\Factory;
-use Kreait\Firebase\ServiceAccount;
 
 use Illuminate\Http\Request;
 
@@ -21,10 +18,9 @@ class SAMController extends Controller
         if (count($request->session()->get('QuestionsRemaining')) > 0) {
             $randomQues = $this->randomizedQuestion($request);
             return redirect('/Q' . $randomQues);
-        }
-        else{
-            $this->saveToFirebase($request);
-            return redirect('/thankyou');
+        } else {
+            // $this->saveToFirebase($request);
+            return redirect('/endSurvey');
         }
     }
 
@@ -35,10 +31,9 @@ class SAMController extends Controller
         if (count($request->session()->get('QuestionsRemaining')) > 0) {
             $randomQues = $this->randomizedQuestion($request);
             return redirect('/Q' . $randomQues);
-        }
-        else{
-            $this->saveToFirebase($request);
-            return redirect('/thankyou');
+        } else {
+            // $this->saveToFirebase($request);
+            return redirect('/endSurvey');
         }
     }
 
@@ -48,10 +43,9 @@ class SAMController extends Controller
         if (count($request->session()->get('QuestionsRemaining')) > 0) {
             $randomQues = $this->randomizedQuestion($request);
             return redirect('/Q' . $randomQues);
-        }
-        else{
-            $this->saveToFirebase($request);
-            return redirect('/thankyou');
+        } else {
+            // $this->saveToFirebase($request);
+            return redirect('/endSurvey');
         }
     }
 
@@ -61,10 +55,9 @@ class SAMController extends Controller
         if (count($request->session()->get('QuestionsRemaining')) > 0) {
             $randomQues = $this->randomizedQuestion($request);
             return redirect('/Q' . $randomQues);
-        }
-        else{
-            $this->saveToFirebase($request);
-            return redirect('/thankyou');
+        } else {
+            // $this->saveToFirebase($request);
+            return redirect('/endSurvey');
         }
     }
 
@@ -74,10 +67,9 @@ class SAMController extends Controller
         if (count($request->session()->get('QuestionsRemaining')) > 0) {
             $randomQues = $this->randomizedQuestion($request);
             return redirect('/Q' . $randomQues);
-        }
-        else{
-            $this->saveToFirebase($request);
-            return redirect('/thankyou');
+        } else {
+            // $this->saveToFirebase($request);
+            return redirect('/endSurvey');
         }
     }
 
@@ -87,10 +79,9 @@ class SAMController extends Controller
         if (count($request->session()->get('QuestionsRemaining')) > 0) {
             $randomQues = $this->randomizedQuestion($request);
             return redirect('/Q' . $randomQues);
-        }
-        else{
-            $this->saveToFirebase($request);
-            return redirect('/thankyou');
+        } else {
+            // $this->saveToFirebase($request);
+            return redirect('/endSurvey');
         }
     }
 
@@ -100,10 +91,9 @@ class SAMController extends Controller
         if (count($request->session()->get('QuestionsRemaining')) > 0) {
             $randomQues = $this->randomizedQuestion($request);
             return redirect('/Q' . $randomQues);
-        }
-        else{
-            $this->saveToFirebase($request);
-            return redirect('/thankyou');
+        } else {
+            // $this->saveToFirebase($request);
+            return redirect('/endSurvey');
         }
     }
 
@@ -113,10 +103,9 @@ class SAMController extends Controller
         if (count($request->session()->get('QuestionsRemaining')) > 0) {
             $randomQues = $this->randomizedQuestion($request);
             return redirect('/Q' . $randomQues);
-        }
-        else{
-            $this->saveToFirebase($request);
-            return redirect('/thankyou');
+        } else {
+            // $this->saveToFirebase($request);
+            return redirect('/endSurvey');
         }
     }
 
@@ -126,10 +115,9 @@ class SAMController extends Controller
         if (count($request->session()->get('QuestionsRemaining')) > 0) {
             $randomQues = $this->randomizedQuestion($request);
             return redirect('/Q' . $randomQues);
-        }
-        else{
-            $this->saveToFirebase($request);
-            return redirect('/thankyou');
+        } else {
+            // $this->saveToFirebase($request);
+            return redirect('/endSurvey');
         }
     }
 
@@ -140,10 +128,9 @@ class SAMController extends Controller
         if (count($request->session()->get('QuestionsRemaining')) > 0) {
             $randomQues = $this->randomizedQuestion($request);
             return redirect('/Q' . $randomQues);
-        }
-        else{
-            $this->saveToFirebase($request);
-            return redirect('/thankyou');
+        } else {
+            // $this->saveToFirebase($request);
+            return redirect('/endSurvey');
         }
     }
 
@@ -159,22 +146,5 @@ class SAMController extends Controller
         $request->session()->put('QuestionsRemaining', $ques);
 
         return $randomQues;
-    }
-
-    public function saveToFirebase(Request $request)
-    {
-        $serviceAccount = ServiceAccount::fromJsonFile(base_path() . '/student-emotion-analysis-d61dc-3e42dda5c936.json');
-        $firebase = (new Factory)
-            ->withServiceAccount($serviceAccount)
-            ->withDatabaseUri('https://student-emotion-analysis-d61dc.firebaseio.com/')
-            ->create();
-
-        $database = $firebase->getDatabase();
-
-        $request->session()->forget(['_token', '_previous']);
-
-        $database
-            ->getReference(Carbon::now())
-            ->push($request->session()->all());
     }
 }

@@ -59,10 +59,8 @@
             of students while learning and answering questions. The
             objective of the research project is to predict which type of
             teaching method is suitable for the students with their
-            respective mood in real-time. For example, when students feel
-            bored, the lecturer should use MCQ to make the lecture more
-            interesting so the students are able to improve their learning
-            performance and hence improving their academic performance.
+            respective mood in real-time. The outcome of this study will facilitate both teachers and students to have an
+            improved teaching and learning experience
         </p>
         <p class="white-label" style="font-size:20px">
             This experiment consists of 2 sections. <br />- The 1st section requires you to filled in your personal

@@ -23,6 +23,12 @@ Route::get('/personalDetail', function () {
     return view('personalDetail');
 });
 
+Route::get('/endSurvey', function () {
+    return view('endSurvey');
+});
+
+Route::post('/endSurvey/post', 'EndSurveyController@surveySubmit');
+
 Route::post('/personaldetail/post', 'PersonalDetailController@update');
 
 Route::get('/Q1', 'QuestionsController@displayQ1');
