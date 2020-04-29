@@ -23,6 +23,48 @@ Route::get('/personalDetail', function () {
     return view('personalDetail');
 });
 
+Route::get('/TutVid1', function () {
+    return view('TutorialVideo.TutorialVid1');
+});
+
+Route::get('/SAMVid1',function(){
+    return view('TutorialSAM.SAMVid1');
+});
+
+Route::post('/SAMVid1/save','SAMController@saveSAMVid1');
+
+Route::get('/TutVid2', function () {
+    return view('TutorialVideo.TutorialVid2');
+});
+
+Route::get('/SAMVid2',function(){
+    return view('TutorialSAM.SAMVid2');
+});
+
+Route::post('/SAMVid2/save','SAMController@saveSAMVid2');
+
+Route::get('/TutVid3', function () {
+    return view('TutorialVideo.TutorialVid3');
+});
+
+Route::get('/SAMVid3',function(){
+    return view('TutorialSAM.SAMVid3');
+});
+
+Route::post('/SAMVid3/save','SAMController@saveSAMVid3');
+
+Route::get('/TutVid4', function () {
+    return view('TutorialVideo.TutorialVid4');
+});
+
+Route::get('/SAMVid4',function(){
+    return view('TutorialSAM.SAMVid4');
+});
+
+Route::post('/SAMVid4/save','SAMController@saveSAMVid4');
+
+Route::post('/SAMQTest/save','SAMController@saveSAMQTest');
+
 Route::get('/QTest', function () {
     return view('QTest');
 });

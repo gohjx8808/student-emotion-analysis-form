@@ -76,7 +76,9 @@
         </p>
         <span style="color:yellow; font-size:20px;">Note:<br />- This experiment is conducted anonymously, so please
             provide the accurate information. <br />- Please wear your earphone for higher accuracy and better
-            experience.
+            experience.<br />- For the coding questions, please try your best, any coding representation will do.
+            (pseudocode, code, any flowchart or mind chart).<br />- If you really unable to do it, you may then google
+            it.
         </span>
         <div style="text-align: center; margin-top:50px">
             <button type="button" class="btn btn-primary" style="width:15%" id='submit'

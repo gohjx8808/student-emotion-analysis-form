@@ -50,19 +50,15 @@
 </head>
 
 <body class="background">
-    <form class="form-background" action="SAMQTest/save" method="POST">
+    <form class="form-background" action="SAMVid2/save" method="POST">
         {{ csrf_field() }}
         <h1 class="white-label">Student Emotion Analysis</h1>
         <br />
-        <h4 class="white-label">Part 2: Test Run</h4>
-        <p class="white-label">
-            Please answer the questions as best as you can. Good luck!
-        </p>
+        <h4 class="white-label">Part 2: SAM Test Pratice Round 2</h4>
         <hr style="background-color:white" />
-        <p class="white-label"><u>Test Run</u></p>
         <p class="white-label">
             Please choose the options that best matches your emotion after
-            trying the question before.
+            watching the video before.
         </p>
         <div style="text-align: center">
             <label for="SAM1" class="white-label">How do you feel?</label>
@@ -109,63 +105,13 @@
                     <input type="radio" name="SAM2" class="radio-center" value="A9" />
                 </div>
             </div>
-            <label for="SAM3" class="white-label">Rate your progress</label>
-            <br />
-            <label for="SAM3" class="white-label">
-                1 (Completely Stuck) - 5 (Smooth Flow)
-            </label>
-            <br />
-            <div class="form-group containerSpacing">
-                <div class="form-control containerSpacing" style="width: 620px;margin:auto;height:60px">
-                    <label class="form-check-label rate">
-                        <input type="radio" name="SAM3" class="radio-center" value="R1" required />
-                        1
-                    </label>
-                    <label class="form-check-label rate">
-                        <input type="radio" name="SAM3" class="radio-center" value="R2" />
-                        2
-                    </label>
-                    <label class="form-check-label rate">
-                        <input type="radio" name="SAM3" class="radio-center" value="R3" />
-                        3
-                    </label>
-                    <label class="form-check-label rate">
-                        <input type="radio" name="SAM3" class="radio-center" value="R4" />
-                        4
-                    </label>
-                    <label class="form-check-label">
-                        <input type="radio" name="SAM3" class="radio-center" value="R5" />
-                        5
-                    </label>
-                </div>
+            <div style=" text-align: center;margin-top:20px">
+                <button type="submit" class="btn btn-primary" style="width:15%" id="submit">
+                    Next
+                </button>
             </div>
-            <button type="submit" class="btn btn-primary" style="width:15%" id="submit">
-                I am ready for the experiment!
-            </button>
         </div>
-        <audio id="nature1" src="{{url("/audio/nature1.mp3")}}"></audio>
-        <audio id="nature2" src="{{url("/audio/nature2.mp3")}}"></audio>
     </form>
-    <script>
-        var counter = 15;
-        var x = Math.floor((Math.random() * 2) + 1);
-        $("#nature"+x).get(0).play();
-        $("#submit").attr("disabled", "disabled");
-        $("#submit").text("I am ready for the experiment! (" + counter + ")");
-        var interval = setInterval(function () {
-            counter--;
-            if (counter == 0) {
-                $("#submit").text("I am ready for the experiment!");
-                clearInterval(interval);
-            } else {
-                $("#submit").text("I am ready for the experiment! (" + counter + ")");
-            }
-        }, 1000);
-        setTimeout(function () {
-            $("#nature"+x).get(0).pause();
-            $("#submit").removeAttr("disabled");
-        }, 15000);
-    </script>
 </body>
 
 </html>

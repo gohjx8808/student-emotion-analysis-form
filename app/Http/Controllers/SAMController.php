@@ -9,6 +9,30 @@ use Illuminate\Http\Request;
 class SAMController extends Controller
 {
 
+    public function saveSAMVid1(Request $request)
+    {
+        $request->session()->put('SAMVid1', $request->except('_token'));
+            return redirect('/TutVid2');
+    }
+
+    public function saveSAMVid2(Request $request)
+    {
+        $request->session()->put('SAMVid2', $request->except('_token'));
+            return redirect('/TutVid3');
+    }
+
+    public function saveSAMVid3(Request $request)
+    {
+        $request->session()->put('SAMVid3', $request->except('_token'));
+            return redirect('/TutVid4');
+    }
+
+    public function saveSAMVid4(Request $request)
+    {
+        $request->session()->put('SAMVid4', $request->except('_token'));
+            return redirect('/QTest');
+    }
+
     public function saveSAMQTest(Request $request)
     {
         $request->session()->put('SAMQTest', $request->except('_token'));
@@ -22,7 +46,7 @@ class SAMController extends Controller
         $ques = array_values($ques);
         $request->session()->put('QuestionsRemaining', $ques);
         $request->session()->put('counter', 0);
-        dd($request->session()->all());
+        // dd($request->session()->all());
         return redirect('/Q' . $randomQues);
     }
 

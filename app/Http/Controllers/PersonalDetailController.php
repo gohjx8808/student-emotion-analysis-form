@@ -16,6 +16,6 @@ class PersonalDetailController extends Controller
 
         // dd($randomQues);
         // dd(session()->all());
-        return redirect('/QTest');
+        return redirect('/TutVid1');
     }
 }

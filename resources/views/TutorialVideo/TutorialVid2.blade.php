@@ -46,10 +46,18 @@
         {{ csrf_field() }}
         <h1 class="white-label">Student Emotion Analysis</h1>
         <br />
-        <p class="white-label">Thank you for your participation!</p>
-        <div style="text-align: center; margin-top:50px">
-            <button type="button" class="btn btn-primary" style="width:15%" id='submit'
-                onClick="window.location='{{url("/")}}'">
+        <h4 class="white-label">Part 2: SAM Test Pratice Round 2</h4>
+        <hr style="background-color:white" />
+        <p class="white-label">
+            Please watch the video displayed below and select the picturee that best matches your feeling on the next
+            page.
+        </p>
+        <video width="90%" height="50%" autoplay controls style="display:block;margin:0 auto">
+            <source src="{{url('/videos/afraid.mp4')}}" typs="video/mp4">
+        </video>
+        <div style=" text-align: center;margin-top:20px">
+            <button type="button" class="btn btn-primary" style="width:15%"
+                onclick="window.location='{{ url("SAMVid2") }}'">
                 Next
             </button>
         </div>

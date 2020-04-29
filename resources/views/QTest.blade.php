@@ -73,7 +73,7 @@
     <div class="form-background">
         <h1 class="white-label">Student Emotion Analysis</h1>
         <br />
-        <h4 class="white-label">Part 2: Questions</h4>
+        <h4 class="white-label">Part 2: Test Run</h4>
         <p class="white-label">
             Please answer the questions as best as you can. Good luck!
         </p>
