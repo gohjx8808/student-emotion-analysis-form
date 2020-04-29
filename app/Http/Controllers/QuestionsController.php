@@ -36,7 +36,7 @@ class QuestionsController extends Controller
             $Qformat = rand(1, 4);
         }
 
-        return view('Q1')->with('Qformat', $Qformat);
+        return view('Questions.Q1')->with('Qformat', $Qformat);
     }
 
     public function saveQ1(Request $request)
@@ -82,7 +82,7 @@ class QuestionsController extends Controller
             $Qformat = rand(1, 4);
         }
 
-        return view('Q2')->with('Qformat', $Qformat);
+        return view('Questions.Q2')->with('Qformat', $Qformat);
     }
 
     public function saveQ2(Request $request)
@@ -133,7 +133,7 @@ class QuestionsController extends Controller
             $Qformat = rand(1, 4);
         }
 
-        return view('Q3')->with('Qformat', $Qformat);
+        return view('Questions.Q3')->with('Qformat', $Qformat);
     }
 
     public function saveQ3(Request $request)
@@ -173,7 +173,7 @@ class QuestionsController extends Controller
             $Qformat = rand(1, 4);
         }
 
-        return view('Q4')->with('Qformat', $Qformat);
+        return view('Questions.Q4')->with('Qformat', $Qformat);
     }
 
     public function saveQ4(Request $request)
@@ -222,7 +222,7 @@ class QuestionsController extends Controller
             $Qformat = rand(1, 4);
         }
 
-        return view('Q5')->with('Qformat', $Qformat);
+        return view('Questions.Q5')->with('Qformat', $Qformat);
     }
 
     public function saveQ5(Request $request)
@@ -269,7 +269,7 @@ class QuestionsController extends Controller
             $Qformat = rand(1, 4);
         }
 
-        return view('Q6')->with('Qformat', $Qformat);
+        return view('Questions.Q6')->with('Qformat', $Qformat);
     }
 
     public function saveQ6(Request $request)
@@ -315,7 +315,7 @@ class QuestionsController extends Controller
             $Qformat = rand(1, 4);
         }
 
-        return view('Q7')->with('Qformat', $Qformat);
+        return view('Questions.Q7')->with('Qformat', $Qformat);
     }
 
     public function saveQ7(Request $request)
@@ -373,7 +373,7 @@ class QuestionsController extends Controller
             $Qformat = rand(1, 4);
         }
 
-        return view('Q8')->with('Qformat', $Qformat);
+        return view('Questions.Q8')->with('Qformat', $Qformat);
     }
 
     public function saveQ8(Request $request)
@@ -431,7 +431,7 @@ class QuestionsController extends Controller
             $Qformat = rand(1, 4);
         }
 
-        return view('Q9')->with('Qformat', $Qformat);
+        return view('Questions.Q9')->with('Qformat', $Qformat);
     }
 
     public function saveQ9(Request $request)
@@ -499,7 +499,7 @@ class QuestionsController extends Controller
             $Qformat = rand(1, 4);
         }
 
-        return view('Q10')->with('Qformat', $Qformat);
+        return view('Questions.Q10')->with('Qformat', $Qformat);
     }
 
     public function saveQ10(Request $request)
