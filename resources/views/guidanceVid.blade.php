@@ -49,7 +49,9 @@
         <h4 class="white-label">Demo</h4>
         <hr style="background-color:white" />
         <video width="90%" height="50%" autoplay controls style="display:block;margin:0 auto">
-            <source src="{{url('/videos/demo.mp4')}}" typs="video/mp4">
+            <source
+                src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/demo.mp4?alt=media&token=c3b4e4fe-85ba-450d-ac18-d8bf6b409b22"
+                type="video/mp4">
         </video>
         <div style=" text-align: center;margin-top:20px">
             <button type="button" class="btn btn-primary" style="width:15%"

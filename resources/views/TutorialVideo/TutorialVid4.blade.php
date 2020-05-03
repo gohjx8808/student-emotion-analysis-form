@@ -53,7 +53,9 @@
             page.
         </p>
         <video width="90%" height="50%" autoplay controls style="display:block;margin:0 auto">
-            <source src="{{url('/videos/relaxed.mp4')}}" typs="video/mp4">
+            <source
+                src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/relaxed.mp4?alt=media&token=de1bf2e7-3784-4cb6-b0fe-ba002f436fe1"
+                type="video/mp4">
         </video>
         <div style=" text-align: center;margin-top:20px">
             <button type="button" class="btn btn-primary" style="width:15%"
