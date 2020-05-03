@@ -28,7 +28,7 @@
         }
 
         .background {
-            background-image: url("/images/wooden_bg.jfif");
+            background-image: "https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/wooden_bg.jfif?alt=media&token=9e27ac6a-5944-413e-b058-5d0128f4a7c3";
             background-size: cover;
         }
 
@@ -56,8 +56,8 @@
     <form class="form-background" action="randomQ" method="POST" id="randomQ">
         {{ csrf_field() }}
         <p class="white-label" id="countdownTimer"></p>
-        <audio id="nature1" src="{{url("/audio/nature1.mp3")}}"></audio>
-        <audio id="nature2" src="{{url("/audio/nature2.mp3")}}"></audio>
+        <audio id="nature1" src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/nature1.mp3?alt=media&token=b73363b7-b865-4ad7-97c6-b7c7c70501c8"></audio>
+        <audio id="nature2" src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/nature2.mp3?alt=media&token=3548f659-0d15-4bf0-b54d-864df58b07ba"></audio>
     </form>
     <script src="{{asset('js/customRelax.js')}}" type="text/javascript">
     </script>

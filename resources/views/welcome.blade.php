@@ -27,7 +27,7 @@
         }
 
         .background {
-            background-image: url("/images/wooden_bg.jfif");
+            background-image: "https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/wooden_bg.jfif?alt=media&token=9e27ac6a-5944-413e-b058-5d0128f4a7c3";
             background-size: cover;
         }
 

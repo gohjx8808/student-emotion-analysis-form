@@ -27,7 +27,7 @@
         }
 
         .background {
-            background-image: url("/images/wooden_bg.jfif");
+            background-image: "https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/wooden_bg.jfif?alt=media&token=9e27ac6a-5944-413e-b058-5d0128f4a7c3";
             background-size: cover;
         }
 
@@ -58,7 +58,8 @@
             <label for="feeling" class="white-label">1. Overall, how do you feel after trying the questions of
                 different topics and format?
             </label>
-            <img src="{{url('/images/feeling1.png')}}" class="img-fluid mx-auto d-block rounded" alt="feeling" />
+            <img src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/feeling1.png?alt=media&token=41f6780b-788e-4590-a232-6d05f8068662"
+                class="img-fluid mx-auto d-block rounded" alt="feeling" />
             <div class="form-control containerSpacing" style="width: 970px;margin:auto">
                 <input type="radio" name="feeling" value="E1" style="margin-left: 70px" required />
                 <input type="radio" name="feeling" class="radio-center" style="margin-left: 180px" value="E2" />
@@ -161,7 +162,8 @@
             <textarea class="form-control" id="stress-reason" rows="3" name="stress-reason" required></textarea>
         </div>
         <div class="form-group">
-            <label for="confusing" class="white-label">5. Is there any parts of the experiment you find confusing?</label>
+            <label for="confusing" class="white-label">5. Is there any parts of the experiment you find
+                confusing?</label>
             <input class="form-control" type="text" id="confusing" name="confusing" required />
         </div>
         <div class="form-group" style="padding-top: 20px">
