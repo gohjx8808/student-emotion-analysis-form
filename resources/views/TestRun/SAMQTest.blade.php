@@ -146,26 +146,6 @@
         <audio id="nature1" src="{{url("/audio/nature1.mp3")}}"></audio>
         <audio id="nature2" src="{{url("/audio/nature2.mp3")}}"></audio>
     </form>
-    <script>
-        var counter = 15;
-        var x = Math.floor((Math.random() * 2) + 1);
-        $("#nature"+x).get(0).play();
-        $("#submit").attr("disabled", "disabled");
-        $("#submit").text("I am ready for the experiment! (" + counter + ")");
-        var interval = setInterval(function () {
-            counter--;
-            if (counter == 0) {
-                $("#submit").text("I am ready for the experiment!");
-                clearInterval(interval);
-            } else {
-                $("#submit").text("I am ready for the experiment! (" + counter + ")");
-            }
-        }, 1000);
-        setTimeout(function () {
-            $("#nature"+x).get(0).pause();
-            $("#submit").removeAttr("disabled");
-        }, 15000);
-    </script>
 </body>
 
 </html>

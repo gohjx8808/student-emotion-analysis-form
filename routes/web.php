@@ -68,16 +68,22 @@ Route::get('/IntroDemo', function () {
 });
 
 Route::get('/QTest', function () {
-    return view('QTest');
+    return view('TestRun.QTest');
 });
 
 Route::post('/QTest/save','QuestionsController@saveQTest');
 
 Route::get('/SAMQTest',function(){
-    return view('SAMQTest');
+    return view('TestRun.SAMQTest');
 });
 
 Route::post('/SAMQTest/save','SAMController@saveSAMQTest');
+
+Route::get('/calmTest',function(){
+    return view('TestRun.delayRelaxTest');
+});
+
+Route::post('/firstRandom','RandomController@firstRandom');
 
 Route::get('/endSurvey', function () {
     return view('endSurvey');

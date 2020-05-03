@@ -17,6 +17,21 @@ class RandomController extends Controller
         }
     }
 
+    public function firstRandom(Request $request)
+    {
+        $ques = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        $randomQues = $ques[array_rand($ques)];
+        $removeIndex = array_search($randomQues, $ques);
+        if ($removeIndex !== false) {
+            unset($ques[$removeIndex]);
+        }
+        $ques = array_values($ques);
+        $request->session()->put('QuestionsRemaining', $ques);
+        $request->session()->put('counter', 0);
+
+        return redirect('/Q' . $randomQues);
+    }
+
     public function randomizedQuestion(Request $request)
     {
         $ques = $request->session()->get('QuestionsRemaining');

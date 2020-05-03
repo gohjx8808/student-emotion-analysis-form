@@ -519,7 +519,7 @@ class QuestionsController extends Controller
             array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q10_1A'), 'a'));
             array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q10_1B'), 'a'));
             $correct = $this->checkCorrectness($displayedResult);
-            $added = $request->session()->get('10');
+            $added = $request->session()->get('Q10');
             $added['correct'] = strval($correct) . '/2';
             $request->session()->put('Q10', $added);
             if ($correct == 2) {
