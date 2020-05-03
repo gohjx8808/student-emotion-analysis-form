@@ -50,7 +50,7 @@
         <div style="text-align: center; margin-top:50px">
             <button type="button" class="btn btn-primary" style="width:15%" id='submit'
                 onClick="window.location='{{url("/")}}'">
-                Next
+                Again :D
             </button>
         </div>
     </form>

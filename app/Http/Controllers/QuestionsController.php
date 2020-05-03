@@ -615,4 +615,22 @@ class QuestionsController extends Controller
 
         return $correct;
     }
+
+    public function demoRun(Request $request)
+    {
+        $request->session()->put('QDemo', $request->input());
+
+        // dd(session()->all());
+        $displayedResult = array();
+
+        array_push($displayedResult, $this->checkMCQ($request->input('QDemo_1'), 'b', ''));
+        $added = $request->session()->get('QDemo');
+        $added['correct'] = strval($displayedResult[0][2] ? 1 : 0) . '/1';
+        $request->session()->put('QDemo', $added);
+
+        // dd(session()->all());
+        // dd($displayedResult);
+
+        return redirect()->back()->withInput()->with(['endResult' => $displayedResult]);
+    }
 }

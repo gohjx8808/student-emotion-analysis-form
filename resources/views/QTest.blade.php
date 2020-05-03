@@ -99,7 +99,7 @@
                     </div>
                     <br />
                     <div class="form-control" style="border-bottom-width: 0;border-radius: 10px 10px 0px 0px;">
-                        <input class="form-control-input" type="radio" id="QTest_1a" name="QTest_1" value="a" required"
+                        <input class="form-control-input" type="radio" id="QTest_1a" name="QTest_1" value="a" required
                             {{old("QTest_1")=='a'?'checked':''}} {{old("flag")?'disabled':''}} />
                         <label class="form-check-label" for="QTest_1a" style="padding-left: 15px;">
                             18

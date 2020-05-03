@@ -63,7 +63,9 @@ Route::get('/SAMVid4',function(){
 
 Route::post('/SAMVid4/save','SAMController@saveSAMVid4');
 
-Route::post('/SAMQTest/save','SAMController@saveSAMQTest');
+Route::get('/IntroDemo', function () {
+    return view('IntroDemo');
+});
 
 Route::get('/QTest', function () {
     return view('QTest');
@@ -188,4 +190,20 @@ Route::post('/SAMQ10/save','SAMController@saveSAMQ10');
 Route::get('/thankyou',function(){
     return view('thankyou');
 });
+
+Route::get('/guideVid',function(){
+    return view('guidanceVid');
+});
+
+Route::get('/calm',function(){
+    return view('delayRelax');
+});
+
+Route::post('/randomQ','RandomController@randomQ');
+
+Route::get('/demo',function(){
+    return view('DemoRun');
+});
+
+Route::post('/QDemo/save','QuestionsController@demoRun');
 

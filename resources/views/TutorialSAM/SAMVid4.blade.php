@@ -107,7 +107,7 @@
             </div>
             <div style=" text-align: center;margin-top:20px">
                 <button type="submit" class="btn btn-primary" style="width:15%" id="submit">
-                    Test Run!
+                    Guidance for answering question!
                 </button>
             </div>
         </div>
