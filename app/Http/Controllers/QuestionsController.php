@@ -32,7 +32,7 @@ class QuestionsController extends Controller
         if ($request->session()->has('Q1')) {
             $Qformat = $request->session()->get('Q1')['Qformat'];
         } else {
-            $request->session()->put('counter', $request->session()->get('counter')+ 1);
+            // $request->session()->put('counter', $request->session()->get('counter')+ 1);
             $Qformat = rand(1, 4);
         }
 
@@ -78,7 +78,7 @@ class QuestionsController extends Controller
         if ($request->session()->has('Q2')) {
             $Qformat = $request->session()->get('Q2')['Qformat'];
         } else {
-            $request->session()->put('counter', $request->session()->get('counter')+ 1);
+            // $request->session()->put('counter', $request->session()->get('counter')+ 1);
             $Qformat = rand(1, 4);
         }
 
@@ -129,7 +129,7 @@ class QuestionsController extends Controller
         if ($request->session()->has('Q3')) {
             $Qformat = $request->session()->get('Q3')['Qformat'];
         } else {
-            $request->session()->put('counter', $request->session()->get('counter')+ 1);
+            // $request->session()->put('counter', $request->session()->get('counter')+ 1);
             $Qformat = rand(1, 4);
         }
 
@@ -169,7 +169,7 @@ class QuestionsController extends Controller
         if ($request->session()->has('Q4')) {
             $Qformat = $request->session()->get('Q4')['Qformat'];
         } else {
-            $request->session()->put('counter', $request->session()->get('counter')+ 1);
+            // $request->session()->put('counter', $request->session()->get('counter')+ 1);
             $Qformat = rand(1, 4);
         }
 
@@ -218,7 +218,7 @@ class QuestionsController extends Controller
         if ($request->session()->has('Q5')) {
             $Qformat = $request->session()->get('Q5')['Qformat'];
         } else {
-            $request->session()->put('counter', $request->session()->get('counter')+ 1);
+            // $request->session()->put('counter', $request->session()->get('counter')+ 1);
             $Qformat = rand(1, 4);
         }
 
@@ -265,7 +265,7 @@ class QuestionsController extends Controller
         if ($request->session()->has('Q6')) {
             $Qformat = $request->session()->get('Q6')['Qformat'];
         } else {
-            $request->session()->put('counter', $request->session()->get('counter')+ 1);
+            // $request->session()->put('counter', $request->session()->get('counter')+ 1);
             $Qformat = rand(1, 4);
         }
 
@@ -311,7 +311,7 @@ class QuestionsController extends Controller
         if ($request->session()->has('Q7')) {
             $Qformat = $request->session()->get('Q7')['Qformat'];
         } else {
-            $request->session()->put('counter', $request->session()->get('counter')+ 1);
+            // $request->session()->put('counter', $request->session()->get('counter')+ 1);
             $Qformat = rand(1, 4);
         }
 
@@ -369,7 +369,7 @@ class QuestionsController extends Controller
         if ($request->session()->has('Q8')) {
             $Qformat = $request->session()->get('Q8')['Qformat'];
         } else {
-            $request->session()->put('counter', $request->session()->get('counter')+ 1);
+            // $request->session()->put('counter', $request->session()->get('counter')+ 1);
             $Qformat = rand(1, 4);
         }
 
@@ -427,7 +427,7 @@ class QuestionsController extends Controller
         if ($request->session()->has('Q9')) {
             $Qformat = $request->session()->get('Q9')['Qformat'];
         } else {
-            $request->session()->put('counter', $request->session()->get('counter')+ 1);
+            // $request->session()->put('counter', $request->session()->get('counter')+ 1);
             $Qformat = rand(1, 4);
         }
 
@@ -491,11 +491,11 @@ class QuestionsController extends Controller
 
     public function displayQ10(Request $request)
     {
-        // dd($request->session()->all());
+        // dd($request->session()->get('counter'));
         if ($request->session()->has('Q10')) {
             $Qformat = $request->session()->get('Q10')['Qformat'];
         } else {
-            $request->session()->put('counter', $request->session()->get('counter')+ 1);
+            // $request->session()->put('counter', $request->session()->get('counter')+ 1);
             $Qformat = rand(1, 4);
         }
 
@@ -504,6 +504,7 @@ class QuestionsController extends Controller
 
     public function saveQ10(Request $request)
     {
+        // dd($request->session()->get('counter'));
         $request->session()->put('Q10', $request->except('_token'));
         // dd($request->input());
         $displayedResult = array();
@@ -527,6 +528,7 @@ class QuestionsController extends Controller
             } else {
                 array_push($displayedResult, ['The answers are', '==', 'true']);
             }
+            // dd($request->session()->get('counter'));
             // dd($displayedResult);
         } else if ($random == 3) {
             array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q10_1A'), '=='));
@@ -544,7 +546,7 @@ class QuestionsController extends Controller
         } else if ($random == 4) {
             array_push($displayedResult, ['Thank you for the answer.', 'You may check your answer by googling the keyword stated above in the topic.']);
         }
-
+        // dd($request->session()->get('counter'));
         return redirect()->back()->withInput()->with(['endResult' => $displayedResult]);
     }
 

@@ -182,7 +182,7 @@
                 {{-- matching --}}
                 <div>
                     <label for="Q10" class="white-label" style="margin-top: 15px">
-                        This is a program to determine the count of ppalindrome sub-strings in a given string.
+                        This is a program to determine the count of palindrome sub-strings in a given string.
                         Please select the appropriate algorithm to produce the following output.
                     </label>
                     <p class="programming-bg" style="font-weight:bold">Input: abbaeae<br />Output: 4</p>
@@ -280,7 +280,7 @@
                 {{-- fill-in-blank --}}
                 <div>
                     <label for="Q10" class="white-label" style="margin-top: 15px">
-                        This is a program to determine the count of ppalindrome sub-strings in a given string.
+                        This is a program to determine the count of palindrome sub-strings in a given string.
                         Please select the appropriate algorithm to produce the following output.
                     </label>
                     <p class="programming-bg" style="font-weight:bold">Input: abbaeae<br />Output: 4</p>

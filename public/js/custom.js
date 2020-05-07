@@ -1,7 +1,6 @@
 $(document).ready(function () {
     let windowY = $(window).height() / 2;
     let windowX = $(window).width() / 2;
-
     window.addEventListener("mousedown", function () {
         let mouseClickedInt = $("#mouseClicked").val();
         mouseClickedInt++;
@@ -16,10 +15,10 @@ $(document).ready(function () {
     });
 
     setInterval(function () {
-        let counter = $("#timeTaken").val();
-        counter++;
+        let time = $("#timeTaken").val();
+        time++;
 
-        $("#timeTaken").val(counter);
+        $("#timeTaken").val(time);
     }, 1000);
 
     //quadrantsCounter=[topLeft, topRight, bottomLeft, bottomRight]

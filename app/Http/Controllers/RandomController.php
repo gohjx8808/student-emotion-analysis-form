@@ -27,7 +27,7 @@ class RandomController extends Controller
         }
         $ques = array_values($ques);
         $request->session()->put('QuestionsRemaining', $ques);
-        $request->session()->put('counter', 0);
+        $request->session()->put('counter', 1);
 
         return redirect('/Q' . $randomQues);
     }
@@ -42,7 +42,7 @@ class RandomController extends Controller
         }
         $ques = array_values($ques);
         $request->session()->put('QuestionsRemaining', $ques);
-
+        $request->session()->put('counter', 10 - count($ques));
         return $randomQues;
     }
 }

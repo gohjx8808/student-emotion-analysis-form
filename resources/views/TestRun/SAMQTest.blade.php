@@ -46,6 +46,10 @@
         .containerSpacing {
             margin-bottom: 30px;
         }
+
+        .SAMWidth {
+            width: 620px
+        }
     </style>
 </head>
 
@@ -72,7 +76,7 @@
             </label>
             <br />
             <img src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/SAM1.png?alt=media&token=93ba5d47-8d4e-451e-9e32-9e823488fe51"
-                class="img-fluid" alt="SAM1" />
+                class="img-fluid SAMWidth" alt="SAM1" />
             <br />
             <div class="form-group">
                 <div class="form-control containerSpacing" style="width: 620px; margin:auto">
@@ -94,7 +98,7 @@
             </label>
             <br />
             <img src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/SAM2.png?alt=media&token=ddac5103-46be-4f51-8e16-d5b7197ed6b9"
-                class="img-fluid" alt="SAM2" />
+                class="img-fluid SAMWidth" alt="SAM2" />
             <br />
             <div class="form-group">
                 <div class="form-control containerSpacing" style="width: 620px;margin:auto">
