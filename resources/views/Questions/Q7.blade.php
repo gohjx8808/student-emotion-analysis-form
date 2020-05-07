@@ -179,9 +179,9 @@
                         <input class="form-control-input" type="radio" id="Q7_1d" name="Q7_1" value="d"
                             {{old("Q7_1")=='d'?'checked':''}} {{old("flag")?'disabled':''}} />
                         <label class="form-check-label" for="Q7_1d" style="padding-left: 15px">
-                            int temp = arr[j];<br />
+                            int temp = arr[j+1];<br />
                             arr[j] = arr[j+i];<br />
-                            arr[j+i] = temp;<br />
+                            arr[j] = temp;<br />
                         </label>
                     </div>
                     @if(Session::has('endResult'))

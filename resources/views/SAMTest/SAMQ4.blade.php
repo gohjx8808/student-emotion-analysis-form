@@ -36,7 +36,7 @@
         }
 
         .radio-center {
-            margin-left: 6.5%;
+            margin-left: 7%;
         }
 
         .rate{
@@ -45,6 +45,10 @@
 
         .containerSpacing{
             margin-bottom:30px;
+        }
+
+        .SAMWidth{
+            width: 620px
         }
     </style>
 </head>
@@ -71,12 +75,12 @@
                 1 (Very Unpleasant) - 9 (Very Pleasant)
             </label>
             <br />
-            <img src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/SAM1.png?alt=media&token=414e2593-346a-49b7-b3c0-8045ba9dcce7"
-                class="img-fluid" alt="SAM1" />
+            <img src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/SAM1.png?alt=media&token=93ba5d47-8d4e-451e-9e32-9e823488fe51"
+                class="img-fluid SAMWidth" alt="SAM1" />
             <br />
             <div class="form-group containerSpacing">
                 <div class="form-control" style="width: 620px; margin:auto">
-                    <input type="radio" name="SAM1" style="margin-left: 4.3%" value="V1" required />
+                    <input type="radio" name="SAM1"  value="V1" required />
                     <input type="radio" name="SAM1" class="radio-center" value="V2" />
                     <input type="radio" name="SAM1" class="radio-center" value="V3" />
                     <input type="radio" name="SAM1" class="radio-center" value="V4" />
@@ -93,12 +97,12 @@
                 1 (Very Calm) - 9 (Very Excited)
             </label>
             <br />
-            <img src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/SAM2.png?alt=media&token=9a832e2a-f8d0-43a1-875a-b4e1dd6fba14"
-                class="img-fluid" alt="SAM2" />
+            <img src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/SAM2.png?alt=media&token=ddac5103-46be-4f51-8e16-d5b7197ed6b9"
+                class="img-fluid SAMWidth" alt="SAM2" />
             <br />
             <div class="form-group containerSpacing">
                 <div class="form-control" style="width: 620px;margin:auto">
-                    <input type="radio" name="SAM2" style="margin-left: 4.3%" value="A1" required />
+                    <input type="radio" name="SAM2"  value="A1" required />
                     <input type="radio" name="SAM2" class="radio-center" value="A2" />
                     <input type="radio" name="SAM2" class="radio-center" value="A3" />
                     <input type="radio" name="SAM2" class="radio-center" value="A4" />

@@ -114,28 +114,28 @@
                         <input class="form-control-input" type="radio" id="Q4_1a" name="Q4_1" value="a" required"
                             {{old("Q4_1")=='a'?'checked':''}} {{old("flag")?'disabled':''}} />
                         <label class="form-check-label" for="Q4_1a" style="padding-left: 15px;">
-                            Factorial of 6 is 28
+                            Factorial of 7 is 28
                         </label>
                     </div>
                     <div class="form-control radio-center">
                         <input class="form-control-input" type="radio" id="Q4_1b" name="Q4_1" value="b"
                             {{old("Q4_1")=='b'?'checked':''}} {{old("flag")?'disabled':''}} />
                         <label class="form-check-label" for="Q4_1b" style="padding-left: 15px">
-                            Factorial of 6 is 120
+                            Factorial of 7 is 120
                         </label>
                     </div>
                     <div class="form-control radio-center">
                         <input class="form-control-input" type="radio" id="Q4_1c" name="Q4_1" value="c"
                             {{old("Q4_1")=='c'?'checked':''}} {{old("flag")?'disabled':''}} />
                         <label class="form-check-label" for="Q4_1c" style="padding-left: 15px">
-                            Factorial of 6 is 5040
+                            Factorial of 7 is 5040
                         </label>
                     </div>
                     <div class="form-control" style="border-radius: 0px 0px 10px 10px;">
                         <input class="form-control-input" type="radio" id="Q4_1d" name="Q4_1" value="d"
                             {{old("Q4_1")=='d'?'checked':''}} {{old("flag")?'disabled':''}} />
                         <label class="form-check-label" for="Q4_1d" style="padding-left: 15px">
-                            Factorial of 6 is 2520
+                            Factorial of 7 is 2520
                         </label>
                     </div>
                     @if(Session::has('endResult'))

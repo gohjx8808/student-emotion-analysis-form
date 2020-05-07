@@ -36,7 +36,7 @@
         }
 
         .radio-center {
-            margin-left: 6.5%;
+            margin-left: 7%;
         }
     </style>
 </head>
@@ -77,8 +77,11 @@
         <span style="color:yellow; font-size:20px;">Note:<br />- This experiment is conducted anonymously, so please
             provide the accurate information. <br />- Please wear your earphone for higher accuracy and better
             experience.<br />- For the coding questions, please try your best, any coding representation will do.
-            (pseudocode, code, any flowchart or mind chart).
+            (pseudocode, code, any flowchart or mind chart).<br/>- This experiment will take around 20 minutes, please have enough time to do so.<br/><br/>
         </span>
+        <p class="white-label" style="font-size:20px">
+            Thank you for you time and attention. Good luck and have a nice day!
+        </p>
         <div style="text-align: center; margin-top:50px">
             <button type="button" class="btn btn-primary" style="width:15%" id='submit'
                 onClick="window.location='{{url("personalDetail")}}'">

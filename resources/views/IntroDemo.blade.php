@@ -36,7 +36,7 @@
         }
 
         .radio-center {
-            margin-left: 6.5%;
+            margin-left: 7%;
         }
     </style>
 </head>

@@ -36,7 +36,7 @@
         }
 
         .radio-center {
-            margin-left: 6.5%;
+            margin-left: 7%;
         }
     </style>
 </head>
@@ -49,7 +49,7 @@
         <h4 class="white-label">Part 2: SAM Test Pratice Round 3</h4>
         <hr style="background-color:white" />
         <p class="white-label">
-            Please watch the video displayed below and select the picturee that best matches your feeling on the next
+            Please watch the video displayed below and select the picture that best matches your feeling on the next
             page.
         </p>
         <video width="90%" height="50%" autoplay controls style="display:block;margin:0 auto">

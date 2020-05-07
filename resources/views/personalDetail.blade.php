@@ -310,11 +310,11 @@
                     <tr>
                         <th scope="col">Item</th>
                         <th scope="col">Questions</th>
-                        <th scope="col">Strongly Disagree</th>
-                        <th scope="col">Disagree</th>
-                        <th scope="col">Neutral</th>
-                        <th scope="col">Agree</th>
-                        <th scope="col">Strongly Agree</th>
+                        <th scope="col" style="text-align: center">Strongly Disagree</th>
+                        <th scope="col" style="text-align: center">Disagree</th>
+                        <th scope="col" style="text-align: center">Neutral</th>
+                        <th scope="col" style="text-align: center">Agree</th>
+                        <th scope="col" style="text-align: center">Strongly Agree</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -430,11 +430,11 @@
                     <tr>
                         <th scope="col">Item</th>
                         <th scope="col">Questions</th>
-                        <th scope="col">Strongly Disagree</th>
-                        <th scope="col">Disagree</th>
-                        <th scope="col">Neutral</th>
-                        <th scope="col">Agree</th>
-                        <th scope="col">Strongly Agree</th>
+                        <th scope="col" style="text-align: center">Never</th>
+                        <th scope="col" style="text-align: center">Rarely</th>
+                        <th scope="col" style="text-align: center">Sometimes</th>
+                        <th scope="col" style="text-align: center">Most of the time</th>
+                        <th scope="col" style="text-align: center">Always</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -669,11 +669,11 @@
                     <tr>
                         <th scope="col">Item</th>
                         <th scope="col">Questions</th>
-                        <th scope="col">Strongly Disagree</th>
-                        <th scope="col">Disagree</th>
-                        <th scope="col">Neutral</th>
-                        <th scope="col">Agree</th>
-                        <th scope="col">Strongly Agree</th>
+                        <th scope="col" style="text-align: center">Strongly Disagree</th>
+                        <th scope="col" style="text-align: center">Disagree</th>
+                        <th scope="col" style="text-align: center">Neutral</th>
+                        <th scope="col" style="text-align: center">Agree</th>
+                        <th scope="col" style="text-align: center">Strongly Agree</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -897,6 +897,7 @@
             ];
 
             var grades = [
+                { name: "A+", value: "A+" },
                 { name: "A", value: "A" },
                 { name: "A-", value: "A-" },
                 { name: "B+", value: "B+" },
