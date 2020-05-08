@@ -406,7 +406,7 @@
                 {{-- code --}}
                 <div>
                     <label for=" Q7" class="white-label" style="margin-top: 15px">
-                        Please write a program to sort array with Bubble Sort in Java.
+                        Please write a Java program to sort array with Bubble Sort.
                     </label>
                     <textarea class="form-control" rows="30" required name='Q7' {{old("flag")?'disabled':''}}>{{old('Q7')}}
                     </textarea>

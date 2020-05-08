@@ -183,7 +183,8 @@
                 <div>
                     <label for="Q10" class="white-label" style="margin-top: 15px">
                         This is a program to determine the count of palindrome sub-strings in a given string.
-                        Please select the appropriate algorithm to produce the following output.
+                        Please select the appropriate algorithm to produce the following output.<br/>
+                        Example: abba has 2 palindrome sub-strings (abba, bb)
                     </label>
                     <p class="programming-bg" style="font-weight:bold">Input: abbaeae<br />Output: 4</p>
                     <div class="programming-bg">
@@ -282,6 +283,7 @@
                     <label for="Q10" class="white-label" style="margin-top: 15px">
                         This is a program to determine the count of palindrome sub-strings in a given string.
                         Please select the appropriate algorithm to produce the following output.
+                        Example: abba has 2 palindrome sub-strings (abba, bb)
                     </label>
                     <p class="programming-bg" style="font-weight:bold">Input: abbaeae<br />Output: 4</p>
                     <div class="programming-bg">
@@ -368,7 +370,7 @@
                 <div style="display: {{$Qformat==4?'block':'none'}}">
                     <label for=" Q10" class="white-label" style="margin-top: 15px">
                         Please write a Java program to count all palindrome sub-strings in an input string.<br/>
-                        For reference, you may google "Count All Palindrome Sub-Strings in a String in Java".
+                        Example: abba has 2 palindrome sub-strings (abba, bb)
                     </label>
                     <textarea class="form-control" rows="30" required name='Q10' {{old("flag")?'disabled':''}}>{{old('Q10')}}
                     </textarea>

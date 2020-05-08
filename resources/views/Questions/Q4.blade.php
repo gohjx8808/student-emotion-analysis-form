@@ -251,8 +251,10 @@
                 {{-- code --}}
                 <div>
                     <label for=" Q4" class="white-label" style="margin-top: 15px">
-                        Please write a program to find the factorial value of any number entered through the
-                        keyboard in Java</label>
+                        Please write a Java program to find the factorial value of any number entered through the
+                        keyboard.
+                    </label>
+                    <p class="programming-bg" style="font-weight:bold">Input: 3<br/>Output: 6 </p>
                     <textarea class="form-control" rows="30" required name='Q4' {{old("flag")?'disabled':''}}>{{old('Q4')}}
                     </textarea>
                     @if(Session::has('endResult'))

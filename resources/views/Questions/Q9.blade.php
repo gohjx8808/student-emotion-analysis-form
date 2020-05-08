@@ -343,7 +343,9 @@
                 {{-- code --}}
                 <div style="display: {{$Qformat==4?'block':'none'}}">
                     <label for=" Q9" class="white-label" style="margin-top: 15px">
-                        Please write a Java program to determine if an input string is palindrome.</label>
+                        Please write a Java program to determine if an input string is palindrome.
+                        <br/>Example: tacocat is a palindrome.
+                    </label>
                     <textarea class="form-control" rows="30" required name='Q9' {{old("flag")?'disabled':''}}>{{old('Q9')}}
                     </textarea>
                     @if(Session::has('endResult'))

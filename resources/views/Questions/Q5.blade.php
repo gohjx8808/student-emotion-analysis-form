@@ -316,8 +316,8 @@
                 {{-- code --}}
                 <div>
                     <label for=" Q5" class="white-label" style="margin-top: 15px">
-                        Please write a program that will prompt user for number of rows and based on the input, it would
-                        print the Floyd's triangle having the same number of rows in Java</label>
+                        Please write a Java program that will prompt user for number of rows and based on the input, it would
+                        print the Floyd's triangle having the same number of rows.</label>
                     <textarea class="form-control" rows="30" required name='Q5' {{old("flag")?'disabled':''}}>{{old('Q5')}}
                     </textarea>
                     @if(Session::has('endResult'))

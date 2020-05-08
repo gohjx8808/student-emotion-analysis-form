@@ -158,8 +158,11 @@
                 <div>
                     <label for="Q8" class="white-label" style="margin-top: 15px">
                         This is a Java program to find all the leader elements in the given array. For example, if {14,
-                        9, 11, 7, 8, 5, 3} is the given array then {14, 11, 8, 5, 3} are the leaders in this array.
-                        <br />Please select the appropriate options to produce the following output.</label>
+                        9, 11, 7, 8, 5, 3} is the given array then {14, 11, 8, 5, 3} are the leaders in this array. 14
+                        is a leader element because it is larger than all elements on its right. However, 9 is not a
+                        leader element because it is not larger than 11. <br />Please select the appropriate options to
+                        produce the following output.
+                    </label>
                     <p class="programming-bg" style="font-weight:bold">Output: 10 33 39 65 87 100</p>
                     <div class="programming-bg">
                         <span class="programming-blue">public class Q{{Session::get('counter')}}</span><br />
@@ -233,8 +236,11 @@
                 <div>
                     <label for="Q8" class="white-label" style="margin-top: 15px">
                         This is a Java program to find all the leader elements in the given array. For example, if {14,
-                        9, 11, 7, 8, 5, 3} is the given array then {14, 11, 8, 5, 3} are the leaders in this array.
-                        <br />Please select the appropriate options to produce the following output.</label>
+                        9, 11, 7, 8, 5, 3} is the given array then {14, 11, 8, 5, 3} are the leaders in this array. 14
+                        is a leader element because it is larger than all elements on its right. However, 9 is not a
+                        leader element because it is not larger than 11. <br />Please select the appropriate options to
+                        produce the following output.
+                    </label>
                     <p class="programming-bg" style="font-weight:bold">Output: 10 33 39 65 87 100</p>
                     <div class="programming-bg">
                         <span class="programming-blue">public class Q{{Session::get('counter')}}</span><br />
@@ -300,7 +306,9 @@
                         Given an integer array, you have to find all the leader elements in this array. An element is
                         said to be leader if all the elements on it’s right side are smaller than it. Rightmost element
                         is always a leader. For example, if {14, 9, 11, 7, 8, 5, 3} is the given array then {14, 11, 8,
-                        5, 3} are the leaders in this array.<br />
+                        5, 3} are the leaders in this array. 14 is a leader element because it is larger than all
+                        elements on its right. However, 9 is not a leader element because it is not larger than
+                        11.<br />
                         Please write a Java program for the problem above.
                     </label>
                     <textarea class="form-control" rows="50" required name='Q8' {{old("flag")?'disabled':''}}>{{old('Q8')}}

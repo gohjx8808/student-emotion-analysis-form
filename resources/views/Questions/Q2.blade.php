@@ -307,7 +307,13 @@
                     <label for=" Q2" class="white-label" style="margin-top: 15px">
                         Please write a Java program that accepts integers and output the total of odd and even numbers
                         and the average of all the numbers. The program must stop when it encounters integer smaller
-                        than 0.</label>
+                        than 0.
+                    </label>
+                    <p class="programming-bg" style="font-weight:bold"><u>Input:</u><br />100<br />93<br />0<br />
+                        4<br />53<br />8<br />-1<br />48<br />-22<br /><br /><u>Output:</u><br /> Average = 51.6<br />
+                        Total of Odd Number = 146<br />
+                        Total of Even Number = 112<br />
+                    </p>
                     <textarea class="form-control" rows="30" required name='Q2' {{old("flag")?'disabled':''}}>{{old('Q2')}}
                     </textarea>
                     @if(Session::has('endResult'))
