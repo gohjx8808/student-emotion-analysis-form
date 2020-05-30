@@ -50,6 +50,41 @@
         <h4 class="white-label">Part 1: Personal Detail</h4>
         <hr style="background-color: white" />
         <div class="form-group">
+            <label for="matrics_num" class="white-label">New Matrics Number</label>
+            <input type="text" class="form-control" id="matrics_num" name="matrics_num"
+                placeholder="Please enter your new matrics number" required />
+        </div>
+        <div class="form-group">
+            <label for="course" class="white-label">Course taking</label>
+            <div class="form-control" style="border-bottom-width: 0;border-radius: 10px 10px 0px 0px;">
+                <label class="form-check-label" for="WIX1002">
+                    <input class="form-control-input" type="radio" id="WIX1002" name="course" value="WIX1002"
+                        required />
+                    WIX1002
+                </label>
+            </div>
+            <div class="form-control radio-center">
+                <label class="form-check-label" for="WID2003">
+                    <input class="form-control-input" type="radio" id="WID2003" name="course" value="WID2003"
+                        required />
+                    WID2003
+                </label>
+            </div>
+            <div class="input-group radio-center radio-center">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <label class="form-check-label" for="other_course">
+                            <input class="form-control-input" type="radio" id="other_course" name="course"
+                                value="other_course" />
+                            Other:
+                        </label>
+                    </div>
+                </div>
+                <input type="text" class="form-control" id="other_course" name="other_course" disabled
+                    placeholder="Please enter your course code" />
+            </div>
+        </div>
+        <div class="form-group">
             <label for="gender" class="white-label">Gender</label>
             <div class="form-control" style="border-bottom-width: 0;border-radius: 10px 10px 0px 0px;">
                 <label class="form-check-label" for="male">
@@ -322,8 +357,8 @@
                         <th scope="row">1</th>
                         <td>It is too difficult to remember the syntax</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P1-difficultSyntax"
-                                value="1" required />
+                            <input class="form-control-input" type="radio" name="P1-difficultSyntax" value="1"
+                                required />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="P1-difficultSyntax" value="2" />
@@ -335,16 +370,14 @@
                             <input class="form-control-input" type="radio" name="P1-difficultSyntax" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P1-difficultSyntax"
-                                value="5" />
+                            <input class="form-control-input" type="radio" name="P1-difficultSyntax" value="5" />
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
                         <td>I do not understand the logic of the programming.</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P2-noLogic" value="1"
-                                required />
+                            <input class="form-control-input" type="radio" name="P2-noLogic" value="1" required />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="P2-noLogic" value="2" />
@@ -363,8 +396,7 @@
                         <th scope="row">3</th>
                         <td>The materials for learning do not provide suitable examples.</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P3-noExample" value="1"
-                                required />
+                            <input class="form-control-input" type="radio" name="P3-noExample" value="1" required />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="P3-noExample" value="2" />
@@ -383,8 +415,7 @@
                         <th scope="row">4</th>
                         <td>It requires certain skills that I do not have.</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P4-noSkill" value="1"
-                                required />
+                            <input class="form-control-input" type="radio" name="P4-noSkill" value="1" required />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="P4-noSkill" value="2" />
@@ -403,8 +434,8 @@
                         <th scope="row">5</th>
                         <td>It is not enough interesting, exciting, or provoking for me.</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P5-notInteresting"
-                                value="1" required />
+                            <input class="form-control-input" type="radio" name="P5-notInteresting" value="1"
+                                required />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="P5-notInteresting" value="2" />
@@ -416,8 +447,7 @@
                             <input class="form-control-input" type="radio" name="P5-notInteresting" value="4" />
                         </td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="P5-notInteresting"
-                                value="5" />
+                            <input class="form-control-input" type="radio" name="P5-notInteresting" value="5" />
                         </td>
                     </tr>
                 </tbody>
@@ -442,8 +472,7 @@
                         <th scope="row">1</th>
                         <td>Bored</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F1-bored" value="1"
-                                required />
+                            <input class="form-control-input" type="radio" name="F1-bored" value="1" required />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="F1-bored" value="2" />
@@ -462,8 +491,7 @@
                         <th scope="row">2</th>
                         <td>Happy</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F2-happy" value="1"
-                                required />
+                            <input class="form-control-input" type="radio" name="F2-happy" value="1" required />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="F2-happy" value="2" />
@@ -482,8 +510,7 @@
                         <th scope="row">3</th>
                         <td>Frustrated</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F3-frustrated" value="1"
-                                required />
+                            <input class="form-control-input" type="radio" name="F3-frustrated" value="1" required />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="F3-frustrated" value="2" />
@@ -502,8 +529,7 @@
                         <th scope="row">4</th>
                         <td>Relaxed</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F4-relaxed" value="1"
-                                required />
+                            <input class="form-control-input" type="radio" name="F4-relaxed" value="1" required />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="F4-relaxed" value="2" />
@@ -522,8 +548,7 @@
                         <th scope="row">5</th>
                         <td>Enthusiastic</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F5-enthusiastic" value="1"
-                                required />
+                            <input class="form-control-input" type="radio" name="F5-enthusiastic" value="1" required />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="F5-enthusiastic" value="2" />
@@ -542,8 +567,7 @@
                         <th scope="row">6</th>
                         <td>Idle</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F6-idle" value="1"
-                                required />
+                            <input class="form-control-input" type="radio" name="F6-idle" value="1" required />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="F6-idle" value="2" />
@@ -562,8 +586,7 @@
                         <th scope="row">7</th>
                         <td>Excited</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F7-excited" value="1"
-                                required />
+                            <input class="form-control-input" type="radio" name="F7-excited" value="1" required />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="F7-excited" value="2" />
@@ -582,8 +605,7 @@
                         <th scope="row">8</th>
                         <td>Dissatisfied</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F8-dissatisfied" value="1"
-                                required />
+                            <input class="form-control-input" type="radio" name="F8-dissatisfied" value="1" required />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="F8-dissatisfied" value="2" />
@@ -602,8 +624,7 @@
                         <th scope="row">9</th>
                         <td>Motivated</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F9-motivated" value="1"
-                                required />
+                            <input class="form-control-input" type="radio" name="F9-motivated" value="1" required />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="F9-motivated" value="2" />
@@ -622,8 +643,7 @@
                         <th scope="row">10</th>
                         <td>Focused</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F10-focused" value="1"
-                                required />
+                            <input class="form-control-input" type="radio" name="F10-focused" value="1" required />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="F10-focused" value="2" />
@@ -642,8 +662,7 @@
                         <th scope="row">11</th>
                         <td>Stressful</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="F11-stressful" value="1"
-                                required />
+                            <input class="form-control-input" type="radio" name="F11-stressful" value="1" required />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="F11-stressful" value="2" />
@@ -681,8 +700,7 @@
                         <th scope="row">1</th>
                         <td>I usually use tutorials and examples.</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A1-tutorial" value="1"
-                                required />
+                            <input class="form-control-input" type="radio" name="A1-tutorial" value="1" required />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="A1-tutorial" value="2" />
@@ -701,8 +719,7 @@
                         <th scope="row">2</th>
                         <td>I focus on the coding with all my attention.</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A2-fullAttention" value="1"
-                                required />
+                            <input class="form-control-input" type="radio" name="A2-fullAttention" value="1" required />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="A2-fullAttention" value="2" />
@@ -721,8 +738,7 @@
                         <th scope="row">3</th>
                         <td>I like to finish my coding task as soon as possible.</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A3-ASAP" value="1"
-                                required />
+                            <input class="form-control-input" type="radio" name="A3-ASAP" value="1" required />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="A3-ASAP" value="2" />
@@ -761,8 +777,7 @@
                         <th scope="row">5</th>
                         <td>I am usually interested and curious about the coding I am writing.</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A5-curious" value="1"
-                                required />
+                            <input class="form-control-input" type="radio" name="A5-curious" value="1" required />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="A5-curious" value="2" />
@@ -781,8 +796,7 @@
                         <th scope="row">6</th>
                         <td>I usually lose the notion of time when coding.</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A6-veryFocus" value="1"
-                                required />
+                            <input class="form-control-input" type="radio" name="A6-veryFocus" value="1" required />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="A6-veryFocus" value="2" />
@@ -821,8 +835,7 @@
                         <th scope="row">8</th>
                         <td>I am not sure whether my code is producing the right result.</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A8-doubt" value="1"
-                                required />
+                            <input class="form-control-input" type="radio" name="A8-doubt" value="1" required />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="A8-doubt" value="2" />
@@ -861,8 +874,7 @@
                         <th scope="row">10</th>
                         <td>I finish the coding when I have given all my best.</td>
                         <td style="text-align: center">
-                            <input class="form-control-input" type="radio" name="A10-giveTheBest" value="1"
-                                required />
+                            <input class="form-control-input" type="radio" name="A10-giveTheBest" value="1" required />
                         </td>
                         <td style="text-align: center">
                             <input class="form-control-input" type="radio" name="A10-giveTheBest" value="2" />
@@ -912,6 +924,15 @@
             ];
 
             $(document).ready(function() {
+
+                $("input[name=course]").on("change", function() {
+                    var race = $(this).val();
+                    if (race == "other_course") {
+                        $("input[name=other_course]").removeAttr("disabled");
+                    } else {
+                        $("input[name=other_course]").attr("disabled", true);
+                    }
+                });
 
                 $("input[name=nationality]").on("change", function() {
                     var race = $(this).val();
