@@ -27,7 +27,7 @@
         }
 
         .background {
-            background-image: url("https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/wooden_bg.jfif?alt=media&token=9e27ac6a-5944-413e-b058-5d0128f4a7c3");
+            background-image: url('/images/wooden_bg.jfif');
             background-size: cover;
         }
 
@@ -71,7 +71,7 @@
                 1 (Very Unpleasant) - 9 (Very Pleasant)
             </label>
             <br />
-            <img src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/SAM1.png?alt=media&token=93ba5d47-8d4e-451e-9e32-9e823488fe51"
+            <img src="{{url('/images/SAM1.png')}}"
                 class="img-fluid SAMWidth" alt="SAM1" />
             <br />
             <div class="form-group">
@@ -93,7 +93,7 @@
                 1 (Very Calm) - 9 (Very Excited)
             </label>
             <br />
-            <img src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/SAM2.png?alt=media&token=ddac5103-46be-4f51-8e16-d5b7197ed6b9"
+            <img src="{{url('/images/SAM2.png')}}"
                 class="img-fluid SAMWidth" alt="SAM2" />
             <br />
             <div class="form-group">

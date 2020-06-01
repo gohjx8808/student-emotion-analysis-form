@@ -27,7 +27,7 @@
         }
 
         .background {
-            background-image: url("https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/wooden_bg.jfif?alt=media&token=9e27ac6a-5944-413e-b058-5d0128f4a7c3");
+            background-image: url('/images/wooden_bg.jfif');
             background-size: cover;
         }
 
@@ -50,7 +50,7 @@
         <hr style="background-color:white" />
         <video width="90%" height="50%" autoplay controls style="display:block;margin:0 auto">
             <source
-                src="https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/demo.mp4?alt=media&token=c3b4e4fe-85ba-450d-ac18-d8bf6b409b22"
+                src="{{url('/videos/demo.mp4')}}"
                 type="video/mp4">
         </video>
         <div style=" text-align: center;margin-top:20px">
