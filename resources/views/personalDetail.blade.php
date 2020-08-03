@@ -49,12 +49,12 @@
         <br />
         <h4 class="white-label">Part 1: Personal Detail</h4>
         <hr style="background-color: white" />
-        <div class="form-group">
+        {{-- <div class="form-group">
             <label for="matrics_num" class="white-label">New Matrics Number</label>
             <input type="text" class="form-control" id="matrics_num" name="matrics_num"
                 placeholder="Please enter your new matrics number" required />
-        </div>
-        <div class="form-group">
+        </div> --}}
+        {{-- <div class="form-group">
             <label for="course" class="white-label">Course taking</label>
             <div class="form-control" style="border-bottom-width: 0;border-radius: 10px 10px 0px 0px;">
                 <label class="form-check-label" for="WIX1002">
@@ -83,7 +83,7 @@
                 <input type="text" class="form-control" id="other_course" name="other_course" disabled
                     placeholder="Please enter your course code" />
             </div>
-        </div>
+        </div> --}}
         <div class="form-group">
             <label for="gender" class="white-label">Gender</label>
             <div class="form-control" style="border-bottom-width: 0;border-radius: 10px 10px 0px 0px;">
