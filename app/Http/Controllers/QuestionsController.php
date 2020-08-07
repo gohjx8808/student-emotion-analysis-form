@@ -148,8 +148,8 @@ class QuestionsController extends Controller
             $added['correct'] = strval($displayedResult[0][2] ? 1 : 0) . '/1';
             $request->session()->put('Q3', $added);
         } else if ($random == 2 || $random == 3) {
-            array_push($displayedResult, $this->checkMultipleSelect($request->input('Q3_1A'), 'x'));
-            array_push($displayedResult, $this->checkMultipleSelect($request->input('Q3_1B'), 'x'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q3_1A'), 'z'));
+            array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q3_1B'), 'y'));
             array_push($displayedResult, $this->checkOnlyOneSelect($request->input('Q3_1C'), 'x'));
             $correct = $this->checkCorrectness($displayedResult);
             $added = $request->session()->get('Q3');

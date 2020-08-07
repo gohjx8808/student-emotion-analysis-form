@@ -31,7 +31,7 @@
         }
 
         .background {
-            background-image: url('/images/wooden_bg.jfif');
+            background-image: url("https://firebasestorage.googleapis.com/v0/b/student-emotion-analysis-d61dc.appspot.com/o/wooden_bg.jfif?alt=media&token=9e27ac6a-5944-413e-b058-5d0128f4a7c3");
             background-size: cover;
         }
 
@@ -102,13 +102,24 @@
                             class="programming-green">"Input the year: "</span>)<br />
                         &emsp;&emsp;<span class="programming-blue">int</span> year = in.<span
                             class="programming-green">nextInt</span>(); <br />
-                        &emsp;&emsp;<span class="programming-blue">boolean</span> x = (year % 4) == 0;<br />
-                        &emsp;&emsp;<span class="programming-blue">boolean</span> y = (year % 100) != 0;<br />
-                        &emsp;&emsp;<span class="programming-blue">boolean</span> z = (year % 100 == 0) && (year %
-                        400 == 0);<br />
-                        &emsp;&emsp;<span class="programming-blue">if</span> (
-                        ( <u style="font-weight: bold">[i]</u> || <u style="font-weight: bold">[ii]</u> ) && <u
-                            style="font-weight: bold">[iii]</u>)<br />
+                        &emsp;&emsp;<span class="programming-blue">boolean</span> x = year % 4 == 0;<br />
+                        &emsp;&emsp;<span class="programming-blue">boolean</span> y = year % 100 == 0;<br />
+                        &emsp;&emsp;<span class="programming-blue">boolean</span> z = year % 400 == 0;<br />
+                        &emsp;&emsp;<span class="programming-blue">if</span>( <u style="font-weight: bold">[i]</u>
+                        )<br />
+                        &emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(year + <span
+                            class="programming-green">"is a leap year"</span>)<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;&emsp;<span class="programming-blue">else if</span>( <u style="font-weight: bold">[ii]</u>
+                        )<br />
+                        &emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(year + <span
+                            class="programming-green">"is not a leap year"</span>)<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;&emsp;<span class="programming-blue">else if</span>( <u
+                            style="font-weight: bold">[iii]</u>
+                        )<br />
                         &emsp;&emsp;{ <br />
                         &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(year + <span
                             class="programming-green">"is a leap year"</span>)<br />
@@ -127,8 +138,8 @@
                         <input class="form-control-input" type="radio" id="Q3_1a" name="Q3_1" value="a" required"
                             {{old("Q3_1")=='a'?'checked':''}} {{old("flag")?'disabled':''}} />
                         <label class="form-check-label" for="Q3_1a" style="padding-left: 15px;">
-                            [i] = y<br />
-                            [ii] = z<br />
+                            [i] = z<br />
+                            [ii] = y<br />
                             [iii] = x<br />
                         </label>
                     </div>
@@ -186,12 +197,11 @@
                             class="programming-green">"Input the year: "</span>)<br />
                         &emsp;&emsp;<span class="programming-blue">int</span> year = in.<span
                             class="programming-green">nextInt</span>(); <br />
-                        &emsp;&emsp;<span class="programming-blue">boolean</span> x = (year % 4) == 0;<br />
-                        &emsp;&emsp;<span class="programming-blue">boolean</span> y = (year % 100) != 0;<br />
-                        &emsp;&emsp;<span class="programming-blue">boolean</span> z = (year % 100 == 0) && (year
-                        % 400 == 0);<br />
+                        &emsp;&emsp;<span class="programming-blue">boolean</span> x = year % 4 == 0;<br />
+                        &emsp;&emsp;<span class="programming-blue">boolean</span> y = year % 100 == 0;<br />
+                        &emsp;&emsp;<span class="programming-blue">boolean</span> z = year % 400 == 0;<br />
                         &emsp;&emsp;<span class="programming-blue">if</span> (
-                        ( <select class="form-control" name="Q3_1A" required style="display: inline; width:60px;"
+                        <select class="form-control" name="Q3_1A" required style="display: inline; width:60px;"
                             {{old("flag")?'disabled':''}}>
                             <option value="" disabled selected />
                             <option value='x' {{old("Q3_1A")=='x'?'selected':''}}>x</option>
@@ -204,7 +214,12 @@
                                 style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
                         </div>
                         @endif
-                        ||
+                        )<br />
+                        &emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(year + <span
+                            class="programming-green">"is a leap year"</span>)<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;&emsp;<span class="programming-blue">else if</span>(
                         <select class="form-control" name="Q3_1B" required style="display: inline; width:60px;"
                             {{old("flag")?'disabled':''}}>
                             <option value="" disabled selected />
@@ -217,8 +232,15 @@
                             <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
                                 style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
                         </div>
-                        @endif ) && <select class="form-control" name="Q3_1C" required
-                            style="display: inline; width:60px;" {{old("flag")?'disabled':''}}>
+                        @endif
+                        )<br />
+                        &emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(year + <span
+                            class="programming-green">"is not a leap year"</span>)<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;&emsp;<span class="programming-blue">else if</span>(
+                        <select class="form-control" name="Q3_1C" required style="display: inline; width:60px;"
+                            {{old("flag")?'disabled':''}}>
                             <option value="" disabled selected />
                             <option value='x' {{old("Q3_1C")=='x'?'selected':''}}>x</option>
                             <option value='y' {{old("Q3_1C")=='y'?'selected':''}}>y</option>
@@ -264,12 +286,10 @@
                             class="programming-green">"Input the year: "</span>)<br />
                         &emsp;&emsp;<span class="programming-blue">int</span> year = in.<span
                             class="programming-green">nextInt</span>(); <br />
-                        &emsp;&emsp;<span class="programming-blue">boolean</span> x = (year % 4) == 0;<br />
-                        &emsp;&emsp;<span class="programming-blue">boolean</span> y = (year % 100) != 0;<br />
-                        &emsp;&emsp;<span class="programming-blue">boolean</span> z = (year % 100 == 0) && (year
-                        %
-                        400 == 0);<br />
-                        &emsp;&emsp;<span class="programming-blue">if</span> (
+                        &emsp;&emsp;<span class="programming-blue">boolean</span> x = year % 4 == 0;<br />
+                        &emsp;&emsp;<span class="programming-blue">boolean</span> y = year % 100 == 0;<br />
+                        &emsp;&emsp;<span class="programming-blue">boolean</span> z = year % 400 == 0;<br />
+                        &emsp;&emsp;<span class="programming-blue">if</span>
                         ( <input class="form-control" name="Q3_1A" required style="display: inline; width:60px;"
                             {{old("flag")?'disabled':''}} value='{{old('Q3_1A')}}' maxlength=1 />
                         @if(Session::has('endResult'))
@@ -278,7 +298,12 @@
                                 style="color: {{Session::get('endResult')[0]?'green':'red'}};"></ion-icon>
                         </div>
                         @endif
-                        ||
+                        )<br />
+                        &emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(year + <span
+                            class="programming-green">"is a leap year"</span>)<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;&emsp;<span class="programming-blue">else if</span>(
                         <input class="form-control" name="Q3_1B" required style="display: inline; width:60px;"
                             {{old("flag")?'disabled':''}} value='{{old('Q3_1B')}}' maxlength=1 />
                         @if(Session::has('endResult'))
@@ -286,21 +311,26 @@
                             <ion-icon name="{{Session::get('endResult')[1]?'checkmark-circle':'close-circle'}}"
                                 style="color: {{Session::get('endResult')[1]?'green':'red'}};"></ion-icon>
                         </div>
-                        @endif ) && <input class="form-control" name="Q3_1C" required
-                            style="display: inline; width:60px;" {{old("flag")?'disabled':''}} value='{{old('Q3_1C')}}'
-                            maxlength=1 />
+                        @endif
+                        )<br />
+                        &emsp;&emsp;{ <br />
+                        &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(year + <span
+                            class="programming-green">"is not a leap year"</span>)<br />
+                        &emsp;&emsp;}<br />
+                        &emsp;&emsp;<span class="programming-blue">else if</span>(
+                        <input class="form-control" name="Q3_1C" required style="display: inline; width:60px;"
+                            {{old("flag")?'disabled':''}} value='{{old('Q3_1C')}}' maxlength=1 />
                         @if(Session::has('endResult'))
                         <div class="rounded" type='text' style="display: {{old('flag')?'inline': 'none' }};">
                             <ion-icon name="{{Session::get('endResult')[2]?'checkmark-circle':'close-circle'}}"
                                 style="color: {{Session::get('endResult')[2]?'green':'red'}};"></ion-icon>
                         </div>
-                        @endif
-                        )<br />
+                        @endif<br />
                         &emsp;&emsp;{ <br />
                         &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(year + <span
                             class="programming-green">"is a leap year"</span>)<br />
                         &emsp;&emsp;}<br />
-                        &emsp;&emsp;<span class="programming-blue">else</span><br />
+                        &emsp;&emsp;<span class="programming-blue">else</span> <br />
                         &emsp;&emsp;{ <br />
                         &emsp;&emsp;&emsp;System.out.<span class="programming-green">println</span>(year + <span
                             class="programming-green">"is not a leap year"</span>)<br />
